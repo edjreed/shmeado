@@ -1,0 +1,125 @@
+{% load humanize %}
+{% with s=player.stats.modes.wool %}
+
+    <h2>Wool Games</h2>
+
+    <!-- Main Stats -->
+     <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Level:</b> {{ s.level|floatformat:"4"|intcomma }} <span class="smallPrestige">{{ s.formatted_prestige|safe }}</span></p>
+            <p><b>Prestige: {{ s.prestige|safe }}</b></p>
+            <p><b>Next Prestige: {{ s.next_prestige|safe }}</b></p>
+        </div>
+        <div class="block">
+            <p><b>Wool:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Layers:</b> {{ s.layers|intcomma }}/100</p>
+            <p><b>Playtime:</b> {{ s.playtime|format_duration:True }}</p>
+        </div>
+        <div class="block">
+            <p><b>Total Wins:</b> {{ s.total_wins|intcomma }}</p>
+            <p><b>Total Kills:</b> {{ s.total_kills|intcomma }}</p>
+            <p><b>Experience:</b> {{ s.experience|floatformat:"0"|intcomma }}</p>
+        </div>
+        <div class="block hideOnMobile"></div>
+    </div>
+
+    <br>
+
+    <!-- Progress Bar -->
+    {% include "stats/components/progress_bar.html" with i=s.prestige_progress %}
+
+    <br>
+
+    <!-- Wool Wars -->
+    <h2 class="divider">Wool Wars</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins_ww|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses_ww|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_ww|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills_ww|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_ww|intcomma }}</p>
+            <p><b>K/D:</b> {{ s.kill_death_ww|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Assists:</b> {{ s.assists_ww|intcomma }}</p>
+            <p><b>Wool Placed:</b> {{ s.wool_placed_ww|intcomma }}</p>
+            <p><b>Blocks Broken:</b> {{ s.blocks_broken_ww|intcomma }}</p>
+        </div>
+        <div class="block"></div>
+    </div>
+
+    <br>
+
+    <!-- Wool Wars Table -->
+    {% include "stats/components/table.html" with table=s.table_classes %}
+
+    <br>
+
+    <!-- Sheep Wars -->
+    <h2 class="divider">Sheep Wars</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins_sw|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses_sw|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_sw|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills_sw|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_sw|intcomma }}</p>
+            <p><b>K/D:</b> {{ s.kill_death_sw|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Sheep Thrown:</b> {{ s.sheep_thrown_sw|intcomma }}</p>
+            <p><b>Magic Wool Hit:</b> {{ s.magic_wool_hit_sw|intcomma }}</p>
+            <p><b>Damage Dealt:</b> {{ s.damage_dealt_sw|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Melee Kills:</b> {{ s.kills_melee_sw|intcomma }}</p>
+            <p><b>Void Kills:</b> {{ s.kills_void_sw|intcomma }}</p>
+            <p><b>Explosive Kills:</b> {{ s.kills_explosive_sw|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Capture the Wool -->
+    <h2 class="divider">Capture the Wool</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.experienced_wins_ctw|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.experienced_losses_ctw|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_ctw|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Carries:</b> {{ s.carries_ctw|intcomma }}</p>
+            <p class="darkGray">(wins whilst dead)</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills_ctw|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_ctw|intcomma }}</p>
+            <p><b>K/D:</b> {{ s.kill_death_ctw|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Kills with Wool:</b> {{ s.kills_with_wool_ctw|intcomma }}</p>
+            <p><b>Kills on Woolholder:</b> {{ s.kills_on_woolholder_ctw|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Assists:</b> {{ s.assists_ctw|intcomma }}</p>
+            <p><b>Wool Captured:</b> {{ s.wools_captured_ctw|intcomma }}</p>
+            <p><b>Wool Stolen:</b> {{ s.wools_stolen_ctw|intcomma }}</p>
+            <br>
+            <p><b>Gold Earned:</b> {{ s.most_gold_earned_ctw|intcomma }}</p>
+            <p><b>Gold Spent:</b> {{ s.gold_spent_ctw|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Fastest Capture:</b> {{ s.fastest_wool_capture_ctw|format_duration:True }}</p>
+            <p><b>Fastest Win:</b> {{ s.fastest_win_ctw|format_duration:True }}</p>
+            <p><b>Longest Game:</b> {{ s.longest_game_ctw|format_duration:True }}</p>
+            <br>
+            <p><b>Most Gold Earned:</b> {{ s.most_gold_earned_ctw|intcomma }}</p>
+            <p><b>Most Kills/Assists:</b> {{ s.most_kills_and_assists_ctw|intcomma }}</p>
+        </div>
+    </div>
+
+{% endwith %}

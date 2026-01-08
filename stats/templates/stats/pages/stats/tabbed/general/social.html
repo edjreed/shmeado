@@ -1,0 +1,29 @@
+{% load static %}
+<h2>Socials</h2>
+<br>
+<div id="socialsContainer">
+    {% for caps, formatted in constants.general.socials.items %}
+        <div class="regularFlex">
+            <div class="socialImageContainer">
+                <img class="socialImage" src="{% static 'stats/stats/general/socials/'|add:formatted|lower|add:'.png' %}">
+            </div>
+            <h2 class="socialTextContainer">
+                {% with socials=player.stats.general.social_media %}
+                    {% if caps in socials %}
+                        {% with link=socials|get_item:caps %}
+                            {% if caps == "DISCORD" %}
+                                <span id="discordText">{{ link }}</span>
+                                <i id="discordCopyIcon" class="bi bi-clipboard2-minus pointer hoverOpacity" onclick="copyToClipboard('discord')"></i>
+                                <h3 id="discordCopyConfirmation" class="makeDarkGrayLightGray hidden">&nbspCopied!</h3>
+                            {% else %}
+                                <a class="noTextDecoration noSelect" href="{{ link }}" target="_blank">{{ formatted }}</a>
+                            {% endif %}
+                        {% endwith %}
+                    {% else %}
+                        <span class="gray">Not Connected</span>
+                    {% endif %}
+                {% endwith %}
+            </h2>
+        </div>
+    {% endfor %}
+</div>

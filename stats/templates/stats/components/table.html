@@ -1,0 +1,172 @@
+{% load tags_main %}
+{% load humanize %}
+{% load static %}
+
+<!-- 
+
+{
+    "head": [
+        "Mode", "Wins", etc.
+    ],
+    "rows": [
+        ["Solo", 999, etc.],
+        etc.
+    ]
+
+    "boldRows": [1, 2, etc.],
+    "boldCols": [1, 2, etc.],
+
+    "percent": [3, etc.],
+    "duration": [6, etc.],
+
+    "green": {
+        3: 1,
+        6: 5,
+        etc.
+    },
+
+    "divider": [4, etc.],
+
+    "buttons": {
+        "W/L": [2, 3, 4, etc.],
+        "K/D": [5, 6, 7, etc.],
+        etc.
+    }
+}
+
+-->
+
+{% spaceless %}
+
+<!-- Buttons -->
+{% if table.buttons %}
+    <div class="tableButtons noSelect">
+        {% for button, cols in table.buttons.items %}
+            <button class="tableButton" onclick="toggleColumns('{{ table.id }}', {{ cols }})">{{ button }}</button>
+        {% endfor %}
+        <button class="tableButton" onclick="showAllColumns('{{ table.id }}')">All</button>
+    </div>
+{% endif %}
+
+<!-- Table -->
+<table 
+    id="{{ table.id }}"
+    class="table"
+    {% if table.width %}
+        style="max-width: {{ table.width }}px;"
+    {% endif %}
+>
+
+    <!-- Header -->
+    {% for th in table.head %}
+
+        <!-- Col Number -->
+        {% with col=forloop.counter0 %}
+
+            <!-- Col Attributes -->
+            <th 
+                {% if col in table.percent %}
+                    class="pointer" onclick="togglePercent('{{ table.id }}', {{ col }})"
+                {% endif %}
+            >
+                {{ th }} {% if col in table.percent %}(%){% endif %}
+            </th>
+
+        {% endwith %}
+
+    {% endfor %}
+    
+    <!-- Rows -->
+    {% for tr in table.rows %}
+
+        <!-- Row Number -->
+        {% with row=forloop.counter %}
+
+            <!-- Divider Row -->
+            {% if row in table.divider %}
+                <tr>
+                    {% for td in tr %}
+                    
+                            {% if forloop.first %}
+                                <th>{{ table.divider|get_item:row }}</th>
+                            {% else %}
+                                <th></th>
+                            {% endif %}
+                        
+                    {% endfor %}
+                </tr>
+            {% endif %}
+
+            <!-- Row Elements (including bold styling) -->
+            <tr {% if row in table.boldRows %}class="bold"{% endif %}>
+
+                {% for td in tr %}
+
+                    <!-- Col Number -->
+                    {% with col=forloop.counter0 %}
+
+                        <!-- Data Elements (including green and bold values) -->
+                        <td class="
+                            {% if td >= table.green|get_item:col %}
+                                darkGreen
+                            {% endif %}
+
+                            {% if col in table.boldCols %}
+                                bold
+                            {% endif %}"
+                        >
+
+                            <!-- Green Values -->
+                            {% if table.green and table.green|get_item:col %}
+                                {{ td|floatformat:3 }}
+
+                            <!-- Percent Values -->
+                            {% elif col in table.percent %}
+                                {{ td|floatformat:3 }}
+
+                            <!-- Decimal Values -->
+                            {% elif col in table.decimal %}
+                                {{ td|floatformat:3 }}
+
+                            <!-- Duration Values -->
+                            {% elif col in table.duration %}
+                                {{ td|format_duration }}
+
+                            <!-- Standard Values -->
+                            {% else %}
+                                {{ td|intcomma|safe }}
+                            {% endif %}
+
+                        </td>
+
+                    {% endwith %}
+
+                {% endfor %}
+
+            </tr>
+
+        {% endwith %}
+
+    {% endfor %}
+
+</table>
+    
+{% endspaceless %}
+
+<script type="text/javascript" src="{% static 'stats/components/table.js' %}"></script>
+
+{% if table.buttons %}
+    <script>
+        // Create a MediaQueryList object
+        var mobileWidth = window.matchMedia("(max-width: 560px)");
+        var tableCols = {% for button, cols in table.buttons.items %}{% if forloop.first %}{{ cols }}{% endif %}{% endfor %};
+
+        // Call listener function at run time
+        mobileColumns(mobileWidth, '{{ table.id }}', tableCols);
+
+        // Attach listener function on state changes
+        mobileWidth.addEventListener("change", function() {
+            mobileColumns(mobileWidth, '{{ table.id }}', tableCols);
+        });
+    </script>
+{% endif %}

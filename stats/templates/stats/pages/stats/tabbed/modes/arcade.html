@@ -1,0 +1,227 @@
+{% load humanize %}
+{% with s=player.stats.modes.arcade %}
+
+    <h2>Arcade</h2>
+
+    <!-- Main Modes -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Coins:</b> {{ s.coins|floatformat:"0"|intcomma }}</p>
+            <br>
+            <b class="red">BLOCKING DEAD</b>
+            <p><b>Wins:</b> {{ s.wins_dayone|intcomma }}</p>
+            <p><b>Kills:</b> {{ s.kills_dayone|intcomma }}</p>
+            <p><b>Headshots:</b> {{ s.headshots_dayone|intcomma }}</p>
+            <p><b>Melee Weapon:</b></p>
+            <p>{{ s.melee_weapon|intcomma }}</p>
+            <br>
+            <b class="darkGreen">BOUNTY HUNTERS</b>
+            <p><b>Wins:</b> {{ s.wins_oneinthequiver|intcomma }}</p>
+            <p><b>Kills:</b> {{ s.kills_oneinthequiver|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_oneinthequiver|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death_oneinthequiver|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Bounty Kills:</b> {{ s.bounty_kills_oneinthequiver|intcomma }}</p>
+            <p><b>Bow Kills:</b> {{ s.bow_kills_oneinthequiver|intcomma }}</p>
+            <p><b>Sword Kills:</b> {{ s.sword_kills_oneinthequiver|intcomma }}</p>
+            <br>
+            <b class="darkPurple">PARTY GAMES</b>
+            <p><b>Wins:</b> {{ s.wins_party_games|intcomma }}</p>
+            <br>
+            <b class="red">HYPIXEL SAYS</b>
+            <p><b>Wins:</b> {{ s.wins_simon_says|intcomma }}</p>
+            <p><b>Rounds:</b> {{ s.rounds_simon_says|intcomma }}</p>
+        </div>
+        <div class="block">
+            <b class="lightPurple">CAPTURE THE WOOL</b>
+            <p><b>Kills:</b> {{ s.ctw_kills|intcomma }}</p>
+            <p><b>Wool Captured:</b> {{ s.ctw_captures|intcomma }}</p>
+            <br>
+            <b class="darkAqua">CREEPER ATTACK</b>
+            <p><b>Best Wave:</b> {{ s.max_wave|intcomma }}</p>
+            <br>
+            <b class="blue">DRAGON WARS</b>
+            <p><b>Wins:</b> {{ s.wins_dragonwars2|intcomma }}</p>
+            <p><b>Kills:</b> {{ s.kills_dragonwars2|intcomma }}</p>
+            <br>
+            <b class="darkGreen">DROPPER</b>
+            <p><b>Wins:</b> {{ s.wins_dropper|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses_dropper|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_dropper|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Fails:</b> {{ s.fails_dropper|intcomma }}</p>
+            <p><b>Maps Completed:</b> {{ s.maps_completed_dropper|intcomma }}</p>
+            <p><b>Games Completed:</b> {{ s.games_finished_dropper|intcomma }}</p>
+            <br>
+            <p><b>Flawless Games:</b> {{ s.flawless_games_dropper|intcomma }}</p>
+            <p><b>Fastest Game:</b> {{ s.fastest_game_dropper|floatformat:3 }}s</p>
+            <br>
+            <b class="darkAqua">PIXEL PAINTERS</b>
+            <p><b>Wins:</b> {{ s.wins_draw_their_thing|intcomma }}</p>
+        </div>
+        <div class="block">
+            <b class="darkGreen">ENDER SPLEEF</b>
+            <p><b>Wins:</b> {{ s.wins_ender|intcomma }}</p>
+            <p><b>Blocks Broken:</b> {{ s.blocks_destroyed_ender|intcomma }}</p>
+            <p><b>Powerup Activations:</b> {{ s.powerup_activations_ender|intcomma }}</p>
+            <p><b>Bigshot Activations:</b> {{ s.bigshot_powerup_activations_ender|intcomma }}</p>
+            <p><b>Tripleshot Activations:</b> {{ s.tripleshot_powerup_activations_ender|intcomma }}</p>
+            <br>
+            <b class="darkPurple">FARM HUNT</b>
+            <p><b>Wins:</b> {{ s.wins_farm_hunt|intcomma }}</p>
+            <p><b>Poop Collected:</b> {{ s.poop_collected|intcomma }}</p>
+            <p><b>Taunts Used:</b> {{ s.taunts_used_farm_hunt|intcomma }}</p>
+            <p><b>Risky Taunts Used:</b> {{ s.risky_taunts_used_farm_hunt|intcomma }}</p>
+            <br>
+            <b class="lightPurple">THROW OUT</b>
+            <p><b>Wins:</b> {{ s.wins_throw_out|intcomma }}</p>
+            <p><b>Kills:</b> {{ s.kills_throw_out|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_throw_out|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death_throw_out|floatformat:3|intcomma }}</p>
+            <br>
+            <b class="makeDarkBlueDarkAqua">HOLE IN THE WALL</b>
+            <p><b>Wins:</b> {{ s.wins_hole_in_the_wall|intcomma }}</p>
+            <p><b>Rounds:</b> {{ s.rounds_hole_in_the_wall|intcomma }}</p>
+            <br>
+            <p><b>Qualifications Record:</b> {{ s.hitw_record_q|intcomma }}</p>
+            <p><b>Finals Record:</b> {{ s.hitw_record_f|intcomma }}</p>
+        </div>
+        <div class="block">
+            <b class="blue">FOOTBALL</b>
+            <p><b>Wins:</b> {{ s.wins_soccer|intcomma }}</p>
+            <p><b>Goals:</b> {{ s.goals_soccer|intcomma }}</p>
+            <p><b>Kicks:</b> {{ s.kicks_soccer|intcomma }}</p>
+            <p><b>Power Kicks:</b> {{ s.powerkicks_soccer|intcomma }}</p>
+            <br>
+            <b class="makeDarkBlueDarkAqua">GALAXY WARS</b>
+            <p><b>Wins:</b> {{ s.sw_game_wins|intcomma }}</p>
+            <p><b>Kills:</b> {{ s.sw_kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.sw_deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.sw_kill_death|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Rebel Kills:</b> {{ s.sw_rebel_kills|intcomma }}</p>
+            <p><b>Empire Kills:</b> {{ s.sw_empire_kills|intcomma }}</p>
+            <p><b>Shots Fired:</b> {{ s.sw_shots_fired|intcomma }}</p>
+            <br>
+            <b class="darkPurple">HIDE AND SEEK</b>
+            <p><b>Seeker Wins:</b> {{ s.seeker_wins_hide_and_seek|intcomma }}</p>
+            <p><b>Hider Wins:</b> {{ s.hider_wins_hide_and_seek|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Seasonal Modes -->
+    <h2 class="divider">Seasonal</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <b class="darkGreen">EASTER SIMULATOR</b>
+            <p><b>Wins:</b> {{ s.wins_easter_simulator|intcomma }}</p>
+            <p><b>Eggs Found:</b> {{ s.eggs_found_easter_simulator|intcomma }}</p>
+            <br>
+            <b class="blue">SCUBA SIMULATOR</b>
+            <p><b>Wins:</b> {{ s.wins_scuba_simulator|intcomma }}</p>
+            <p><b>Items Found:</b> {{ s.items_found_scuba_simulator|intcomma }}</p>
+            <p><b>Total Points:</b> {{ s.total_points_scuba_simulator|intcomma }}</p>
+        </div>
+        <div class="block">
+            <b class="darkPurple">HALLOWEEN SIMULATOR</b>
+            <p><b>Wins:</b> {{ s.wins_halloween_simulator|intcomma }}</p>
+            <p><b>Candy Found:</b> {{ s.candy_found_halloween_simulator|intcomma }}</p>
+        </div>
+        <div class="block">
+            <b class="red">GRINCH SIMULATOR V2</b>
+            <p><b>Wins:</b> {{ s.wins_grinch_simulator_v2|intcomma }}</p>
+            <p><b>Presents Stolen:</b> {{ s.gifts_grinch_simulator_v2|intcomma }}</p>
+        </div>
+        <div class="block">
+            <b class="red">SANTA SAYS</b>
+            <p><b>Wins:</b> {{ s.wins_santa_says|intcomma }}</p>
+            <p><b>Rounds:</b> {{ s.rounds_santa_says|intcomma }}</p>
+            <br>
+            <b class="red">SANTA SIMULATOR</b>
+            <p><b>Presents Delivered:</b> {{ s.delivered_santa_simulator|intcomma }}</p>
+            <p><b>Times Spotted:</b> {{ s.spotted_santa_simulator|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Pixel Party -->
+    <h2 class="divider">Pixel Party</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins_pixel_party|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses_pixel_party|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss_pixel_party|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Powerups Collected:</b> {{ s.power_ups_collected_pixel_party|intcomma }}</p>
+            <p><b>Highest Round:</b> {{ s.highest_round_pixel_party|intcomma }}</p>
+            <p><b>Rounds Completed:</b> {{ s.rounds_completed_pixel_party|intcomma }}</p>
+        </div>
+        <div class="block hideOnMobile"></div><div class="block hideOnMobile"></div>
+    </div>
+    <br>
+    {% include "stats/components/table.html" with table=s.table_pixel_party %}
+
+    <br>
+
+    <!-- Mini Walls -->
+    <h2 class="divider">Mini Walls</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins_mini_walls|intcomma }}</p>
+            <p><b>Final Kills:</b> {{ s.final_kills_mini_walls|intcomma }}</p>
+            <p><b>Active Kit:</b> {{ s.miniwalls_activeKit|capfirst }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills_mini_walls|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_mini_walls|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death_mini_walls|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Wither Kills:</b> {{ s.wither_kills_mini_walls|intcomma }}</p>
+            <p><b>Wither Damage:</b> {{ s.wither_damage_mini_walls|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Arrows Shot:</b> {{ s.arrows_shot_mini_walls|intcomma }}</p>
+            <p><b>Arrows Hit:</b> {{ s.arrows_hit_mini_walls|intcomma }}</p>
+            <p><b>Arrow Hit/Miss:</b> {{ s.arrow_hit_miss_mini_walls|floatformat:3|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Zombies -->
+    <h2 class="divider">Zombies</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins_zombies|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_zombies|intcomma }}</p>
+            <p><b>Zombie Kills:</b> {{ s.zombie_kills_zombies|intcomma }}</p>
+            <p><b>Rounds Survived:</b> {{ s.total_rounds_survived_zombies|intcomma }}</p>
+            <p><b>Best Round:</b> {{ s.best_round_zombies|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Bullets Shot:</b> {{ s.bullets_shot_zombies|intcomma }}</p>
+            <p><b>Bullets Hit:</b> {{ s.bullets_hit_zombies|intcomma }}</p>
+            <p><b>Bullet Accuracy:</b> {{ s.bullet_accuracy_zombies }}%</p>
+        </div>
+        <div class="block">
+            <p><b>Headshots:</b> {{ s.headshots_zombies|intcomma }}</p>
+            <p><b>Headshot Accuracy:</b> {{ s.headshot_accuracy_zombies }}%</p>
+        </div>
+        <div class="block">
+            <p><b>Players Revived:</b> {{ s.players_revived_zombies|intcomma }}</p>
+            <p><b>Times Knocked Down:</b> {{ s.times_knocked_down_zombies|intcomma }}</p>
+            <br>
+            <p><b>Doors Opened:</b> {{ s.doors_opened_zombies|intcomma }}</p>
+            <p><b>Windows Repaired:</b> {{ s.windows_repaired_zombies|intcomma }}</p>
+        </div>
+    </div>
+    <br>
+    {% include "stats/components/table.html" with table=s.table_zombies %}
+    <br>
+    {% include "stats/components/table.html" with table=s.table_zombies_types %}
+{% endwith %}

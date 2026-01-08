@@ -1,0 +1,19 @@
+{% load humanize %}
+{% with s=player.stats.duels %}
+    <div class="scrollRowContainer">
+        <div class="scrollRow shmeadoColor">
+            <div><b>Title</b></div>
+            <div><b>Wins (per mode)</b></div>
+            <div><b>Wins (overall)</b></div>
+        </div>
+        {% for req, d in constants.duels.divisions.items %}
+            {% if not forloop.first and not forloop.last %}
+                <div class="scrollRow {{ d.color }}">
+                    <div><b>{{ d.name }} {{ d.value }}</b></div>
+                    <div><b>{{ req|divide:2|intcomma }}</b></div>
+                    <div><b>{{ req|intcomma }}</b></div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endwith %}

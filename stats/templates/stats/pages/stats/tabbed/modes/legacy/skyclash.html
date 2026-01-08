@@ -1,0 +1,35 @@
+{% load humanize %}
+{% with s=player.stats.modes.legacy.skyclash %}
+
+    <h2>SkyClash</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Arrows Shot:</b> {{ s.bow_shots|intcomma }}</p>
+            <p><b>Arrows Hit:</b> {{ s.bow_hits|intcomma }}</p>
+            <p><b>Arrow Hit Accuracy:</b> {{ s.bow_hit_accuracy|floatformat:2|intcomma }}%</p>
+        </div>
+        <div class="block">
+            <p><b>Assists:</b> {{ s.assists|intcomma }}</p>
+            <p><b>Void Kills:</b> {{ s.void_kills|intcomma }}</p>
+            <p><b>Enderchests Opened:</b> {{ s.enderchests_opened|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+{% endwith %}

@@ -1,0 +1,79 @@
+{% load humanize %}
+{% with s=player.stats.skywars %}
+    <div id="rankedContainer" class="wrappedFlex">
+        <div id="rankedLeft" class="evenFlex">
+            <h2>Ranked</h2>
+            <br>
+            {% with best=s.best_season_ranked %}
+                {% if best %}
+                    <h6>Highest Position - <span class="ranked{{ best.color }}">#{{ best.position|intcomma }}</span> (Season {{ best.season }})</h6>
+                {% else %}
+                    <h6>Highest Position - <span class="gray">N/A</span></h6>
+                {% endif %}
+            {% endwith %}
+            <br>
+            <div class="wrappedFlex">
+                <div class="evenFlex">
+                    <p><b>Wins:</b> {{ s.wins_ranked|intcomma }}</p>
+                    <p><b>Losses:</b> {{ s.losses_ranked|intcomma }}</p>
+                    <p><b>W/L Ratio:</b> {{ s.win_loss_ranked|intcomma }}</p>
+                    <br>
+                </div>
+                <div class="evenFlex">
+                    <p><b>Kills:</b> {{ s.kills_ranked|intcomma }}</p>
+                    <p><b>Deaths:</b> {{ s.deaths_ranked|intcomma }}</p>
+                    <p><b>K/D Ratio:</b> {{ s.kill_death_ranked|intcomma }}</p>
+                    <br>
+                </div>
+            </div>
+            <h2>Rewards</h2>
+            <br>
+            <div id="rankedRewardsContainer" class="wrappedFlex">
+                <div id="rankedRewardsLeft">
+                    <div id="rankedRewardsGoldMasters" class="evenFlex">
+                        <div id="rewardsGold" class="goldBorder">
+                            <b class="rewardsTitle gold">Gold Rewards ({{ s.reward_counts_ranked.gold }}/3)</b>
+                            {% include "stats/components/reward_list.html" with rewards=s.rewards_ranked.gold %}
+                        </div>
+                        <div id="rewardsMasters" class="darkGreenBorder">
+                            <b class="rewardsTitle darkGreen">Masters Rewards ({{ s.reward_counts_ranked.masters }}/3)</b>
+                            {% include "stats/components/reward_list.html" with rewards=s.rewards_ranked.masters %}
+                        </div>
+                    </div>
+                </div>
+                <div id="rewardsDiamond" class="darkAquaBorder">
+                    <b class="darkAqua">Diamond Rewards <br>({{ s.reward_counts_ranked.diamond }}/8)</b>
+                    <div id="rewardsDiamondBreak"></div>
+                    {% include "stats/components/reward_list.html" with rewards=s.rewards_ranked.diamond %}
+                </div>
+            </div>
+        </div>
+        <div id="rankedRight" class="evenFlex">
+            <h2>History
+                <span class="tooltip">
+                    <i class="shmeadoColor pointer bi bi-question-circle-fill"></i>&nbsp
+                    <span class="itemText">
+                        <span class="tooltipMainText">The Hypixel API only tracks from Season 24 onwards.</span><br>
+                        <span class="tooltipSubText">NOTE: Most masters achieved before Season 24 will still be shown.</span>
+                    <span>
+                </span>
+            </h2>
+            <br>
+            <div id="rankedHistory">
+                {% if s.history_ranked|length == 0 %}
+                    <div class="placeHolder rankedNone center">
+                        <span class="gray">There is no history for this player</span>
+                    </div>
+                {% else %}
+                    {% for season in s.history_ranked %}
+                        <div class="placeHolder {{ season.color }} {{ season.color }}Border wrappedFlex">
+                            <div class="evenFlex">s{{ season.season }}</div>
+                            <div class="evenFlex">#{{ season.position|intcomma }}</div>
+                            <div class="evenFlex">{{ season.rating|intcomma }} Rating</div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endwith %}

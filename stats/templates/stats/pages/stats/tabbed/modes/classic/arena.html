@@ -1,0 +1,35 @@
+{% load humanize %}
+{% with s=player.stats.modes.classic.arena %}
+
+    <h2>Arena Brawl</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Keys:</b> {{ s.keys|intcomma }}</p>
+            <p><b>Winstreaks:</b> {{ s.win_streaks|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Damage Dealt:</b> {{ s.damage|intcomma }}</p>
+            <p><b>Health Regen'd:</b> {{ s.healed|intcomma }}</p>
+            <p><b>Damage/Regen:</b> {{ s.damage_healed|floatformat:3|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+{% endwith %}

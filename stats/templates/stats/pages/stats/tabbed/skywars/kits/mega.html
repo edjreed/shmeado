@@ -1,0 +1,10 @@
+<h2>Mega Kits</h2>
+<br>
+{% include "stats/components/kit_pills.html" with tab="mega" %}
+<br>
+<div id="megaKitStats">
+    {% include "stats/components/table.html" with table=player.stats.skywars.table_kits_mega %}
+</div>
+<div id="megaKitPrestige" class="hidden">
+    {% include "stats/components/kit_prestige.html" with kits=player.stats.skywars.table_kits_mega.rows %}
+</div>

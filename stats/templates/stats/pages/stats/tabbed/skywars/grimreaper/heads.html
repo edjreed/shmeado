@@ -1,0 +1,35 @@
+{% load humanize %}
+{% with s=player.stats.skywars %}
+    <div class="wrappedFlex">
+        <div class="evenFlex">
+            <div id="headTextContainer">
+                {% with hs=s.head_stats %}
+                    <h6 class="makeDarkBlueDarkAqua">{{ s.heads|intcomma }} Heads ({{ hs.total_xp|intcomma }} XP earned)</h6><br>
+                    {% for section in constants.skywars.heads %}
+                        {% for head in section.heads %}
+                            {% with amount=hs|get_item:head.name %}
+                                <p class="{{ section.color }}"><b>(+{{ head.xp }}) {{ head.name|title }}:</b> {{ amount|intcomma }} ({{ s.heads|percent:amount }}%) - <b>{{ amount|multiply:head.xp|intcomma }} XP</b></p>
+                            {% endwith %}
+                        {% endfor %}
+                        {% if not forloop.last %}
+                            <br>
+                        {% endif %}
+                    {% endfor %}
+                {% endwith %}
+            </div>
+        </div>
+        <div id="headInfoContainer" class="evenFlex">
+            <div>
+                <h6 class="darkGray">Victim Requirements</h6><br>
+                {% for section in constants.skywars.heads %}
+                    {% for head in section.heads %}
+                        <p class="darkGray">{{ head.req }}</p>
+                    {% endfor %}
+                    {% if not forloop.last %}
+                        <br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endwith %}

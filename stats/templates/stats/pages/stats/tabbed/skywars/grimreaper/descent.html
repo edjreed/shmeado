@@ -1,0 +1,97 @@
+{% load humanize %}
+{% load static %}
+{% with s=player.stats.skywars %}
+    <div id="angelsDescentContainer" class="wrappedFlex">
+        <!-- Descent Info -->
+        <div id="angelsDescentText">
+            <h2>Angel's Descent</h2>
+            <h3>Hover over an item to see details</h3>
+            <h3>View on desktop for a better experience</h3>
+            <br>
+            <p>
+                <b>Eligibility: 
+                    {% if s.level >= 15 %}
+                        <span class="darkGreen">Eligible</span>
+                    {% else %}
+                        <span class="red">Ineligible</span>
+                    {% endif %}
+                </b>
+            </p>
+            <p>Level 15 <b>(<span class="{{ s.prestige.progress.current.color }}">{{ s.level|round_down }}</span>/<span class="darkGray">15</span>)</b></p>
+            <br>
+            <p><b>Grand Slam:</b> {{ s.grand_slam }}/3 <b>(+<span class="darkAqua">{{ s.grand_slam|multiply:2 }}</span>)</b></p>
+            <p><b>Soul Seeker:</b> {{ s.shard_seeker }}/5 <b>(+<span class="darkAqua">{{ s.shard_seeker|multiply:2 }}</span>%)</b></p>
+            <br>
+            <p><b>Xezbeth Luck:</b> {{ s.xezbeth_luck }}/3 <b>(+<span class="darkAqua">{{ s.xezbeth_luck }}</span>)</b></p>
+            <p><b>Harvesting Season:</b> {{ s.harvesting_season }}/5 <b>(+<span class="darkAqua">{{ s.harvesting_season }}</span>%)</b></p>
+            <br>
+            <p><b>Opals Spent: <span class="blue">{{ s.opals_spent|intcomma }}/{{ s.opals_to_spend|intcomma }}</span></b></p>
+            <br>
+            <p><b>Current Opals: <span class="blue">{{ s.opals|intcomma }}</span></b></p>
+            <br>
+            <p><b>Current Souls: <span class="darkAqua">{{ s.souls|intcomma }}</span></b></p>
+            <p><b>Souls Needed: <span class="darkAqua">{{ 1500|subtract:s.souls|intcomma }}</span></b></p>
+            <br>
+            <div id="opalBarContainer">{% include "stats/components/progress_bar.html" with i=s.opal_progress mobileNumbers=True %}</div>
+        </div>
+        <!-- Descent Visualisation -->
+        <div id="angelsDescentInventory" class="inventoryContainer">
+            <div class="inventory">
+                <div class="slotContainer">
+                    {% with s_descent=s.angels_descent_info %}
+                        {% for slot in constants.skywars.descentSlots|loop_counter %}
+                            <div class="slot">
+                                {% for item, info in constants.skywars.descentFormatting.items %}
+                                        {% if info.location == slot %}
+                                            <div class="item">
+                                                {% with s_item=s_descent|get_item:item %}
+                                                    <img src="{% static 'stats/stats/skywars/angels_descent/'|add:item|add:'.png' %}" alt="{{ info.name }}" {% if s_item.value == 0 %}class="itemLocked"{% endif %}>
+                                                    <div id="{{ item }}" class="itemText">
+                                                        <span class="{% if s_item.value == 0 %}red{% else %}green{% endif %}">
+                                                            {{ info.name }}
+                                                        </span><br>
+                                                        {{ info.description|safe }}
+                                                        <br><br>
+                                                        <!-- Complete -->
+                                                        {% if s_item.value == s_item.tiers %}
+                                                            <!-- Owned -->
+                                                            {% if s_item.tiers == 1 %}
+                                                                <span class="yellow">Owned!</span>
+                                                            <!-- Fully upgraded -->
+                                                            {% else %}
+                                                                {% spaceless %}
+                                                                    <span class="gold">Tier: </span>
+                                                                    <span class="green">{{ s_item.value }}</span>
+                                                                    <span class="gray">/</span>
+                                                                    <span class="yellow">{{ s_item.tiers }}</span><br>
+                                                                    <span class="yellow">Fully upgraded!</span>
+                                                                {% endspaceless %}
+                                                            {% endif %}
+                                                        <!-- Incomplete -->
+                                                        {% else %}
+                                                            <!-- In progress -->
+                                                            {% if s_item.value > 0 %}
+                                                                {% spaceless %}
+                                                                    <span class="gold">Tier: </span>
+                                                                    <span class="green">{{ s_item.value }}</span>
+                                                                    <span class="gray">/</span>
+                                                                    <span class="yellow">{{ s_item.tiers }}</span><br>
+                                                                    <span class="gray">Next tier: </span>
+                                                                    <span class="green">{{ s_item.value|add:1 }}</span><br>
+                                                                {% endspaceless %}
+                                                            {% endif %}
+                                                            <span class="gray">Cost: </span><span class="blue">{{ s_item.cost }} opals</span>
+                                                        {% endif %}
+                                                    </div>
+                                                {% endwith %}
+                                            </div>
+                                        {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endwith %}

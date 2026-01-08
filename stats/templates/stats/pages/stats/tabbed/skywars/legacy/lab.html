@@ -1,0 +1,30 @@
+{% load humanize %}
+{% with s=player.stats.skywars t=player.stats.skywars.table_lab %}
+    <h2>Lab</h2>
+    <h3>Lab stats do not count for overall stats.</h3>
+    <h3>NOTE: Lucky Blocks is still available to play.</h3>
+    <div class="stats">
+        <div class="block">
+            <p><b>Wins:</b> {{ t.rows.0.1|intcomma }}</p>
+            <p><b>Losses:</b> {{ t.rows.0.2|intcomma }}</p>
+            <p><b>W/L:</b> {{ t.rows.0.3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ t.rows.0.4|intcomma }}</p>
+            <p><b>Deaths:</b> {{ t.rows.0.5|intcomma }}</p>
+            <p><b>K/D:</b> {{ t.rows.0.6|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Assists:</b> {{ s.assists_lab|intcomma }}</p>
+            <p><b>Rush Wins:</b> {{ s.wins_rush_lab|intcomma }}</p>
+            <p><b>Slime Wins:</b> {{ s.wins_slime_lab|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Lucky Blocks Wins:</b> {{ s.wins_lucky_blocks_lab|intcomma }}</p>
+            <p><b>TNT Madness Wins:</b> {{ s.wins_tnt_madness_lab|intcomma }}</p>
+            <p><b>Hunters VS Beasts Wins:</b> {{ s.wins_hunters_vs_beasts_lab|intcomma }}</p>
+        </div>
+    </div>
+    <br>
+    {% include "stats/components/table.html" with table=t %}
+{% endwith %}

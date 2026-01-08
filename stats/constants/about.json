@@ -1,0 +1,50 @@
+{
+  "acknowledgements": [
+    {
+      "image": "hypixel",
+      "name": "Hypixel API",
+      "desc": "Player Stats",
+      "href": "https://api.hypixel.net/"
+    },
+    {
+      "image": "twemoji",
+      "name": "Twemoji",
+      "desc": "Emojis",
+      "href": "https://github.com/jdecked/twemoji"
+    },
+    {
+      "image": "bootstrap",
+      "name": "Bootstrap",
+      "desc": "Icons",
+      "href": "https://icons.getbootstrap.com/"
+    },
+    {
+      "image": "crafatar",
+      "name": "Crafatar",
+      "desc": "Player Heads",
+      "href": "https://crafatar.com/"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How can I report an issue or suggest a new feature?",
+      "a": "For any queries please message me on <a class='noTextDecoration' href='https://x.com/shmeado64/' target='_blank'>Twitter <i class='bi bi-box-arrow-up-right'></i></a>."
+    },
+    {
+      "q": "How often do the statistics update?",
+      "a": "Player stats will update immediately following a page refresh."
+    },
+    {
+      "q": "I am connected to the server, but appearing as offline.",
+      "a": "If refreshing the page doesn't work, it is likely that you have online status disabled in your in-game settings."
+    },
+    {
+      "q": "My name comes back as invalid, even though I am entering it correctly.",
+      "a": "<ul><li>If you have recently changed your name, try entering your previous name.</li><li>If you have not recently changed your name, try searching with your UUID which can be found on <a class='noTextDecoration' href='https://namemc.com/' target='_blank'>NameMC <i class='bi bi-box-arrow-up-right'></i></a>.</li><li>If neither of these solutions work, it is likely that the API ratelimit has been reached, in which case try searching your name again after a couple of minutes.</ul>"
+    },
+    {
+      "q": "What happened to Live Track and Leaderboards?",
+      "a": "Live Track and Leaderboards unfortunately had to be removed due to <a class='noTextDecoration' href='https://developer.hypixel.net/policies' target='_blank'>Hypixel API policy <i class='bi bi-box-arrow-up-right'></i></a> changes."
+    }
+  ]
+}

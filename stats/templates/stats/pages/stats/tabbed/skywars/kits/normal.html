@@ -1,0 +1,10 @@
+<h2>Normal Kits</h2>
+<br>
+{% include "stats/components/kit_pills.html" with tab="normal" %}
+<br>
+<div id="normalKitStats">
+    {% include "stats/components/table.html" with table=player.stats.skywars.table_kits_normal %}
+</div>
+<div id="normalKitPrestige" class="hidden">
+    {% include "stats/components/kit_prestige.html" with kits=player.stats.skywars.table_kits_normal.rows %}
+</div>

@@ -1,0 +1,24 @@
+{% load humanize %}
+{% with s=player.stats.modes.classic.walls %}
+
+    <h2>Walls</h2>
+
+    <br>
+
+    <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block hideOnMobile"></div><div class="block hideOnMobile"></div>
+    </div>
+
+{% endwith %}

@@ -1,0 +1,13 @@
+{% if supporter.uuid != "b876ec32e396476ba1158438d83c67d4" %}
+    <a href="https://www.patreon.com/c/Shmeado" target="_blank" class="supporterContainer">
+        <img class="supporterEmoji" class="pointer noSelect" src="https://abs.twimg.com/emoji/v2/svg/{{ supporter.emoji }}.svg" width="25" height="25">
+        <div class="right noSelect">
+            <b class="pointer">
+                <span>Patreon Supporter&nbsp;<img class="supporterTrophy" src="https://abs.twimg.com/emoji/v2/svg/1f3c6.svg" width="15" height="15"></span>
+            </b>
+            <i></i>
+        </div>
+    </a>
+{% else %}
+    <img class="supporterEmoji" class="pointer noSelect" src="https://abs.twimg.com/emoji/v2/svg/{{ supporter.emoji }}.svg" width="25" height="25">
+{% endif %}

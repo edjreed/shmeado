@@ -1,0 +1,42 @@
+{% load humanize %}
+{% with s=player.stats.modes.megawalls %}
+
+    <h2>Mega Walls</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Final Kills:</b> {{ s.final_kills|intcomma }}</p>
+            <p><b>Final Deaths:</b> {{ s.final_deaths|intcomma }}</p>
+            <p><b>Final K/D Ratio:</b> {{ s.final_kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Defender Kills:</b> {{ s.defender_kills|intcomma }}</p>
+            <p><b>Wither Damage:</b> {{ s.wither_damage|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Modes Table -->
+    <h2 class="divider">Modes</h2><br>
+    {% include "stats/components/table.html" with table=s.table_modes %}
+
+    <br>
+
+    <!-- Classes Table -->
+    <h2 class="divider">Classes</h2><br>
+    {% include "stats/components/table.html" with table=s.table_classes %}
+
+{% endwith %}

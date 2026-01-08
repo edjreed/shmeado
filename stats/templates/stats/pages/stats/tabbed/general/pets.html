@@ -1,0 +1,95 @@
+{% load humanize %}
+<div id="petsContainer" class="wrappedFlex">
+    {% with s=player.stats.general.pet_items %}
+        <div class="evenFlex">
+            <h2>Pet Items</h2>
+            <h3 id="totalPetItems">Total: {{ s.total|intcomma }}</h3>
+            <div id="petItemsContainer" class="wrappedFlex">
+                    <div class="evenFlex">
+                        <br>
+                        <p class="bold">Thirst</p>
+                        <p><b>Milk:</b> {{ s.MILK_BUCKET|intcomma }}</p>
+                        <p><b>Lava:</b> {{ s.LAVA_BUCKET|intcomma }}</p>
+                        <p><b>Water:</b> {{ s.WATER_BUCKET|intcomma }}</p>
+                        <br>
+                        <p class="bold">Excercise</p>
+                        <p><b>Sticks:</b> {{ s.STICK|intcomma }}</p>
+                        <p><b>Leashes:</b> {{ s.LEASH|intcomma }}</p>
+                        <p><b>Frisbees:</b> {{ s.GOLD_RECORD|intcomma }}</p>
+                        <p><b>Feathers:</b> {{ s.FEATHER|intcomma }}</p>
+                        <p><b>Slime Balls:</b> {{ s.SLIME_BALL|intcomma }}</p>
+                        <p><b>Sparring Swords:</b> {{ s.WOOD_SWORD|intcomma }}</p>
+                        <br>
+                        <p class="bold">Hunger</p>
+                        <p><b>Apples:</b> {{ s.APPLE|intcomma }}</p>
+                        <p><b>Melons:</b> {{ s.MELON|intcomma }}</p>
+                        <p><b>Carrots:</b> {{ s.CARROT_ITEM|intcomma }}</p>
+                    </div>
+                    <div class="evenFlex">
+                        <br>
+                        <p><b>Hay:</b> {{ s.HAY_BLOCK|intcomma }}</p>
+                        <p><b>Wheat:</b> {{ s.WHEAT|intcomma }}</p>
+                        <p><b>Flowers:</b> {{ s.RED_ROSE|intcomma }}</p>
+                        <br>
+                        <p><b>Bones:</b> {{ s.BONE|intcomma }}</p>
+                        <p><b>Rotten Flesh:</b> {{ s.ROTTEN_FLESH|intcomma }}</p>
+                        <p><b>Magma Cream:</b> {{ s.MAGMA_CREAM|intcomma }}</p>
+                        <br>
+                        <p><b>Bread:</b> {{ s.BREAD|intcomma }}</p>
+                        <p><b>Cakes:</b> {{ s.CAKE|intcomma }}</p>
+                        <p><b>Cookies:</b> {{ s.COOKIE|intcomma }}</p>
+                        <p><b>Raw Fish:</b> {{ s.RAW_FISH|intcomma }}</p>
+                        <p><b>Angus Steaks:</b> {{ s.COOKED_BEEF|intcomma }}</p>
+                        <p><b>Pumpkin Pies:</b> {{ s.PUMPKIN_PIE|intcomma }}</p>
+                        <p><b>Raw Porkchops:</b> {{ s.PORK|intcomma }}</p>
+                        <p><b>Baked Potatoes:</b> {{ s.BAKED_POTATO|intcomma }}</p>
+                        <p><b>Mushroom Soup:</b> {{ s.MUSHROOM_SOUP|intcomma }}</p>
+                    </div>
+            </div>
+        </div>
+    {% endwith %}
+    <div id="petsOwnedContainer" class="evenFlex">
+        <h2>Pets Owned ({{ player.stats.general.pets|length|intcomma }})</h2>
+        <br>
+        <div id="petsOwned" class="scrollRowContainer">
+            {% if player.stats.general.pets|length == 0 %}
+                <div class="scrollRow">
+                    <p class="center">This player has no pets.</p>
+                </div>
+            {% else %}
+                <div class="wrappedFlex scrollRow">
+                    <div class="left"><b>Pet</b></div>
+                    <div class="center"><b>Name</b></div>
+                    <div class="right"><b>Level</b></div>
+                </div>
+            {% endif %}
+            {% for pet, info in player.stats.general.pets.items %}
+                    {% with petInfo=constants.general.pets|get_item:pet %}
+                        {% with rarity=petInfo.rarity %}
+                            <div class="scrollRow">
+                                <div class="left"><p><b class="{{ constants.general.petColors|get_item:rarity }}">{{ petInfo.name }}</b></p></div>
+                                <div class="center"><p><b class="makeDarkGrayWhite">
+                                    {% if info.name %}
+                                        {{ info.name|replace_color_tags|safe }}
+                                    {% else %}
+                                        <span class="gray">-</span>
+                                    {% endif %}
+                                </b></p></div>
+                                <div class="right"><p><b class="darkAqua">
+                                    {% if petInfo.companion %}
+                                        <span class="gray">N/A</span>
+                                    {% else %}
+                                        {% if info.level == 100 %}
+                                            <span class="darkGreen">100 (Max!)</span>
+                                        {% else %}
+                                            {{ info.level|floatformat:2 }}
+                                        {% endif %}
+                                    {% endif %}
+                                </b></p></div>
+                            </div>
+                        {% endwith %}
+                    {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

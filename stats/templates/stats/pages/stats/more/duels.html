@@ -1,0 +1,31 @@
+{% load humanize %}
+{% with s=player.stats.duels %}
+    <div class="block">
+        <p><b>Melee Swings:</b> {{ s.melee_swings|intcomma }}</p>
+        <p><b>Melee Hits:</b> {{ s.melee_hits|intcomma }}</p>
+        <p><b>Melee H/M:</b> {{ s.melee_hit_miss|floatformat:3|intcomma }}</p>
+        <br>
+        <p><b>Arrows Shot:</b> {{ s.bow_shots|intcomma }}</p>
+        <p><b>Arrows Hit:</b> {{ s.bow_hits|intcomma }}</p>
+        <p><b>Arrow H/M:</b> {{ s.bow_hit_miss|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Damage Dealt:</b> {{ s.damage_dealt|intcomma }}</p>
+        <p><b>Health Regen'd:</b> {{ s.health_regenerated|intcomma }}</p>
+        <p><b>Damage/Regen:</b> {{ s.damage_dealt|ratio:s.health_regenerated|floatformat:3|intcomma }}</p>
+        <br>
+        <p><b>Games Played:</b> {{ s.games_played_duels|intcomma }}</p>
+        <p><b>Rounds Played:</b> {{ s.rounds_played|intcomma }}</p>
+        <p><b>Blocks Placed:</b> {{ s.blocks_placed|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Loot Chests Opened:</b> {{ s.Duels_openedChests|intcomma }}</p>
+        <p><b>Commons:</b> {{ s.Duels_openedCommons|intcomma }}</p>
+        <p><b>Rares:</b> {{ s.Duels_openedRares|intcomma }}</p>
+        <p><b>Epics:</b> {{ s.Duels_openedEpics|intcomma }}</p>
+        <p><b>Legendaries:</b> {{ s.Duels_openedLegendaries|intcomma }}</p>
+        <br>
+        <p><b>Golden Apples Eaten:</b> {{ s.golden_apples_eaten|intcomma }}</p>
+    </div>
+    <div class="block emptyBlock"></div>
+{% endwith %}

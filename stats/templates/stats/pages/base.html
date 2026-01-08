@@ -1,0 +1,160 @@
+{% load static %}
+{% load tags_main %}
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_ID }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ GA_ID }}');
+    </script>
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="shmeado, hypixel, stats, bedwars, skywars, duels, gamemodes, quests, achievements, calculator">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Title and Icon -->
+    <title>{{ header }} | Shmeado</title>
+    <link id="metaIcon" rel="icon" href="" type=".svg">
+</head>
+
+<!-- Base Styles -->
+<link rel="stylesheet" href="{% static 'stats/main/main.css' %}">
+<link rel="stylesheet" href="{% static 'stats/base/base.css' %}">
+<link rel="stylesheet" href="{% static 'stats/main/minecraftia/minecraftia.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+
+<body>
+    <!-- Header -->
+    <div id="header" class="noSelect">
+        <!-- Icon -->
+        <a id="headerIcon" class="hoverOpacity" href="{% url 'home' %}">
+            <div id="headerIconPlaceholder"></div>
+            <img id="headerIconImage" class="hidden" width="36" height="36">
+        </a>
+
+        <!-- Domain -->
+        <a class="noTextDecoration hoverOpacity" href="{% url 'home' %}">
+            <h1 id="headerDomain">
+                {% spaceless %}
+                    {% for char in "shmeado.club" %}
+                        <span id="{{ char }}">{{ char }}</span>
+                    {% endfor %}
+                {% endspaceless %}
+            </h1>
+        </a>
+
+        <!-- Hamburger -->
+        <h1 id="sidebarButton" class="pointer hoverOpacity" onclick="sidebar()">☰</h1>
+
+        <!-- Search Bar -->
+        <div class="search" id="headerSearchBarContainer">
+            <input type="text" id="headerSearchBar" class="searchTerm" placeholder="Name..." spellcheck="false">
+            <div class="searchParent">
+                <button type="submit" id="headerSearchButton" class="searchButton" onclick="headerSearchBarSearch()">
+                    <div class="searchParentHighlight">
+                        <i class="bi bi-search"></i>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- API Status -->
+        <div id="apiStatusContainer">
+            <div id="apiStatus">
+                <span class="white">API Response Time ~ </span>
+                {% if api_status.status == 4 %}
+                    <span class="gold">Unknown</span>
+                {% elif api_status.status == 3 %}
+                    <span class="red">Unresponsive</span>
+                {% else %}
+                    <span class="{% if api_status.status == 0 %}green{% else %}gold{% endif %}">{{ api_status.time|floatformat:3 }}s</span>
+                {% endif %}
+                {% if forloop.first %}
+                    <br>
+                {% endif %}
+            </div>
+            <div id="apiStatusIcon">
+                <p><i class="bi bi-server white pointer hoverOpacity" onclick="toggleApiStatus()" ></i></p>
+            </div>
+        </div>
+
+        <!-- Theme Toggle -->
+        <div id="themeToggleContainer">
+            <p><i id="themeToggleIcon" class="bi bi-moon-fill white pointer hoverOpacity" onclick="toggleTheme()"></i></p>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="noSelect shown">
+        <a href="{% url 'home' %}">
+            <div class="sidebarElement {% if sidebar == "stats" %}sidebarElementSelected{% endif %} hoverOpacity">
+                <div class="sidebarElementIcon">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+                Player Stats
+            </div>
+        </a>
+        <div>&nbsp</div>
+        <a href="{% url 'about' %}">
+            <div class="sidebarElement {% if sidebar == "about" %}sidebarElementSelected{% endif %} hoverOpacity">
+                <div class="sidebarElementIcon">
+                    <i class="bi bi-file-earmark-text"></i>
+                </div>
+                About
+            </div>
+        </a>
+        <a href="https://www.patreon.com/Shmeado" target="_blank">
+            <div class="sidebarElement hoverOpacity">
+                <div class="sidebarElementIcon">
+                    <i class="bi bi-fire"></i>
+                </div>
+                Patreon
+            </div>
+        </a>
+        <div><p>&nbsp</p></div>
+        <a id="sidebarThemeToggle" class="pointer" onclick="toggleTheme()">
+            <div class="sidebarElement hoverOpacity">
+                <div class="sidebarElementIcon">
+                    <i id="sidebarThemeToggleIcon" class="bi bi-moon-fill white pointer hoverOpacity"></i>
+                </div>
+                <span id="sidebarThemeToggleText">Dark</span>&nbspTheme
+            </div>
+        </a>
+    </div>
+
+    <!-- Page Content -->
+    {% block content %} {% endblock %}
+
+    <!-- Footer -->
+    <div id="pageFooter"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Relevant URLs
+        const backgroundsUrl = "{% static 'stats/base/backgrounds/' %}";
+        const statsUrl = "{% url 'stats' 'name' %}";
+
+        // Page load animation
+        setTimeout(function() {
+            var main = document.getElementById("main");
+            main.style.visibility = "visible";
+            main.style.opacity = 1;
+        }, 100);
+    </script>
+    <script type="text/javascript" src="{% static 'stats/base/base.js' %}"></script>
+
+    <!-- Themes -->
+    <link rel="stylesheet" href="{% static 'stats/base/dark.css' %}">
+</body>
+
+</html>

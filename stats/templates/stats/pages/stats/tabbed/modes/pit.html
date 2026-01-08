@@ -1,0 +1,133 @@
+{% load humanize %}
+{% with s=player.stats.modes.pit %}
+
+    <h2>Pit</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Level:</b> <span class="smallPrestige">
+                {% spaceless %}
+                    {% with i=s.level %}
+                        <span class="{{ i.prestigeColor }}">[</span>
+                        {% if i.prestige %}
+                            <span class="yellow">{{ i.prestige|romanize }}</span>
+                            <span class="{{ i.prestigeColor }}">-</span>
+                        {% endif %}
+                        <span class="{{ i.levelColor }}">{{ i.level }}</span>
+                        <span class="{{ i.prestigeColor }}">]</span>
+                    {% endwith %}
+                {% endspaceless %}
+            </span></p>
+            <p><b>Gold:</b> {{ s.cash|floatformat:2|intcomma }}g</p>
+            <p><b>Total XP:</b> {{ s.xp|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Total Gold:</b> {{ s.cash_earned|intcomma }}</p>
+            <p><b>Gold/Hour:</b> {{ s.gold_hour|intcomma }}</p>
+            <p><b>XP/Hour:</b> {{ s.xp_hour|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Playtime:</b> {{ s.playtime }}</p>
+            <p><b>Contracts Completed:</b> {{ s.contracts_completed|intcomma }}</p>
+            <p><b>King's Quest Completions:</b> {{ s.king_quest_completion|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Jumps Into Pit:</b> {{ s.jumped_into_pit|intcomma }}</p>
+            <p><b>Blocks Broken:</b> {{ s.blocks_broken|intcomma }}</p>
+            <p><b>Blocks Placed:</b> {{ s.blocks_placed|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Progress Bars -->
+    {% include "stats/components/progress_bar.html" with i=s.prestige_xp_progress %}
+    <br>
+    {% include "stats/components/progress_bar.html" with i=s.prestige_gold_progress %}
+    <br>
+    {% include "stats/components/progress_bar.html" with i=s.renown_progress %}
+
+    <br>
+
+    <!-- Combat Stats -->
+    <h2 class="divider">Combat</h2>
+
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Assists:</b> {{ s.assists|intcomma }}</p>
+            <p><b>Bounty:</b> {{ s.bounty|intcomma }}g</p>
+            <p><b>Best Killstreak:</b> {{ s.max_streak|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills/Hour:</b> {{ s.kill_hour|floatformat:2|intcomma }}</p>
+            <p><b>K+A/D Ratio:</b> {{ s.kill_assist_death|floatformat:3|intcomma }}</p>
+            <p><b>K+A/Hour:</b> {{ s.kill_assist_hour|floatformat:2|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Damage Dealt:</b> {{ s.damage_dealt|intcomma }}</p>
+            <p><b>Damage Taken:</b> {{ s.damage_received|intcomma }}</p>
+            <p><b>Damage Dealt/Taken:</b> {{ s.damage_dealt_taken|floatformat:3|intcomma }}</p>
+        </div>
+    </div>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Melee DD:</b> {{ s.melee_damage_dealt|intcomma }}</p>
+            <p><b>Melee DT:</b> {{ s.melee_damage_received|intcomma }}</p>
+            <p><b>Melee DD/T:</b> {{ s.melee_damage_dealt_taken|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Melee Swings:</b> {{ s.left_clicks|intcomma }}</p>
+            <p><b>Melee Hits:</b> {{ s.sword_hits|intcomma }}</p>
+            <p><b>Melee Accuracy:</b> {{ s.melee_accuracy|intcomma }}%</p>
+        </div>
+        <div class="block">
+            <p><b>Bow DD:</b> {{ s.bow_damage_dealt|intcomma }}</p>
+            <p><b>Bow DT:</b> {{ s.bow_damage_received|intcomma }}</p>
+            <p><b>Bow DD/T:</b> {{ s.bow_damage_dealt_taken|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Bow Shots:</b> {{ s.arrows_fired|intcomma }}</p>
+            <p><b>Bow Hits:</b> {{ s.arrow_hits|intcomma }}</p>
+            <p><b>Bow Accuracy:</b> {{ s.bow_accuracy|intcomma }}%</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Miscellaneous Stats -->
+    <h2 class="divider">Miscellaneous</h2>
+
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Lava Buckets Emptied:</b> {{ s.lava_bucket_emptied|intcomma }}</p>
+            <p><b>Launcher Launches:</b> {{ s.launched_by_launchers|intcomma }}</p>
+            <p><b>Lucky Dia Pieces:</b> {{ s.lucky_diamond_pieces|intcomma }}</p>
+            <p><b>Dia Items Purchased:</b> {{ s.diamond_items_purchased|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Soups Drank:</b> {{ s.soups_drank|intcomma }}</p>
+            <p><b>Golden Apples Eaten:</b> {{ s.gapple_eaten|intcomma }}</p>
+            <p><b>Golden Heads Eaten:</b> {{ s.ghead_eaten|intcomma }}</p>
+            <p><b>Rage Potatoes Eaten:</b> {{ s.rage_potatoes_eaten|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Tier 1 Mystics:</b> {{ s.enchanted_tier1|intcomma }}</p>
+            <p><b>Tier 2 Mystics:</b> {{ s.enchanted_tier2|intcomma }}</p>
+            <p><b>Tier 3 Mystics:</b> {{ s.enchanted_tier3|intcomma }}</p>
+            <p><b>Fishing Rod Launches:</b> {{ s.fishing_rod_launched|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Wheat Farmed:</b> {{ s.wheat_farmed|intcomma }}</p>
+            <p><b>Fished Items:</b> {{ s.fished_anything|intcomma }}</p>
+            <p><b>Fished Fish:</b> {{ s.fishes_fished|intcomma }}</p>
+            <p><b>Sewer Treasures Found:</b> {{ s.sewer_treasures_found|intcomma }}</p>
+        </div>
+    </div>
+
+{% endwith %}

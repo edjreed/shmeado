@@ -1,0 +1,8 @@
+@font-face {font-family: "Minecraftia";
+    src: url("/static/stats/main/minecraftia/files/ie9.eot"); /* IE9*/
+    src: url("/static/stats/main/minecraftia/files/ie6_8.eot") format("embedded-opentype"), /* IE6-IE8 */
+    url("/static/stats/main/minecraftia/files/chrome_firefox_woff2.woff2") format("woff2"), /* Chrome & Firefox */
+    url("/static/stats/main/minecraftia/files/chrome_firefox_woff.woff2") format("woff"), /* Chrome & Firefox */
+    url("/static/stats/main/minecraftia/files/truetype.ttf") format("truetype"), /* Chrome, Firefox, Opera, Safari, Android, iOS 4.2+*/
+    url("/static/stats/main/minecraftia/files/ios4_1.svg") format("svg"); /* iOS 4.1- */
+}

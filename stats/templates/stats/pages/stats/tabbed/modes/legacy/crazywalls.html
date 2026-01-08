@@ -1,0 +1,35 @@
+{% load humanize %}
+{% with s=player.stats.modes.legacy.crazywalls %}
+
+    <h2>Crazy Walls</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Arrows Shot:</b> {{ s.arrows_shot|intcomma }}</p>
+            <p><b>Arrows Hit:</b> {{ s.arrows_hit|intcomma }}</p>
+            <p><b>Arrow Hit Accuracy:</b> {{ s.arrow_hit_accuracy|floatformat:2 }}%</p>
+        </div>
+        <div class="block">
+            <p><b>Gold Dust:</b> {{ s.gold_dust|intcomma }}</p>
+            <p><b>Items Enchanted:</b> {{ s.items_enchanted|intcomma }}</p>
+            <p><b>Survived Players:</b> {{ s.survived_players|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+{% endwith %}

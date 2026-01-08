@@ -1,0 +1,11 @@
+{% load humanize %}
+<h2>
+    Carries
+    {% include "stats/components/carries_tooltip.html" with final=True %}
+</h2>
+<br>
+{% with s=player.stats.bedwars %}
+    <h2>{% rank player.rank player.name True %} has been carried {{ s.carries_bedwars }} times!</h2>
+    <br>
+    {% include "stats/components/table.html" with table=s.table_carries %}
+{% endwith %}

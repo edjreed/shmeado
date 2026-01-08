@@ -1,0 +1,77 @@
+{% load humanize %}
+{% with s=player.stats.modes.warlords %}
+
+    <h2>Warlords</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kill:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Void Shards:</b> {{ s.void_shards|intcomma }}</p>
+            <p><b>Magic Dust:</b> {{ s.magic_dust|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Assists:</b> {{ s.assists|intcomma }}</p>
+            <p><b>Flags Captured:</b> {{ s.flag_conquer_self|intcomma }}</p>
+            <p><b>Flags Returned:</b> {{ s.flag_returns|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Main Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+    <br>
+
+    <!-- Weapons -->
+    <h2 class="divider">Weapons</h2>
+    <div id="warlordsWeaponsContainer" class="wrappedFlex">
+        <div id="warlordsWeaponsLeft" class="evenFlex">
+            <p><b>Weapons Inventory</b> ({{ s.weapon_inv|length|intcomma }})</p><br>
+            {% if s.weapon_inv|length == 0 %}
+                <b class="gray">No weapons</b>
+            {% else %}
+                {% for weapon in s.weapon_inv %}
+                    {% with category=weapon.category|lower %}
+                        <p class="{{ constants.modes.warlords.weaponTypes|get_item:category }}">
+                            <b>
+                                {% if weapon.prefix %}
+                                    {{ weapon.prefix }}
+                                {% endif %}
+                                {{ constants.modes.warlords.weaponNames|get_item:weapon.material }}
+                                of the
+                                {{ constants.modes.warlords.weaponClasses|get_index:weapon.spec.playerClass|get_index:weapon.spec.spec }}
+                            </b>
+                        </p>
+                    {% endwith %}
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="evenFlex">
+            <br><p><b>Weapons Repaired:</b> {{ s.repaired|intcomma }}</p>
+            {% for weapon, color in constants.modes.warlords.weaponTypes.items %}
+                {% with key="repaired_"|add:weapon %}{% with amount=s|get_item:key %}
+                    <br><p class="{{ color }}"><b>{{ weapon|title }}:</b> {{ amount|intcomma }} <b>({{ s.repaired|percent:amount }}%)</b></p>
+                {% endwith %}{% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Classes Table -->
+    <h2 class="divider">Classes</h2><br>
+    {% include "stats/components/table.html" with table=s.table_classes %}
+
+{% endwith %}

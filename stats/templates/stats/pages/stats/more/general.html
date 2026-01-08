@@ -1,0 +1,36 @@
+{% load humanize %}
+{% with s=player.stats.general %}
+
+    <!-- Written Stats -->
+    <div class="block">
+        <p><b>Gifts Sent:</b> {{ s.bundles_given|intcomma }}</p>
+        <p><b>Gifts Received:</b> {{ s.bundles_received|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Ranks Gifted:</b> {{ s.ranks_given|intcomma }}</p>
+        <p><b>Times Voted:</b> {{ s.total_votes|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Current Daily Streak:</b> {{ s.reward_streak|intcomma }}</p>
+        <p><b>Best Daily Streak:</b> {{ s.reward_high_score|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p class="copyContainer noSelect">
+            <b>UUID</b>
+            <i class="bi bi-scissors pointer hoverOpacity" onclick="uuidToggle()"></i>
+            <i id="uuidCopyIcon" class="bi bi-clipboard2-minus pointer hoverOpacity" onclick="copyToClipboard('uuid')"></i>
+            <h3 id="uuidCopyConfirmation" class="makeDarkGrayLightGray hidden">Copied!</h3>
+        </p>
+        <p>
+            <span id="uuidText" class="uuid">
+                <span id="uuidUntrimmed">{{ player.uuid|untrim_uuid }}</span>
+                <span id="uuidTrimmed" class="hidden">{{ player.uuid }}</span>
+            </span>
+        </p>
+    </div>
+
+    <!-- Network Level Progress Bars -->
+    <div id="barGeneralLevel" class="barContainer">{% include "stats/components/progress_bar.html" with i=s.next_level_progress %}</div>
+    <div id="barGeneralMilestone" class="barContainer">{% include "stats/components/progress_bar.html" with i=s.next_milestone_progress %}</div>
+
+{% endwith %}

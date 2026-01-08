@@ -1,0 +1,58 @@
+{% load humanize %}
+{% with s=player.stats.modes.murdermystery %}
+
+    <h2>Murder Mystery</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Fastest Wins</b>
+            <p>Murderer: {{ s.quickest_murderer_win_time_seconds|format_duration:True }}</p>
+            <p>Detective: {{ s.quickest_detective_win_time_seconds|format_duration:True }}</p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Tokens:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Gold Collected:</b> {{ s.coins_pickedup|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+    <br>
+
+    <!-- Infection V2 -->
+    <h2 class="divider">Infection V2</h2>
+    <div class="wrappedFlex">
+    <div class="block">
+            <p><b>Wins:</b> {{ s.wins_infected|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death_infected|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills_infected|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_infected|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills as Infected:</b> {{ s.kills_as_infected_infected|intcomma }}</p>
+            <p><b>Kills as Survivor:</b> {{ s.kills_as_survivor_infected|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Gold Collected:</b> {{ s.coins_pickedup_infected|intcomma }}</p>
+            <p><b>Time Survived:</b> {{ s.total_time_survived_seconds_infected|format_duration:True }}</p>
+        </div>
+    </div>
+
+{% endwith %}

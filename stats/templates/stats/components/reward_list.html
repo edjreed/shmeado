@@ -1,0 +1,3 @@
+{% for reward in rewards %}
+    <p><img src="https://abs.twimg.com/emoji/v2/svg/{% if reward.has %}2705{% else %}274c{% endif %}.svg"> {{ reward.name }}</p>
+{% endfor %}

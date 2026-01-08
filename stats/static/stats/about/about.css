@@ -1,0 +1,180 @@
+/*============================================================================*/
+/* MAIN STYLING
+/*============================================================================*/
+
+/* Header */
+#aboutHeader {
+  border-radius: 15px;
+}
+
+/* Main */
+#main img {
+  height: 48px;
+  border-radius: 8px;
+}
+
+#main a {
+  transition: opacity 0.2s;
+}
+
+#main a:hover {
+  opacity: 0.6;
+}
+
+#aboutMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+#aboutMain .mainElement {
+  padding: 16px;
+}
+
+.aboutFlex {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.aboutLink {
+  transition: opacity 0.2s;
+}
+
+.aboutLink:hover {
+  opacity: 0.6;
+}
+
+/* Created by Shmeado */
+#createdByShmeado {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+#createdByShmeadoText {
+  margin-top: -2px;
+}
+
+#createdByShmeadoLinks {
+  margin-top: 4px;
+}
+
+#youtube {
+  color: #c4302b;
+}
+
+#twitter {
+  margin-left: 8px;
+}
+
+/* Perks */
+#perks {
+  grid-area: 1 / 2 / 1 / 4;
+}
+
+/* Acknowledgements */
+#acknowledgements {
+  grid-area: 2 / 1 / 2 / 4;
+}
+
+#acknowledgementsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+#acknowledgementsGrid img {
+  margin-bottom: 8px;
+}
+
+.acknowledgement {
+  text-align: center;
+}
+
+/* FAQs */
+#faqs {
+  grid-area: 3 / 1 / 3 / 4;
+}
+
+.q {
+  cursor: pointer;
+  padding: 18px;
+  transition: 0.2s;
+  margin-top: 12px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.q:after {
+  content: "+";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.qActive {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.qActive:after {
+  content: "-";
+}
+
+.a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s, border-radius 0.2s;
+  border-radius: 15px;
+}
+
+.aActive {
+  border-radius: 0px 0px 15px 15px;
+}
+
+.aText {
+  padding: 18px;
+}
+
+.aText ul {
+  margin-left: 18px;
+}
+
+/*============================================================================*/
+/* MEDIA QUERIES
+/*============================================================================*/
+
+@media (max-width: 1000px) {
+  #acknowledgementsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    row-gap: 24px;
+  }
+}
+
+@media (max-width: 712px) {
+  #acknowledgementsGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .acknowledgement {
+    display: flex;
+    text-align: left;
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  #createdByShmeado {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+  #perks {
+    grid-area: 2 / 1 / 3 / 4;
+  }
+  #acknowledgements {
+    grid-area: 3 / 1 / 3 / 4;
+  }
+  #faqs {
+    grid-area: 4 / 1 / 5 / 4;
+  }
+}

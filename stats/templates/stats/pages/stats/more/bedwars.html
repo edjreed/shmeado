@@ -1,0 +1,39 @@
+{% load humanize %}
+{% with s=player.stats.bedwars %}
+    <div class="block">
+        <p><b>Beds Broken:</b> {{ s.beds_broken_bedwars|intcomma }}</p>
+        <p><b>Beds Lost:</b> {{ s.beds_lost_bedwars|intcomma }}</p>
+        <br>
+        <p><b>Beds/Win:</b> {{ s.beds_win|floatformat:3|intcomma }}</p>
+        <p><b>Beds/Game:</b> {{ s.beds_game|floatformat:3|intcomma }}</p>
+        <p><b>Beds Broken/Lost:</b> {{ s.beds_broken_lost|floatformat:3|intcomma }}</p>
+        <p><b>Items Purchased:</b> {{ s.items_purchased_bedwars|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Final Kills/Win:</b> {{ s.final_kills_win|floatformat:3|intcomma }}</p>
+        <p><b>Final Kills/Game:</b> {{ s.final_kills_game|floatformat:3|intcomma }}</p>
+        <br>
+        <p><b>Void Final Kills:</b> {{ s.void_final_kills_bedwars|intcomma }}</p>
+        <p><b>Melee Final Kills:</b> {{ s.entity_attack_final_kills_bedwars|intcomma }}</p>
+        <p><b>Void Final Deaths:</b> {{ s.void_final_deaths_bedwars|intcomma }}</p>
+        <p><b>Melee Final Deaths:</b> {{ s.entity_attack_final_deaths_bedwars|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>XP/Win:</b> {{ s.experience_win|floatformat:0|intcomma }}</p>
+        <p><b>XP/Game:</b> {{ s.experience_game|floatformat:0|intcomma }}</p>
+        <br>
+        <p><b>Solo Winstreak:</b> {{ s.eight_one_winstreak|intcomma }}</p>
+        <p><b>Doubles Winstreak:</b> {{ s.eight_two_winstreak|intcomma }}</p>
+        <p><b>3v3v3v3 Winstreak:</b> {{ s.four_three_winstreak|intcomma }}</p>
+        <p><b>4v4v4v4 Winstreak:</b> {{ s.four_four_winstreak|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Loot Chests:</b> {{ s.total_boxes|intcomma }}</p>
+        <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+        <br>
+        <p><b>Iron:</b> {{ s.iron_resources_collected_bedwars|intcomma }}</p>
+        <p><b>Gold:</b> {{ s.gold_resources_collected_bedwars|intcomma }}</p>
+        <p><b>Diamonds:</b> {{ s.diamond_resources_collected_bedwars|intcomma }}</p>
+        <p><b>Emeralds:</b> {{ s.emerald_resources_collected_bedwars|intcomma }}</p>
+    </div>
+{% endwith %}

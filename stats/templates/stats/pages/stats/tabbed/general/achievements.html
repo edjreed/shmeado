@@ -1,0 +1,59 @@
+{% load humanize %}
+<!-- This tab is dynamically populated using JS and Hypixel resources. -->
+<!-- Frontend resource request ensures up to date information without overloading the backend. -->
+
+<div id="achievementsError" class="hidden">
+    {% include "stats/components/error.html" with tab="achievements" %}
+</div>
+
+<div id="achievementsContainer" class="wrappedFlex">
+    <div class="evenFlex">
+        <h2>Achievements</h2>
+        <br>
+        <p class="noSelect">
+            <span id="currentButton" onclick="achievements({}, 'current')" class="pill pillSelected">Current</span>
+            &nbsp
+            <span id="legacyButton" onclick="achievements({}, 'legacy')" class="pill pointer noSelect hoverOpacity">Legacy</span>
+        </p>
+        <br>
+        <p><b>Achievements:</b> <span id="achievements"></span>/<span id="achievementsTotal"></span></p>
+        <p><b>Points:</b> <span id="achievement_points"></span>/<span id="achievementsPointsTotal"></span> (<b id="achievementsPointsPercentage"></b>)</p>
+        <br>
+        <div id="achievementsSelection">
+            <div id="placeHolderContainerAchievements"></div>
+        </div>
+    </div>
+    <div class="generalModeSelectionContainer">
+        <div class="wrappedFlex">
+            <h2 id="achievementsModeTitle"></h2>
+            <h3 id="achievementsModeCompletionsContainer">(click on an achievement below to view details)</h3>
+        </div>
+        <div id="achievementsDescriptionContainer">
+            <p><b>
+                <span id="achievementsMode"></span>/<span id="achievementsModePossible"></span> Achievements <span class="gray">(<span id="achievementsModeProgress"></span>%)</span>
+            </b></p>
+            <p><b>
+                <span id="achievementsModePoints"></span>/<span id="achievementsModePointsPossible"></span> Points <span class="gray">(<span id="achievementsModePointsProgress"></span>%)</span>
+            </b></p>
+        </div>
+        <div id="achievementsFilterContainer" class="noSelect wrappedFlex">
+            <div>
+                <span id="oneTimeButton" onclick="oneTimeTiered('one_time')" class="pill pillSelected">One Time</span>
+                &nbsp
+                <span id="tieredButton" onclick="oneTimeTiered('tiered')" class="pill pointer noSelect hoverOpacity">Tiered</span>
+            </div>
+            <div id="achievementsDash">
+                <p><b>-</b></p>
+            </div>
+            <div id="achievementsMinimisedExpandedContainer">
+                <span id="minimisedButton" onclick="minimisedExpanded('minimised')" class="pill pillSelected">Minimised</span>
+                &nbsp
+                <span id="expandedButton" onclick="minimisedExpanded('expanded')" class="pill pointer noSelect hoverOpacity">Expanded</span>
+            </div>
+        </div><br>
+        <div id="achievementsModeSelection">
+            <div id="placeHolderContainerAchievementsModeOneTime"></div>
+            <div id="placeHolderContainerAchievementsModeTiered" class="hidden"></div>
+        </div>
+    </div>
+</div>

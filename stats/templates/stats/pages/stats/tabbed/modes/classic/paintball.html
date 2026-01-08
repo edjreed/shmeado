@@ -1,0 +1,25 @@
+{% load humanize %}
+{% with s=player.stats.modes.classic.paintball %}
+
+    <h2>Paintball</h2>
+
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Killstreaks:</b> {{ s.killstreaks|intcomma }}</p>
+            <p><b>Forcefield Time:</b> {{ s.forcefieldTime|format_duration:True }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Shots Fired:</b> {{ s.shots_fired|intcomma }}</p>
+            <p><b>Shots/Kill:</b> {{ s.shot_kill|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block"></div>
+    </div>
+
+{% endwith %}

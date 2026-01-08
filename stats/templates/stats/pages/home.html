@@ -1,0 +1,117 @@
+{% extends "stats/pages/base.html" %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'stats/home/home.css' %}">
+
+<div id="main">
+    <!-- API Status Warning -->
+    {% if api_status.status == 3 %}
+        <div class="shadow">
+            <div class="mainElement apiStatusWarning apiStatusWarningUnresponsive">
+                <b class="white">The Hypixel API is currently unresponsive!</b>
+            </div>
+        </div>
+    {% elif api_status.status == 2 or api_status.status == 1 %}
+        <div class="shadow">
+            <div class="mainElement apiStatusWarning apiStatusWarningSlow">
+                <b class="white">The Hypixel API is currently{% if api_status.status == 2 %} very{% endif %} slow!</b>
+                <span class="white">Latest response time was ~ {{ api_status.time|floatformat:3 }}s.</span>
+            </div>
+        </div>
+    {% endif %}
+
+    <!-- Search -->
+    <div class="shadow">
+        <div class="mainHeader">
+            <h1 class="white">Player Stats</h1>
+        </div>
+        <div id="homeSearch" class="mainElement">
+            <div id="homeSearchContainer">
+                <!-- Tab Buttons -->
+                <div class="homeSearchNavbar">
+                    {% for t in constants.tabs %}
+                        {% with title=t.title %}
+                            <button id="searchTabButton{{ title }}" class="navTabButton {% if title == tab %}bold{% else %}pointer hoverOpacity{% endif %}">
+                                {{ title }}
+                            </button>
+                        {% endwith %}
+                    {% endfor %}
+                </div>
+
+                <!-- Tabs -->
+                <div class="homeSearchTabContainer">
+                    <!-- Tab Metadata -->
+                    {% for t in constants.tabs %}
+                        {% with title=t.title %}
+                            <div id="searchTab{{ title }}" class="navTab {% if title == tab %}navTabSelected{% endif %}">
+                                <h2 class="shmeadoColor">{{ title }}</h2>
+                                <br>
+                                <p>{{ t.desc|safe }}</p>
+                                {% if error and title == tab %}
+                                    <br>
+                                    <h2 class="red">Invalid Name/UUID '{{ error }}'</h2>
+                                {% endif %}
+                            </div>
+                        {% endwith %}
+                    {% endfor %}
+
+                    <!-- Tab Searchbars -->
+                    <div id="homeSearchTabInputCompareContainer" class="hidden">
+                        <div class="search">
+                            <input id="homeSearchTabInputCompare" type="text" class="searchTerm" placeholder="Name 1...">
+                        </div>
+                    </div>
+                    <div id="homeSearchTabInputContainer" class="search">
+                        <input id="homeSearchTabInput" type="text" class="searchTerm" placeholder="Name...">
+                        <div class="searchParent">
+                            <button id="homeSearchTabButton" class="searchButton" type="submit" onclick="search()">
+                                <div class="searchParentHighlight">
+                                    <i class="bi bi-search"></i>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popular Profiles -->
+    <div class="shadow">
+        <div class="mainHeader">
+            <h1 class="white">Popular Profiles</h1>
+        </div>
+        <div id="popularProfiles" class="mainElement">
+            {% for player in constants.popular %}
+                <a href="{% url 'stats' player.uuid %}" class="noTextDecoration">
+                    <div class="popularTile">
+                        <img class="popularHead" src="https://mc-heads.net/avatar/{{ player.uuid }}">
+                        <h4>
+                            <span class="{{ player.color }}">
+                                {% spaceless %}
+                                    <span>{{ player.name }}</span>
+                                    {% if player.emoji %}
+                                        <img class="popularEmoji" src="https://abs.twimg.com/emoji/v2/svg/{{ player.emoji }}.svg">
+                                    {% endif %}
+                                {% endspaceless %}
+                            </span>
+                        </h4>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchTabs = {{ constants.tabs|safe }};
+    let currentSearchTab = "{{ tab }}";
+
+    const calculatorUrl = "";  // Placeholder % url 'calc' 'name' %
+    const comparisonUrl = "";  // Placeholder % url 'compare' 'name1' 'name2' %
+</script>
+
+<script type="text/javascript" src="{% static 'stats/home/home.js' %}"></script>
+
+{% endblock content %}

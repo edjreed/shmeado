@@ -1,0 +1,59 @@
+{% load humanize %}
+{% with s=player.stats.modes.classic.tkr %}
+
+    <h2>Turbo Kart Racers</h2>
+    
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Grand Prix Tokens:</b> {{ s.grand_prix_tokens|intcomma }}</p>
+            <p><b>Laps Completed:</b> {{ s.laps_completed|intcomma }}</p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Gold Trophies:</b> {{ s.gold_trophy|intcomma }}</p>
+            <p><b>Silver Trophies:</b> {{ s.silver_trophy|intcomma }}</p>
+            <p><b>Bronze Trophies:</b> {{ s.bronze_trophy|intcomma }}</p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Banana Hits Sent:</b> {{ s.banana_hits_sent|intcomma }}</p>
+            <p><b>Banana Hits Received:</b> {{ s.banana_hits_received|intcomma }}</p>
+            <p><b>Banana Sent/Received:</b> {{ s.banana_sent_received|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Blue Torpedoes Hit:</b> {{ s.blue_torpedo_hit|intcomma }}</p>
+            <p><b>Boxes Picked Up:</b> {{ s.box_pickups|intcomma }}</p>
+            <p><b>Coins Picked Up:</b> {{ s.coins_picked_up|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Current Kart -->
+    <h2 class="divider">Current Kart</h2>
+    <div id="currentKartContainer" class="wrappedFlex">
+        {% for part in s.kart_parts %}
+            <div class="block">
+                {% if part.Quality %}
+                    {% with quality=part.Quality %}{% with qi=constants.modes.classic.turboKartRacers.kartQuality|get_index:quality %}
+                        <p><b class='{{ qi.color }}'>{{ qi.name }} {{ part.PartRarity|title }} {{ part.PartType|title }}</b></p>
+                        {% for attr in part.Attributes %}
+                            <p>
+                                <b>[{% for x in attr.Level|get_range %}<span class="darkGreen">></span>{% endfor %}{% for x in 5|subtract:attr.Level|get_range %}<span class="gray">></span>{% endfor %}]</b>
+                                {{ attr.KartAttributeType|remove_underscores|title }}
+                                <b class="darkGray">({{ attr.Level }}/5)</b>
+                            </p>
+                        {% endfor %}
+                    {% endwith %}{% endwith %}
+                {% else %}
+                    <p class="darkGray"><b>No {{ part.PartType|title }} Selected</b></p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endwith %}

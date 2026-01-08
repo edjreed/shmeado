@@ -1,0 +1,73 @@
+{% load humanize %}
+{% with s=player.stats.modes.tnt %}
+
+    <h2>TNT Games</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <br>
+            <br>
+            <p><b class="makeDarkRedRed">TNT RUN <span class="makeDarkGrayLightGray"> • {{ s.record_tntrun|format_duration:True }}</span></b></p>
+            <p><b>Wins:</b> {{ s.wins_tntrun|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.deaths_tntrun|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_tntrun|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b class="red">PVP RUN <span class="makeDarkGrayLightGray"> • {{ s.record_pvprun|format_duration:True }}</span></b></p>
+            <p><b>Wins:</b> {{ s.wins_pvprun|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.deaths_pvprun|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_pvprun|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Kills:</b> {{ s.kills_pvprun|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_pvprun|intcomma }}</p>
+            <p><b>K/D:</b> {{ s.kill_death_pvprun|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b class="makeDarkRedRed">TNT TAG</b></p>
+            <p><b>Wins:</b> {{ s.wins_tntag|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.deaths_tntag|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_tntag|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Kills:</b> {{ s.kills_tntag|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_tntag|intcomma }}</p>
+            <p><b>K/D:</b> {{ s.kill_death_tntag|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b class="red">BOW SPLEEF</b></p>
+            <p><b>Wins:</b> {{ s.wins_bowspleef|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.deaths_bowspleef|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss_bowspleef|floatformat:3|intcomma }}</p>
+            <br>
+            <p><b>Shots:</b> {{ s.tags_bowspleef|intcomma }}</p>
+            <p><b>Shots/Win:</b> {{ s.tags_win_bowspleef|intcomma }}</p>
+            <p><b>Shots/Game:</b> {{ s.tags_game_bowspleef|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Wizards Stats -->
+    <h2 class="divider">Wizards</h2>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins_capture|intcomma }}</p>
+            <p><b>Assists:</b> {{ s.assists_capture|intcomma }}</p>
+            <p><b>Captures:</b> {{ s.points_capture|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills_capture|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths_capture|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death_capture|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block hideOnMobile"></div><div class="block hideOnMobile"></div>
+    </div>
+
+    <br>
+
+    <!-- Wizards Table -->
+    {% include "stats/components/table.html" with table=s.table_capture %}
+
+{% endwith %}

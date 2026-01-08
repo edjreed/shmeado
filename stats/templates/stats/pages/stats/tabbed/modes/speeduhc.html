@@ -1,0 +1,51 @@
+{% load humanize %}
+{% with s=player.stats.modes.speeduhc %}
+
+    <h2>Speed UHC</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Score:</b> {{ s.score|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Title: <span class="darkGray">{{ s.title|safe }}<span></b></p>
+            <p><b>Next Title: <span class="darkGray">{{ s.next_title|safe }}</span></b></p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Assists:</b> {{ s.assists|intcomma }}</p>
+            <p><b>Items Enchanted:</b> {{ s.items_enchanted|intcomma }}</p>
+            <p><b>Blocks Broken:</b> {{ s.blocks_broken|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Progress Bar -->
+    {% include "stats/components/progress_bar.html" with i=s.title_progress %}
+
+    <br>
+
+    <!-- Modes Table -->
+    <h2 class="divider">Modes</h2><br>
+    {% include "stats/components/table.html" with table=s.table_modes %}
+
+    <br>
+
+    <!-- Masteries Table -->
+    <h2 class="divider">Masteries</h2><br>
+    {% include "stats/components/table.html" with table=s.table_masteries %}
+
+{% endwith %}

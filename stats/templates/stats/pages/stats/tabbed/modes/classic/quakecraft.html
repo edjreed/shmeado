@@ -1,0 +1,35 @@
+{% load humanize %}
+{% with s=player.stats.modes.classic.quakecraft %}
+
+    <h2>Quakecraft</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Godlikes:</b> {{ s.godlikes|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Headshots:</b> {{ s.headshots|intcomma }}</p>
+            <p><b>Killstreaks:</b> {{ s.killstreaks|intcomma }}</p>
+            <p><b>Highest Killstreak:</b> {{ s.highest_killstreak|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Shots Fired:</b> {{ s.shots_fired|intcomma }}</p>
+            <p><b>Dash Power:</b> {{ s.dash_power|intcomma }}</p>
+            <p><b>Dash Cooldown:</b> {{ s.dash_cooldown|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+{% endwith %}

@@ -1,0 +1,64 @@
+{% load humanize %}
+{% with s=player.stats.skywars %}
+    <div id="aodContainer" class="wrappedFlex">
+        <div id="aodInfo" class="evenFlex">
+            <h2>Angel of Death</h2>
+            <br>
+            <p><b>AOD Level: {{ s.angel_of_death_level_raw }}%</b></p>
+            <h3> • This is the level purchased from the Grim Reaper</h3>
+            <br>
+            <p>
+                <b>Angel's Offering: 
+                    {% if s.angels_offering == "true" %}
+                        <span class="darkGreen">Unlocked</span>
+                    {% else %}
+                        <span class="red">Not Unlocked</span>
+                    {% endif %}
+                </b>
+            </p>
+            <h3> • Grants <span class="darkPurple">+1% chance</span> for games to be corrupted</h3>
+            <h3> • Requires <span class="darkGreen">Level 22</span> in SkyWars</h3>
+            <h3> • Purchased from Angel's Descent for <span class="blue">5 opals</span></h3>
+            <br>
+            <p>
+                <b>Favor of the Angel: 
+                    {% if s.favor_of_the_angel == "true" %}
+                        <span class="darkGreen">Unlocked</span>
+                    {% else %}
+                        <span class="red">Not Unlocked</span>
+                    {% endif %}
+                </b>
+            </p>
+            <h3> • Grants <span class="darkPurple">+1% chance</span> for games to be corrupted</h3>
+            <h3> • Includes the <span class="darkAqua">⚔</span> prestige icon</h3>
+            <h3> • Includes <span class="lightPurple">+1 XP</span> per SkyWars win</h3>
+            <h3> • Includes <span class="lightPurple">+500 XP</span> one-time bonus</h3>
+            <h3> • Purchased from the <span class="gold">Tournament Shop</span> for <span class="gold">100 tributes</span></h3>
+            <br>
+            <p><b>Base Corruption Chance: {{ s.angel_of_death_level }}%</b></p>
+            <h3> • This is the actual corruption chance when joining games</h3>
+        </div>
+        <div id="aodCostsContainer" class="scrollRowContainer evenFlex">
+            <div class="wrappedFlex angelOfDeathRow center shmeadoColor">
+                <div class="evenFlex"><b>Level</b></div>
+                <div class="evenFlex"><b>Icon</b></div>
+                <div class="doubleFlex"><b>Cost</b></div>
+                <div class="doubleFlex"><b>Total</b></div>
+            </div>
+            {% for level in constants.skywars.angelOfDeath %}
+                <div class="wrappedFlex scrollRow angelOfDeathRow center">
+                    <div class="darkAqua makeThin">{{ forloop.counter }}</div>
+                    <div class="darkAqua">
+                        {% if forloop.last %}
+                            {{ constants.skywars.emblems|get_item:"fallen_crest" }}
+                        {% else %}
+                            -
+                        {% endif %}
+                    </div>
+                    <div class="doubleFlex gold makeThin">{{ level.cost|intcomma }}</div>
+                    <div class="doubleFlex gold makeThin">{{ level.total|intcomma }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endwith %}

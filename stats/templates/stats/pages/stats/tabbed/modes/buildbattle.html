@@ -1,0 +1,41 @@
+{% load humanize %}
+{% with s=player.stats.modes.build_battle %}
+
+    <h2>Build Battle</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Score:</b> {{ s.score|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            {% with tp=s.title_progress %}
+                <p><b>Title: <span class="{{ s.current_title.color }}">{{ s.current_title.name }}</span></b></p>
+                <p><b>Next Title: <span class="{{ s.next_title.color }}">{{ s.next_title.name }}</span></b></p>
+            {% endwith %}
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <br>
+            <p><b>Total Votes:</b> {{ s.total_votes|intcomma }}</p>
+            <p><b>Super Votes:</b> {{ s.super_votes|intcomma }}</p>
+            <p><b>Correct Guesses:</b> {{ s.correct_guesses|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Solo Wins:</b> {{ s.wins_solo_normal|intcomma }}</p>
+            <p><b>Team Wins:</b> {{ s.wins_teams_normal|intcomma }}</p>
+            <p><b>Pro Wins:</b> {{ s.wins_solo_pro|intcomma }}</p>
+            <p><b>Guess The Build Wins:</b> {{ s.wins_guess_the_build|intcomma }}</p>
+        </div>
+    </div>
+    
+    <br>
+
+    <!-- Progress Bar -->
+    {% include "stats/components/progress_bar.html" with i=s.title_progress %}
+
+{% endwith %}

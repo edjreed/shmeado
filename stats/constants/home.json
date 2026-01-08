@@ -1,0 +1,64 @@
+{
+    "tabs": [
+        {
+            "title": "Stats",
+            "desc": "Advanced statistics tool for the Hypixel network.<br>Includes all gamemodes and general statistics."
+        }
+    ],
+    "popular": [
+        {
+            "uuid": "9ea6462037604b7a978e6c29718e1ffa",
+            "name": "Shmeado",
+            "color": "aqua",
+            "emoji": "1f525"
+        },
+        {
+            "uuid": "ca6f7b3a3e0f4b4a8e06d8be7914ed80",
+            "name": "Specular",
+            "color": "red",
+            "emoji": "1f525"
+        },
+        {
+            "uuid": "b876ec32e396476ba1158438d83c67d4",
+            "name": "Technoblade",
+            "color": "lightPurple",
+            "emoji": "1f397"
+        },
+        {
+            "uuid": "42215a7d4fac49bebae71d40d1a34063",
+            "name": "Petereo",
+            "color": "gold",
+            "emoji": "1f1f5-1f1f9"
+        },
+        {
+            "uuid": "2baaec9272fd487294e673eb4ec35201",
+            "name": "Uleb",
+            "color": "aqua",
+            "emoji": "2615"
+        },
+        {
+            "uuid": "9519d984413f41a9963bced2e52e06fc",
+            "name": "WhatsCPS",
+            "color": "aqua",
+            "emoji": "1f603"
+        },
+        {
+            "uuid": "2e12870c08ec4337bc2e8fbf54e79853",
+            "name": "TapL",
+            "color": "red",
+            "emoji": "1f34e"
+        },
+        {
+            "uuid": "1218cdf352bd4e18ba24d4b202ec85f3",
+            "name": "Purpled",
+            "color": "red",
+            "emoji": "1f525"
+        },
+        {
+            "uuid": "24c182c6716b47c68f60a1be9045c449",
+            "name": "gamerboy80",
+            "color": "red",
+            "emoji": "1f525"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{% load humanize %}
+{% with s=player.stats.modes.bsg %}
+
+    <h2>Blitz Survival Games</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Playtime:</b> {{ s.time_played|format_duration }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block hideOnMobile"></div><div class="block hideOnMobile"></div>
+    </div>
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Chests Opened:</b> {{ s.chests_opened|intcomma }}</p>
+            <p><b>Games Played:</b> {{ s.games_played|intcomma }}</p>
+            <p><b>Kill/Game Ratio:</b> {{ s.kill_game|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Arrows Shot:</b> {{ s.arrows_fired|intcomma }}</p>
+            <p><b>Arrows Hit:</b> {{ s.arrows_hit|intcomma }}</p>
+            <p><b>Arrow Hit/Miss:</b> {{ s.arrow_hit_miss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Mobs Spawned:</b> {{ s.mobs_spawned|intcomma }}</p>
+            <p><b>Potions Drunk:</b> {{ s.potions_drunk|intcomma }}</p>
+            <p><b>Potions Thrown:</b> {{ s.potions_thrown|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Damage Dealt:</b> {{ s.damage|intcomma }}</p>
+            <p><b>Damage Taken:</b> {{ s.damage_taken|intcomma }}</p>
+            <p><b>Damage Dealt/Taken:</b> {{ s.damage_dealt_taken|floatformat:3|intcomma }}</p>
+        </div>
+    </div>
+
+    <!-- Table -->
+    {% if s.played_kits %}
+        <br>{% include "stats/components/table.html" with table=s.table %}
+    {% endif %}
+
+{% endwith %}

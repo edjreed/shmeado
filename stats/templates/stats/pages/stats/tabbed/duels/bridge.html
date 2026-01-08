@@ -1,0 +1,7 @@
+{% with s=player.stats.duels %}
+    <h2>Bridge</h2>
+    <br>
+    <b>Division - {{ s.division_bridge|safe }}</b>
+    <br><br>
+    {% include "stats/components/table.html" with table=s.table_bridge %}
+{% endwith %}

@@ -1,0 +1,202 @@
+{% extends "stats/pages/base.html" %}
+{% block content %}
+{% load static %}
+
+{% with games=constants.main.games tabs=constants.main.tabs subTabs=constants.main.subTabs formattedTabs=constants.main.formattedTabs %}
+
+<link rel="stylesheet" href="{% static 'stats/stats/stats.css' %}">
+
+<div id="main">
+    <!-- Header -->
+    <div id="statsHeader" class="mainHeader shadow">
+        <div id="playerContainer">
+            <h4 id="playerPrestigeBedWars" class="{% if game != 'BedWars' %}hidden{% endif %}">{{ player.stats.bedwars.prestige_formatted|safe }}</h4>
+            <h4 id="playerPrestigeSkyWars" class="{% if game != 'SkyWars' %}hidden{% endif %} {% if 'mythic' in player.stats.skywars.active_scheme %}pointer hoverOpacity{% endif %}">
+                {{ player.stats.skywars.prestige_formatted|safe }}
+            </h4>
+            <h4>{% rank player.rank player.name %}</h4>
+            <h4 class="hidden" id="playerPrestigeGuildTag"></h4>
+            {% if supporter %}
+                {% include "stats/components/supporter.html" %}
+            {% endif %}
+        </div>
+        <div id="onlineStatusContainer" class="pointer hoverOpacity" onclick="requestHandler('online', onlineStatus)">
+            <span id="onlineStatusDot" class="hidden"></span>
+            <img id="onlineStatusHead" src="https://mc-heads.net/avatar/{{ player.uuid }}">
+        </div>
+    </div>
+
+    <!-- Online Details -->
+    <div id="onlineStatusDetails" class="zeroHeight">
+        <p class="bold green">Online</p>
+        <p class="bold white">
+            Playing
+            <span id="onlineStatusGame"></span>
+            <span id="onlineStatusMode"></span>
+            <span id="onlineStatusMap" class="hidden">
+                <span class="gray">•</span>
+                <span id="onlineStatusMapText"></span>
+            </span>
+            <span id="onlineStatusHide" class="gray pointer hoverOpacity" onclick="toggleOnlineDetails()"><i class="bi bi-x-lg"></i></span>
+        </p>
+    </div>
+
+    <!-- Game Selection -->
+    <div id="navGames" class="navGames noSelect">
+        {% for g in games %}
+            <div class="navGame shadow {% if g == game %}navGameSelected{% endif %}" id="navGame{{ g }}">
+                <div class="navGameName">{{ g }}</div>
+                <img class="navGameIcon" id="navGameIcon{{ g }}" src="{% static 'stats/main/images/navGameIcon'|add:g|add:'.png' %}"> 
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Main Stats -->
+    <div id="mainStatsElement" class="mainElement shadow {% if game == games.0 %}navGameSelectedTargetLeft{% endif %} {% if game == "Modes" %}hidden{% endif %}">
+        <div id="mainStatsContainer" class="mainText">
+
+            <!-- Title -->
+            <div class="wrappedFlex">
+                <div id="gameTitleBlock">
+                    <h2><span id="gameTitle">{{ game }}</span> Stats</h2>
+                    <h3>(updates on refresh)</h3>
+                </div>
+                <div id="showMoreBlock">
+                    <button id="showMoreUpper" class="showMoreButton noSelect">Show More</button>
+                </div>
+                {% if supporter %}
+                    <div id="supporterBio">{{ supporter.bio|safe }}</div>
+                {% endif %}
+            </div>
+
+            <!-- Main Stats -->
+            {% for g in games %}
+                {% if g != "Modes" %}
+                    <div id="mainStats{{ g }}" class="mainStats {% if g == game %}mainStatsSelected{% endif %}">
+                        {% with template=g|lower|add:".html" %}
+                            {% include "stats/pages/stats/main/"|add:template %}
+                        {% endwith %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <!-- Secondary Show More Button -->
+            <button id="showMoreLower" class="showMoreButton noSelect">Show More</button>
+
+            <!-- More Stats -->
+            <div id="moreStatsContainer" class="moreStatsContainer">
+                {% for g in games %}
+                    {% if g != "Modes" %}
+                        <div id="moreStats{{ g }}" class="moreStats {% if g == game %}moreStatsSelected{% endif %}">
+                            {% with template=g|lower|add:".html" %}
+                                {% include "stats/pages/stats/more/"|add:template %}
+                            {% endwith %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Tabbed  Stats -->
+    <div id="tabbedStatsElement" class="shadow {% if game == 'Modes' %}tabbedStatsElementModesSelected{% endif %}">
+
+        <!-- Tab Selection -->
+        <div id="navTabBar" class="navTabBar noSelect {% if game == 'Modes' %}navTabBarModesSelected{% endif %}">
+            {% for g, ts in tabs.items %}
+                <div id="navTabBar{{ g }}" {% if g == game %}class="navTabSelected"{% endif %}>
+                    {% spaceless %}
+                        {% for t in ts %}
+                            <button id="navTabButton{{ g }}{{ t }}" class="navTabButton {% if g == game and t == tab %}navTabButtonSelected{% elif g != game and forloop.first %}navTabButtonSelected{% endif %} {% if t == 'Recent' or t == 'Guild' %}hidden{% endif %}">{% if formattedTabs|get_item:t %}{{ formattedTabs|get_item:t }}{% else %}{{ t }}{% endif %}</button>
+                        {% endfor %}
+                    {% endspaceless %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Tabs -->
+        <div id="navTabs" class="mainElement {% if tab == "Prestige" %}mainElementTransparent{% endif %}">
+            {% for g, ts in tabs.items %}
+                <div id="navTabContainer{{ g }}" class="navTabContainer {% if g == game %}navTabSelected{% endif %}">
+                    {% for t in ts %}
+                        <div id="navTab{{ g }}{{ t }}" class="navTab {% if g == game and t == tab %}navTabSelected{% elif g != game and forloop.first %}navTabSelected{% endif %}">
+                            <!-- Sub Tabs -->
+                            {% if subTabs|get_item:g|get_item:t %}
+                                <div class="navTabBar navTabBarThin noSelect">
+                                    {% for st in subTabs|get_item:g|get_item:t %}
+                                        <button id="navTabButton{{ g }}{{ t }}{{ st }}" class="navTabButton {% if forloop.first %}navTabButtonSelected{% endif %}">{% if formattedTabs|get_item:st %}{{ formattedTabs|get_item:st }}{% else %}{{ st }}{% endif %}</button>
+                                    {% endfor %}
+                                </div>
+                                <div id="navSubTabs">
+                                    {% for st in subTabs|get_item:g|get_item:t %}
+                                        <div id="navTab{{ g }}{{ t }}{{ st }}" class="navTab {% if forloop.first %}navTabSelected{% endif %}">
+                                            {% with template=g|lower|add:"/"|add:t|lower|add:"/"|add:st|lower|add:".html" %}
+                                                {% spaceless %}{% include "stats/pages/stats/tabbed/"|add:template %}{% endspaceless %}
+                                            {% endwith %}
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            <!-- Standard Tabs -->
+                            {% else %}
+                                {% with template=g|lower|add:"/"|add:t|lower|add:".html" %}
+                                    {% include "stats/pages/stats/tabbed/"|add:template %}
+                                {% endwith %}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // Constants
+    const player = {{ player|safe }};
+    console.log(player);
+    const questRewards = {{ constants.general.questRewards|safe }};
+    const gameInformation = {{ constants.main.gameInformation|safe }};
+
+    // Game and tab navigation
+    const navGames = {{ constants.main.games|safe }};
+    let currentNavGame = "{{ game }}";
+
+    const navTabs = {{ constants.main.tabs|safe }};
+    let currentNavTabs = {};
+    navGames.forEach(game => {
+        currentNavTabs[game] = navTabs[game][0];
+    })
+    currentNavTabs[currentNavGame] = "{{ tab }}";
+
+    const navSubTabs = {{ constants.main.subTabs|safe }};
+
+    let currentNavSubTabs = {};
+    for (let key in navSubTabs) {
+        currentNavSubTabs[key] = {};
+        for (let subKey in navSubTabs[key]) {
+            currentNavSubTabs[key][subKey] = navSubTabs[key][subKey][0];
+        }
+    }
+
+    // Relevant URLs
+    const statsUrlCustom = "{% url 'stats-custom' player.name 'param:game' 'param:tab' %}";
+    const apiUrls = {
+        "games": "https://api.hypixel.net/v2/resources/games",
+        "quests": "https://api.hypixel.net/v2/resources/quests",
+        "challenges": "https://api.hypixel.net/v2/resources/challenges",
+        "achievements": "https://api.hypixel.net/v2/resources/achievements",
+        "online": "{% url 'online' player.uuid %}",
+        "recent": "{% url 'recent' player.uuid %}",
+        "guild": "{% url 'guild' player.uuid %}"
+    }
+</script>
+
+<script type="text/javascript" src="{% static 'stats/main/main.js' %}"></script>
+<script type="text/javascript" src="{% static 'stats/stats/stats.js' %}"></script>
+<script type="text/javascript" src="{% static 'stats/stats/general/general.js' %}"></script>
+
+{% endwith %}
+
+{% endblock content %}

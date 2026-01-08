@@ -1,0 +1,8 @@
+{% load humanize %}
+{% with s=player.stats.bedwars %}
+    <h2>Beds</h2>
+    <br>
+    <h2>{% rank player.rank player.name True %} has broken {{ s.beds_broken_bedwars|intcomma }} beds!</h2>
+    <br>
+    {% include "stats/components/table.html" with table=s.table_beds %}
+{% endwith %}

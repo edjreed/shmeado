@@ -1,0 +1,10 @@
+<h2>Insane Kits</h2>
+<br>
+{% include "stats/components/kit_pills.html" with tab="insane" %}
+<br>
+<div id="insaneKitStats">
+    {% include "stats/components/table.html" with table=player.stats.skywars.table_kits_insane %}
+</div>
+<div id="insaneKitPrestige" class="hidden">
+    {% include "stats/components/kit_prestige.html" with kits=player.stats.skywars.table_kits_insane.rows %}
+</div>

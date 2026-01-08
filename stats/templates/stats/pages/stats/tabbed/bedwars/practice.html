@@ -1,0 +1,66 @@
+{% load humanize %}
+{% with s=player.stats.bedwars %}
+    <h2>Practice</h2>
+    <br>
+    <div class="stats">
+        <div class="practiceModeBlock">
+            <h2 class="darkAqua">Bridging</h2>
+            <p><b>Blocks Placed: </b>{{ s.blocks_placed_bridging|intcomma }}</p>
+            <p class="darkGreen"><b>Successful: </b>{{ s.successful_attempts_bridging|intcomma }}</p>
+            <p class="red"><b>Failed: </b>{{ s.failed_attempts_bridging|intcomma }}</p>
+            <p><b>Success Rate: </b>{{ s.success_rate_bridging }}</p>
+        </div>
+        <div class="practiceModeBlock">
+            <h2>&nbsp</h2>
+            <h2 class="blue">Bridging Records</h2>
+            <p><b>30 Blocks: </b>{{ s.straight_30 }}</p>
+            <p><b>30 Incline: </b>{{ s.incline_30 }}</p>
+            <p><b>30 Stairs: </b>{{ s.stairs_30 }}</p>
+        </div>
+        <div class="practiceModeBlock">
+            <h2>&nbsp</h2>
+            <h2>&nbsp</h2>
+            <p><b>50 Blocks: </b>{{ s.straight_50 }}</p>
+            <p><b>50 Incline: </b>{{ s.incline_30 }}</p>
+            <p><b>50 Stairs: </b>{{ s.stairs_50 }}</p>
+        </div>
+        <div class="practiceModeBlock">
+            <h2>&nbsp</h2>
+            <h2>&nbsp</h2>
+            <p><b>100 Blocks: </b>{{ s.straight_100 }}</p>
+            <p><b>100 Incline: </b>{{ s.incline_100 }}</p>
+            <p><b>100 Stairs: </b>{{ s.stairs_100 }}</p>
+        </div>
+    </div>
+    <br>
+    <div class="stats">
+        <div class="practiceModeBlock">
+            <br>
+            <h2 class="makeDarkBlueDarkAqua">MLG</h2>
+            <p class="darkGreen"><b>Successful: </b>{{ s.successful_attempts_mlg }}</p>
+            <p class="red"><b>Failed: </b>{{ s.failed_attempts_mlg }}</p>
+            <p><b>Success Rate: </b>{{ s.success_rate_mlg }}</p>
+        </div>
+        <div class="practiceModeBlock">
+            <br>
+            <h2 class="blue">Pearl Clutching</h2>
+            <p class="darkGreen"><b>Successful: </b>{{ s.successful_attempts_pearl_clutching }}</p>
+            <p class="red"><b>Failed: </b>{{ s.failed_attempts_pearl_clutching }}</p>
+            <p><b>Success Rate: </b>{{ s.success_rate_pearl_clutching }}</p>
+        </div>
+        <div class="practiceModeBlock">
+            <br>
+            <h2 class="gold">Bow</h2>
+            <p class="darkGreen"><b>Arrows Hit: </b>{{ s.successful_attempts_bow }}</p>
+            <p class="red"><b>Arrows Shot: </b>{{ s.failed_attempts_bow }}</p>
+            <p><b>Arrows Hit/Miss: </b>{{ s.success_rate_bow }}</p>
+        </div>
+        <div class="practiceModeBlock">
+            <br>
+            <h2 class="red">Fireball/TNT Jumping</h2>
+            <p class="darkGreen"><b>Successful: </b>{{ s.successful_attempts_fireball_jumping }}</p>
+            <p class="red"><b>Failed: </b>{{ s.failed_attempts_fireball_jumping }}</p>
+            <p><b>Success Rate: </b>{{ s.success_rate_fireball_jumping }}</p>
+        </div>
+    </div>
+{% endwith %}

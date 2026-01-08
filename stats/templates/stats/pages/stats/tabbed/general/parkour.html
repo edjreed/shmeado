@@ -1,0 +1,63 @@
+{% with t=player.stats.general.parkour_times c=player.stats.general.parkour_checkpoints %}
+    <div id="parkourContainer" class="wrappedFlex">
+        <div class="evenFlex">
+            <h2>Parkour</h2>
+            <br>
+            <p><b>Modes Completed:</b> {{ player.stats.general.parkour_times|length }}</p>
+            {% if t|length > 0 %}
+                <br>
+                <div class="placeHolderContainer5">
+                    {% for game in t %} {% with gameLower=game|lower %}
+                        <div class="placeHolder wrappedFlex pointer noSelect hoverOpacity darkAqua darkAquaBorder" onclick="changeParkourGame('{{ game }}')">
+                            {% with gameFormatted=constants.main.gameInformation|get_item:gameLower %}
+                                <span>
+                                    {% if gameFormatted != None %}
+                                        {{ gameFormatted }}
+                                    {% else %}
+                                        {{ game }}
+                                    {% endif %}
+                                </span>
+                            {% endwith %}
+                        </div>    
+                    {% endwith %} {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="generalModeSelectionContainer doubleFlex">
+            {% for game, best in t.items %} {% with gameLower=game|lower i=c|get_item:game %}
+                <div id="{{ game }}CheckpointContainer" {% if not forloop.first %}class="hidden"{% endif %}>
+                    <h2>{{ constants.main.gameInformation|get_item:gameLower }}</h2>
+                    <br>
+                    <p><b>Fastest Time: <span class="darkGreen">{{ best.0.timeTook|format_duration_ms }}</span></b></p>
+                    <p>(achieved {{ best.0.timeStart|format_timestamp }})</p>
+                    <br>
+                    <p class="parkourCheckpointsTitle"><b>Checkpoints</b></p>
+                    <div class="placeHolderContainer4">
+                        {% with cs=c|get_item:game %} 
+                            {% for number, duration in cs.items %}
+                                <div class="placeHolder wrappedFlex darkGreen darkGreenBorder">
+                                    <span class="evenFlex">{{ number }} to {{ number|add:"1" }}</span>
+                                    <span class="evenFlex right">{{ duration|format_duration_ms }}</span>
+                                </div>   
+                            {% endfor %}
+                            {% with amount=cs.values|length %}
+                                {% if amount == 0 %}
+                                    <div class="placeHolder grayBorder center">
+                                        <span class="gray">There are no recorded checkpoint times for this run</span>
+                                    </div>
+                                    {% for i in 3|loop_counter %}
+                                        <div class="placeHolder grayBorder"><span>&nbsp</span></div>
+                                    {% endfor %}
+                                {% elif amount < 4 %}
+                                    {% for i in 4|subtract:amount|loop_counter %}
+                                        <div class="placeHolder grayBorder"><span>&nbsp</span></div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                        {% endwith %}
+                    </div>
+                </div>
+            {% endwith %} {% endfor %}
+        </div>
+    </div>
+{% endwith %}

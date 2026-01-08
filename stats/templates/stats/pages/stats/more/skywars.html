@@ -1,0 +1,39 @@
+{% load humanize %}
+{% with s=player.stats.skywars %}
+    <div class="block">
+        <p><b>Kill/Win Ratio:</b> {{ s.kill_win|floatformat:3|intcomma }}</p>
+        <p><b>Kill/Game Ratio:</b> {{ s.kill_game|floatformat:3|intcomma }}</p>
+        <br>
+        <p><b>Assists:</b> {{ s.assists|intcomma }}</p>
+        <p><b>Arrows Hit:</b> {{ s.arrows_hit|intcomma }}</p>
+        <p><b>Arrows Shot:</b> {{ s.arrows_shot|intcomma }}</p>
+        <p><b>Arrows Hit/Miss:</b> {{ s.arrow_hit_miss|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+        <p><b>Tokens:</b> {{ s.cosmetic_tokens|intcomma }}</p>
+        <br>
+        <p><b>Mob Kills:</b> {{ s.mob_kills|intcomma }}</p>
+        <p><b>Bow Kills:</b> {{ s.bow_kills|intcomma }}</p>
+        <p><b>Void Kills:</b> {{ s.void_kills|intcomma }}</p>
+        <p><b>Melee Kills:</b> {{ s.melee_kills|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Blocks Broken:</b> {{ s.blocks_broken|intcomma }}</p>
+        <p><b>Blocks Placed:</b> {{ s.blocks_placed|intcomma }}</p>
+        <br>
+        <p><b>Items Enchanted:</b> {{ s.items_enchanted|intcomma }}</p>
+        <p><b>Chests Opened:</b> {{ s.chests_opened|intcomma }}</p>
+        <br>
+        <p><b>Survived Players:</b> {{ s.survived_players|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Eggs Thrown:</b> {{ s.egg_thrown|intcomma }}</p>
+        <p><b>Pearls Thrown:</b> {{ s.enderpearls_thrown|intcomma }}</p>
+        <br>
+        <p><b>Paid Souls:</b> {{ s.paid_souls|intcomma }}</p>
+        <p><b>Current Souls:</b> {{ s.souls|intcomma }}</p>
+        <p><b>Total Souls:</b> {{ s.souls_gathered|intcomma }}</p>
+        <p><b>Soul Well Uses:</b> {{ s.soul_well|intcomma }}</p>
+    </div>
+{% endwith %}

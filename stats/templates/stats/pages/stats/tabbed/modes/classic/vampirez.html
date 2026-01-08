@@ -1,0 +1,28 @@
+{% load humanize %}
+{% with s=player.stats.modes.classic.vampirez %}
+
+    <h2>VampireZ</h2>
+
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <br>
+            <p><b>Zombie Kills:</b> {{ s.zombie_kills|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Human Wins:</b> {{ s.human_wins|intcomma }}</p>
+            <p><b>Vampire Kills:</b> {{ s.vampire_kills|intcomma }}</p>
+            <p><b>Human Deaths:</b> {{ s.human_deaths|intcomma }}</p>
+            <p><b>Human K/D Ratio:</b> {{ s.human_kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Vampire Wins:</b> {{ s.vampire_wins|intcomma }}</p>
+            <p><b>Human Kills:</b> {{ s.human_kills|intcomma }}</p>
+            <p><b>Vampire Deaths:</b> {{ s.vampire_deaths|intcomma }}</p>
+            <p><b>Vampire K/D Ratio:</b> {{ s.vampire_kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block"></div>
+    </div>
+
+{% endwith %}

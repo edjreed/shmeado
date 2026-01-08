@@ -1,0 +1,36 @@
+{% load tags_main %}
+{% load humanize %}
+{% load static %}
+
+<!--
+
+{
+    "text": "Level 100 to 200"  # Optional text displayed at front of bar
+    "complete": 1  # Boolean to denote whether all levels are complete
+    "current": {
+        "color": "gold",  # darkAqua if not given
+        "progress": 100  # Current progress towards next 
+    },
+    "next": {
+        "color": "red",  # blue if not given
+        "needed": 200  # Amount needed for next
+    }
+}
+
+-->
+
+{% with percent=i.next.needed|percent:i.current.progress %}
+    <div class="bar {% if i.current.color %}{{ i.current.color }}{% endif %}Background">
+        <div class="barCurrent {% if i.next.color %}{{ i.next.color }}{% endif %}Background" style="width: {{ percent }}%">
+            <p class="barText {% if i.next.color == 'white' or i.current.color == 'white' %}black{% else %}white{% endif %}">
+                {% if i.text %}
+                    {{ i.text }}<span class="barProgressNumbers"> • </span>
+                {% endif %}
+                <span class="{% if not mobileNumbers %}barProgressNumbers{% endif %}">
+                    {{ i.current.progress|intcomma }}/{{ i.next.needed|intcomma }} 
+                </span>
+                ({% if i.complete %}100{% else %}{{ percent }}{% endif %}%)
+            </p>
+        </div>
+    </div>
+{% endwith %}

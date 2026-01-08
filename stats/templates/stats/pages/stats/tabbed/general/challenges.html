@@ -1,0 +1,36 @@
+{% load humanize %}
+<!-- This tab is dynamically populated using JS and Hypixel resources -->
+
+<div id="challengesError" class="hidden">
+    {% include "stats/components/error.html" with tab="challenges" %}
+</div>
+
+<div id="challengesContainer" class="wrappedFlex">
+    <div class="evenFlex">
+        <h2>Challenges</h2>
+        <br>
+        <p><b>Challenges Completed:</b> {{ player.stats.general.challenges.completed|intcomma }}</p>
+        <h3>Click on a mode below to view completions</h3>
+        <br>
+        <p><b>Most Challenges</b>:</b> <span id="challengesMainMode"></span></p>
+        <div class="generalSelectionContainer">
+            <div id="placeHolderContainerChallenges"></div>
+        </div>
+    </div>
+    <div class="generalModeSelectionContainer">
+        <div class="wrappedFlex">
+            <h2 id="challengesModeTitle"></h2>
+            <p class="generalModeCompletionsContainer">(<b id="challengesModeCompletions"></b> <span id="challengesModeSuffix"></span>)</p>
+        </div>
+        <div class="generalDescriptionContainer">
+            <h3>Click on a challenge below to view details</h3>
+            <br>
+            <p><b id="challengesChallengeTitle">Challenge Title</b></p>
+            <br>
+            <p><b class="darkAqua"><span id="challengesChallengeRewardXP">0,000</span> XP</b></p>
+        </div>
+        <div class="generalModeSelection">
+            <div id="placeHolderContainerChallengesGame"></div>
+        </div>
+    </div>
+</div>

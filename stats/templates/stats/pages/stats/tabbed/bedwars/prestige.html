@@ -1,0 +1,37 @@
+{% load humanize %}
+{% with s=player.stats.bedwars.prestige %}
+    <!-- Headline -->
+    <h2 class="white">Prestige Progress</h2>
+    <br>
+    <h2 class="white">
+        {% rank player.rank player.name %}
+        is {{ s.percent|floatformat:2 }}% towards
+        &nbsp<span class="bigPrestige">{{ s.next.formatted|safe }}</span>
+        <span class="levelCalcLinkContainer pointer hoverOpacity hidden"><a><i class="white bi bi-calculator-fill"></i></a></span>
+    </h2>
+    
+    <!-- Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p class="white"><b>Current: <span class="{{ s.previous.color }}">{{ s.previous.name }}</span></b> <span class="smallPrestige">{{ s.previous.formatted|safe }}</span></p>
+            <p class="white"><b>Next: <span class="{{ s.next.color }}">{{ s.next.name }}</span></b> <span class="smallPrestige">{{ s.next.formatted|safe }}</span></p>
+            <p class="white"><b>XP Needed: <span class="aqua">{{ s.remaining|intcomma }}</span></b></p>
+        </div>
+        <div class="block">
+            <p class="white"><b>Estimated Wins:</b> {{ s.wins_estimated|intcomma }}</p>
+            <p class="white"><b>Estimated Finals:</b> {{ s.final_kills_estimated|intcomma }}</p>
+            <p class="white"><b>Estimated Beds Broken:</b> {{ s.beds_broken_estimated|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p class="white"><b>≈ Wins at <span class="smallPrestige">{{ s.next.formatted|safe }}</span>:</b> {{ s.wins_at|intcomma }}</p>
+            <p class="white"><b>≈ Finals at <span class="smallPrestige">{{ s.next.formatted|safe }}</span>:</b> {{ s.final_kills_at|intcomma }}</p>
+            <p class="white"><b>≈ Beds Broken at <span class="smallPrestige">{{ s.next.formatted|safe }}</span>:</b> {{ s.beds_broken_at|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Progress Bar -->
+    {% include "stats/components/progress_bar.html" with i=s.progress mobileNumbers=True %}
+
+{% endwith %}

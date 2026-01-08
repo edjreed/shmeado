@@ -1,0 +1,40 @@
+{% load humanize %}
+{% with s=player.stats.modes.uhc %}
+
+    <h2>UHC Champions</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Score:</b> {{ s.score|intcomma }}</p>
+            <p><b>Title: {{ s.title|safe }}</b></p>
+            <p><b>Next Title: {{ s.next_title|safe }}</b></p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Kill/Win Ratio:</b> {{ s.kill_win|floatformat:2|intcomma }}</p>
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Heads Eaten:</b> {{ s.heads_eaten|intcomma }}</p>
+            <p><b>Ultimates Crafted:</b> {{ s.ultimates_crafted|intcomma }}</p>
+            <p><b>Extra Ultimates Crafted:</b> {{ s.extra_ultimates_crafted|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Progress Bar -->
+    {% include "stats/components/progress_bar.html" with i=s.title_progress %}
+
+    <br>
+
+    <!-- Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+{% endwith %}

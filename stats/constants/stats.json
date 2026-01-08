@@ -1,0 +1,5494 @@
+{
+  "main": {
+    "tabs": {
+      "General": [
+        "Quests",
+        "Challenges",
+        "Achievements",
+        "Parkour",
+        "Pets",
+        "History",
+        "Social",
+        "Recent",
+        "Guild"
+      ],
+      "BedWars": ["Table", "Prestige", "Beds", "Carries", "Dream", "Practice"],
+      "SkyWars": [
+        "Table",
+        "Prestige",
+        "GrimReaper",
+        "Playtime",
+        "Kits",
+        "Carries",
+        "Legacy"
+      ],
+      "Duels": ["Table", "Titles", "Bridge", "Carries"],
+      "Modes": [
+        "Arcade",
+        "BSG",
+        "BuildBattle",
+        "CVC",
+        "MegaWalls",
+        "MurderMystery",
+        "Pit",
+        "Smash",
+        "SpeedUHC",
+        "TNT",
+        "UHC",
+        "Warlords",
+        "Wool",
+        "Classic",
+        "Legacy"
+      ]
+    },
+
+    "subTabs": {
+      "General": {
+        "Guild": ["Info", "Experience", "Ranks"]
+      },
+      "BedWars": {},
+      "SkyWars": {
+        "GrimReaper": ["Descent", "AngelOfDeath", "Heads", "Brewery"],
+        "Kits": ["Normal", "Insane", "Mythic", "Ranked", "Mega"],
+        "Legacy": ["Ranked", "Mega", "Lab"]
+      },
+      "Duels": {
+        "Titles": ["Divisions", "Requirements", "Custom"]
+      },
+      "Modes": {
+        "Classic": [
+          "Arena",
+          "Paintball",
+          "Quakecraft",
+          "TKR",
+          "VampireZ",
+          "Walls"
+        ],
+        "Legacy": ["CrazyWalls", "SkyClash"]
+      }
+    },
+
+    "formattedTabs": {
+      "GrimReaper": "Grim Reaper",
+      "Descent": "Angel's Descent",
+      "AngelOfDeath": "Angel of Death",
+      "Brewery": "Angel's Brewery",
+
+      "BSG": "Blitz SG",
+      "BuildBattle": "Build Battle",
+      "CVC": "Cops & Crims",
+      "MegaWalls": "Mega Walls",
+      "MurderMystery": "Murder Mystery",
+      "Smash": "Smash Heroes",
+      "SpeedUHC": "Speed UHC",
+      "TNT": "TNT Games",
+      "UHC": "UHC Champions",
+      "Wool": "Wool Games",
+      "Classic": "Classic Games",
+      "Arena": "Arena Brawl",
+      "TKR": "Turbo Kart Racers",
+      "CrazyWalls": "Crazy Walls"
+    },
+
+    "gameInformation": {
+      "arcade": "Arcade",
+      "arena": "Arena Brawl",
+      "battleground": "Warlords",
+      "bedwars": "BedWars",
+      "buildbattle": "Build Battle",
+      "duels": "Duels",
+      "gingerbread": "Turbo Kart Racers",
+      "hungergames": "Blitz SG",
+      "mcgo": "Cops and Crims",
+      "murdermystery": "Murder Mystery",
+      "paintball": "Paintball",
+      "prototype": "Prototype",
+      "quake": "Quakecraft",
+      "skyclash": "SkyClash",
+      "skywars": "SkyWars",
+      "supersmash": "Smash Heroes",
+      "tntgames": "TNT Games",
+      "truecombat": "Crazy Walls",
+      "uhc": "UHC",
+      "vampirez": "VampireZ",
+      "walls": "Walls",
+      "walls3": "Mega Walls",
+      "woolgames": "Wool Games",
+
+      "christmas2017": "Christmas",
+      "easter": "Easter",
+      "general": "General",
+      "halloween2017": "Halloween",
+      "summer": "Summer",
+      "cvc": "Cops and Crims",
+      "copsandcrims": "Cops and Crims",
+      "blitz": "Blitz SG",
+      "tkr": "Turbo Kart Racers",
+      "housing": "Housing",
+      "pit": "Pit",
+      "skyblock": "SkyBlock",
+      "speeduhc": "Speed UHC",
+      "smash": "Smash Heroes",
+      "tnt": "TNT Games",
+      "crazywalls": "Crazy Walls",
+      "megawalls": "Mega Walls",
+      "warlords": "Warlords",
+
+      "blitzlobby": "Blitz SG",
+      "truepvpparkour": "Crazy Walls",
+      "mainlobby2017": "Main Lobby (2017)",
+      "newmainlobby": "Main Lobby (newer)",
+      "skywarsaug2017": "SkyWars (new)",
+      "arcadegames": "Arcade",
+      "main": "Main Lobby (original)",
+      "mainlobby2022": "Main Lobby (2022)",
+      "christmas": "Christmas",
+      "thewallslobby": "Walls",
+      "quakecraft": "Quakecraft",
+      "copsncrims": "Cops and Crims",
+      "skywarsstandard2022": "SkyWars (2022)",
+      "legacy": "Legacy",
+      "skywarschristmas2017": "SkyWars (Xmas 2017)",
+      "turbo": "Turbo Kart Racers",
+      "tntlobby2024": "TNT Games (2024)",
+      "mainlobby": "Main Lobby (new)",
+      "overhaul": "Overhaul"
+    },
+
+    "colorSections": {
+      "§0": "black",
+      "§1": "darkBlue",
+      "§2": "darkGreen",
+      "§3": "darkAqua",
+      "§4": "darkRed",
+      "§5": "darkPurple",
+      "§6": "gold",
+      "§7": "gray",
+      "§8": "darkGray",
+      "§9": "blue",
+      "§a": "green",
+      "§b": "aqua",
+      "§c": "red",
+      "§d": "lightPurple",
+      "§e": "yellow",
+      "§f": "white"
+    }
+  },
+
+  "general": {
+    "questRewards": {
+      "MultipliedExperienceReward": {
+        "name": "Network XP",
+        "color": "darkAqua"
+      },
+      "MultipliedCoinReward": {
+        "name": "Coins",
+        "color": "gold"
+      },
+      "MegawallsMythicFavorReward": {
+        "name": "Mega Walls Mythic Favors",
+        "color": "gold"
+      },
+      "ArenaMagicKeyReward": {
+        "name": "Magical Keys",
+        "color": "makeDarkAquaAqua"
+      },
+      "CoinReward": {
+        "name": "Coins",
+        "color": "gold"
+      },
+      "WarlordsBrokenWeaponReward": {
+        "name": "Broken Weapons",
+        "color": "makeDarkAquaAqua"
+      },
+      "WarlordsMagicDustReward": {
+        "name": "Magic Dust",
+        "color": "makeDarkAquaAqua"
+      },
+      "WarlordsVoidShardReward": {
+        "name": "Void Shards",
+        "color": "lightPurple"
+      },
+      "WarlordsLegendaryBrokenWeaponReward": {
+        "name": "Legendary Broken Weapons",
+        "color": "gold"
+      },
+      "SkyWarsSoulReward": {
+        "name": "Souls",
+        "color": "makeDarkAquaAqua"
+      },
+      "SkyWarsTokenReward": {
+        "name": "Tokens",
+        "color": "darkGreen"
+      },
+      "SkyWarsOpalReward": {
+        "name": "Opals",
+        "color": "darkBlue"
+      },
+      "CrazyWallsSkullReward": {
+        "name": "Skulls",
+        "color": "makeDarkGrayLightGray"
+      },
+      "SkyClashCardPackReward": {
+        "name": "Card Packs",
+        "color": "gold"
+      },
+      "BedwarsExpReward": {
+        "name": "BedWars XP",
+        "color": "makeDarkAquaAqua"
+      },
+      "SkyWarsXpReward": {
+        "name": "SkyWars XP",
+        "color": "lightPurple"
+      },
+      "SkyWarsBonusCoinsReward": {
+        "name": "Coins",
+        "color": "gold"
+      },
+      "PitGold": {
+        "name": "Gold",
+        "color": "gold"
+      },
+      "WoolWarsWoolReward": {
+        "name": "Wool",
+        "color": "gold"
+      },
+      "WoolGamesExpReward": {
+        "name": "Wool Games XP",
+        "color": "makeDarkAquaAqua"
+      },
+      "FestivalExperienceReward": {
+        "name": "Event XP",
+        "color": "darkPurple"
+      },
+      "PackageReward": {
+        "name": "Cosmetic",
+        "color": "gold"
+      }
+    },
+
+    "pets": {
+      "SILVERFISH": { "rarity": "Common", "name": "Silverfish" },
+
+      "CAT_BLACK": { "rarity": "Common", "name": "Black Cat" },
+      "CAT_RED": { "rarity": "Common", "name": "Red Cat" },
+      "CAT_SIAMESE": { "rarity": "Common", "name": "Siamese Cat" },
+      "CAT_BLACK_BABY": { "rarity": "Rare", "name": "Black Cat (Baby)" },
+      "CAT_RED_BABY": { "rarity": "Rare", "name": "Red Cat (Baby)" },
+      "CAT_SIAMESE_BABY": { "rarity": "Rare", "name": "Siamese Cat (Baby)" },
+      "WILD_OCELOT": { "rarity": "Special", "name": "Wild Ocelot" },
+      "WILD_OCELOT_BABY": { "rarity": "Special", "name": "Wild Ocelot (Baby)" },
+
+      "CHICKEN": { "rarity": "Common", "name": "Chicken" },
+      "CHICKEN_BABY": { "rarity": "Rare", "name": "Chicken (Baby)" },
+
+      "WOLF": { "rarity": "Common", "name": "Wolf" },
+      "WOLF_BABY": { "rarity": "Rare", "name": "Wolf (Baby)" },
+
+      "BAT": { "rarity": "Epic", "name": "Bat" },
+
+      "BLACK_RABBIT": { "rarity": "Rare", "name": "Black Rabbit" },
+      "BLACK_WHITE_RABBIT": {
+        "rarity": "Epic",
+        "name": "Black & White Rabbit"
+      },
+      "BROWN_RABBIT": { "rarity": "Rare", "name": "Brown Rabbit" },
+      "GOLD_RABBIT": { "rarity": "Epic", "name": "Gold Rabbit" },
+      "SALT_PEPPER_RABBIT": {
+        "rarity": "Epic",
+        "name": "Salt & Pepper Rabbit"
+      },
+      "WHITE_RABBIT": { "rarity": "Rare", "name": "White Rabbit" },
+      "KILLER_RABBIT": { "rarity": "Epic", "name": "Killer Rabbit" },
+
+      "VILLAGER_BLACKSMITH": {
+        "rarity": "Rare",
+        "name": "Blacksmith Villager"
+      },
+      "VILLAGER_BLACKSMITH_BABY": {
+        "rarity": "Epic",
+        "name": "Blacksmith Villager (Baby)"
+      },
+      "VILLAGER_BUTCHER": { "rarity": "Rare", "name": "Butcher Villager" },
+      "VILLAGER_BUTCHER_BABY": {
+        "rarity": "Epic",
+        "name": "Butcher Villager (Baby)"
+      },
+      "VILLAGER_FARMER": { "rarity": "Rare", "name": "Farmer Villager" },
+      "VILLAGER_FARMER_BABY": {
+        "rarity": "Epic",
+        "name": "Farmer Villager (Baby)"
+      },
+      "VILLAGER_LIBRARIAN": { "rarity": "Rare", "name": "Librarian Villager" },
+      "VILLAGER_LIBRARIAN_BABY": {
+        "rarity": "Epic",
+        "name": "Librarian Villager (Baby)"
+      },
+      "VILLAGER_PRIEST": { "rarity": "Rare", "name": "Priest Villager" },
+      "VILLAGER_PRIEST_BABY": {
+        "rarity": "Epic",
+        "name": "Priest Villager (Baby)"
+      },
+      "ZOMBIE_VILLAGER": { "rarity": "Epic", "name": "Zombie Villager" },
+      "WITCH": { "rarity": "Epic", "name": "Witch" },
+
+      "ZOMBIE": { "rarity": "Common", "name": "Zombie" },
+      "ZOMBIE_BABY": { "rarity": "Rare", "name": "Zombie (Baby)" },
+      "FROZEN_ZOMBIE": { "rarity": "Epic", "name": "Frozen Zombie" },
+      "GROWING_ZOMBIE": { "rarity": "Epic", "name": "Growing Zombie" },
+      "BURNING_ZOMBIE": { "rarity": "Epic", "name": "Burning Zombie" },
+
+      "RED_HELPER": { "rarity": "Epic", "name": "Red Little Helper" },
+      "GREEN_HELPER": { "rarity": "Epic", "name": "Green Little Helper" },
+
+      "IRON_GOLEM": { "rarity": "Legendary", "name": "Golem" },
+
+      "ENDERMAN": { "rarity": "Legendary", "name": "Enderman" },
+
+      "BLAZE": { "rarity": "Tournament", "name": "Blaze" },
+
+      "SNOWMAN": { "rarity": "Legendary", "name": "Snowman" },
+
+      "HEROBRINE": { "rarity": "Legendary", "name": "Herobrine" },
+
+      "ENDERMITE": { "rarity": "Legendary", "name": "Endermite" },
+
+      "MINI_WITHER": { "rarity": "Legendary", "name": "Mini Wither" },
+
+      "CLONE": { "rarity": "Tournament", "name": "Clone" },
+
+      "MINECART": { "rarity": "Tournament", "name": "Minecart" },
+
+      "GRINCH": { "rarity": "Tournament", "name": "Grinch" },
+
+      "BEE": { "rarity": "Legendary", "name": "Bee" },
+
+      "SPIDER": { "rarity": "Epic", "name": "Spider" },
+      "CAVE_SPIDER": { "rarity": "Rare", "name": "Cave Spider" },
+      "BOUNCY_SPIDER": { "rarity": "Legendary", "name": "Bouncy Spider" },
+
+      "COW": { "rarity": "Common", "name": "Cow" },
+      "COW_BABY": { "rarity": "Rare", "name": "Cow (Baby)" },
+      "MOOSHROOM": { "rarity": "Epic", "name": "Mooshroom" },
+      "MOOSHROOM_BABY": { "rarity": "Legendary", "name": "Mooshroom (Baby)" },
+
+      "CREEPER": { "rarity": "Epic", "name": "Creeper" },
+      "CREEPER_POWERED": { "rarity": "Legendary", "name": "Powered Creeper" },
+
+      "HORSE_BLACK": { "rarity": "Epic", "name": "Black Horse" },
+      "HORSE_BROWN": { "rarity": "Common", "name": "Brown Horse" },
+      "HORSE_CHESTNUT": { "rarity": "Rare", "name": "Chestnut Horse" },
+      "HORSE_CREAMY": { "rarity": "Rare", "name": "Creamy Horse" },
+      "HORSE_DARK_BROWN": { "rarity": "Rare", "name": "Dark Brown Horse" },
+      "HORSE_GREY": { "rarity": "Rare", "name": "Gray Horse" },
+      "HORSE_WHITE": { "rarity": "Epic", "name": "White Horse" },
+      "BROWN_HORSE_BABY": { "rarity": "Rare", "name": "Brown Horse (Baby)" },
+      "HORSE_CHESTNUT_BABY": {
+        "rarity": "Epic",
+        "name": "Chestnut Horse (Baby)"
+      },
+      "HORSE_CREAMY_BABY": { "rarity": "Epic", "name": "Creamy Horse (Baby)" },
+      "HORSE_DARK_BROWN_BABY": {
+        "rarity": "Epic",
+        "name": "Dark Brown Horse (Baby)"
+      },
+      "HORSE_GRAY_BABY": { "rarity": "Epic", "name": "Gray Horse (Baby)" },
+      "HORSE_UNDEAD": { "rarity": "Epic", "name": "Undead Horse" },
+      "HORSE_SKELETON": { "rarity": "Legendary", "name": "Skeleton Horse" },
+      "MULE": { "rarity": "Rare", "name": "Mule" },
+      "DONKEY": { "rarity": "Rare", "name": "Donkey" },
+
+      "PIG": { "rarity": "Common", "name": "Pig" },
+      "PIG_BABY": { "rarity": "Rare", "name": "Pig (Baby)" },
+      "PIG_ZOMBIE": { "rarity": "Epic", "name": "Pig Zombie" },
+      "PIG_ZOMBIE_BABY": { "rarity": "Legendary", "name": "Pig Zombie (Baby)" },
+
+      "SHEEP_BLACK": { "rarity": "Epic", "name": "Black Sheep" },
+      "SHEEP_BLACK_BABY": {
+        "rarity": "Legendary",
+        "name": "Black Sheep (Baby)"
+      },
+      "SHEEP_BLUE": { "rarity": "Rare", "name": "Blue Sheep" },
+      "SHEEP_BLUE_BABY": { "rarity": "Epic", "name": "Blue Sheep (Baby)" },
+      "SHEEP_BROWN": { "rarity": "Common", "name": "Brown Sheep" },
+      "SHEEP_BROWN_BABY": { "rarity": "Rare", "name": "Brown Sheep (Baby)" },
+      "SHEEP_CYAN": { "rarity": "Rare", "name": "Cyan Sheep" },
+      "SHEEP_CYAN_BABY": { "rarity": "Epic", "name": "Cyan Sheep (Baby)" },
+      "SHEEP_GRAY": { "rarity": "Common", "name": "Gray Sheep" },
+      "SHEEP_GRAY_BABY": { "rarity": "Rare", "name": "Gray Sheep (Baby)" },
+      "SHEEP_GREEN": { "rarity": "Rare", "name": "Green Sheep" },
+      "SHEEP_GREEN_BABY": { "rarity": "Epic", "name": "Green Sheep (Baby)" },
+      "SHEEP_LIGHT_BLUE": { "rarity": "Rare", "name": "Light Blue Sheep" },
+      "SHEEP_LIGHT_BLUE_BABY": {
+        "rarity": "Epic",
+        "name": "Light Blue Sheep (Baby)"
+      },
+      "SHEEP_LIME": { "rarity": "Rare", "name": "Lime Sheep" },
+      "SHEEP_LIME_BABY": { "rarity": "Epic", "name": "Lime Sheep (Baby)" },
+      "SHEEP_MAGENTA": { "rarity": "Rare", "name": "Magenta Sheep" },
+      "SHEEP_MAGENTA_BABY": {
+        "rarity": "Epic",
+        "name": "Magenta Sheep (Baby)"
+      },
+      "SHEEP_ORANGE": { "rarity": "Rare", "name": "Orange Sheep" },
+      "SHEEP_ORANGE_BABY": { "rarity": "Epic", "name": "Orange Sheep (Baby)" },
+      "SHEEP_PINK": { "rarity": "Epic", "name": "Pink Sheep" },
+      "SHEEP_PINK_BABY": { "rarity": "Legendary", "name": "Pink Sheep (Baby)" },
+      "SHEEP_PURPLE": { "rarity": "Rare", "name": "Purple Sheep" },
+      "SHEEP_PURPLE_BABY": { "rarity": "Epic", "name": "Purple Sheep (Baby)" },
+      "SHEEP_RED": { "rarity": "Rare", "name": "Red Sheep" },
+      "SHEEP_RED_BABY": { "rarity": "Epic", "name": "Red Sheep (Baby)" },
+      "SHEEP_SILVER": { "rarity": "Common", "name": "Silver Sheep" },
+      "SHEEP_SILVER_BABY": { "rarity": "Rare", "name": "Silver Sheep (Baby)" },
+      "SHEEP_WHITE": { "rarity": "Common", "name": "White Sheep" },
+      "SHEEP_WHITE_BABY": { "rarity": "Rare", "name": "White Sheep (Baby)" },
+      "SHEEP_YELLOW": { "rarity": "Rare", "name": "Yellow Sheep" },
+      "SHEEP_YELLOW_BABY": { "rarity": "Epic", "name": "Yellow Sheep (Baby)" },
+      "SHEEP_RAINBOW": { "rarity": "Legendary", "name": "Rainbow Sheep" },
+      "BOUNCY_SHEEP": { "rarity": "Epic", "name": "Bouncy Sheep" },
+      "MERRY_SHEEP": { "rarity": "Epic", "name": "Merry Sheep" },
+
+      "SLIME_BIG": { "rarity": "Legendary", "name": "Slime (Big)" },
+      "SLIME_SMALL": { "rarity": "Epic", "name": "Slime (Small)" },
+      "SLIME_TINY": { "rarity": "Rare", "name": "Slime (Tiny)" },
+      "MAGMA_CUBE_BIG": { "rarity": "Legendary", "name": "Magma Cube (Big)" },
+      "MAGMA_CUBE_SMALL": { "rarity": "Epic", "name": "Magma Cube (Small)" },
+      "MAGMA_CUBE_TINY": { "rarity": "Epic", "name": "Magma Cube (Tiny)" },
+
+      "SKELETON": { "rarity": "Epic", "name": "Skeleton" },
+      "WITHER_SKELETON": { "rarity": "Tournament", "name": "Wither Skeleton" },
+      "FROZEN_SKELETON": { "rarity": "Epic", "name": "Frozen Skeleton" },
+      "SMOLDERING_SKELETON": {
+        "rarity": "Epic",
+        "name": "Smoldering Skeleton"
+      },
+
+      "SQUID": { "rarity": "Special", "name": "Squid" },
+      "FLYING_SQUID": { "rarity": "Legendary", "name": "Flying Squid" },
+
+      "GUARDIAN": { "rarity": "Rare", "name": "Guardian" },
+      "ELDER_GUARDIAN": { "rarity": "Legendary", "name": "Elder Guardian" },
+
+      "PENGUIN": { "rarity": "Special", "name": "Penguin", "companion": 1 },
+      "TURTLE": { "rarity": "Special", "name": "Turtle", "companion": 1 },
+      "GIFTERINO": {
+        "rarity": "Legendary",
+        "name": "Gifterino",
+        "companion": 1
+      },
+      "BLACK_PUG": {
+        "rarity": "Legendary",
+        "name": "Black Pug",
+        "companion": 1
+      },
+      "DUCK": { "rarity": "Special", "name": "Duck", "companion": 1 },
+      "FROG": { "rarity": "Special", "name": "Frog", "companion": 1 },
+      "SLOTH": { "rarity": "Special", "name": "Sloth", "companion": 1 },
+      "HP8": { "rarity": "Special", "name": "HP8", "companion": 1 },
+      "WHITE_PUG": { "rarity": "Special", "name": "White Pug", "companion": 1 },
+      "SHIBE": { "rarity": "Special", "name": "Shibe", "companion": 1 },
+      "CHIMP": { "rarity": "Special", "name": "Chimp", "companion": 1 },
+      "GORRILA": { "rarity": "Special", "name": "Gorilla", "companion": 1 },
+      "PANDA": { "rarity": "Special", "name": "Panda", "companion": 1 },
+      "ELEPHANT": { "rarity": "Special", "name": "Elephant", "companion": 1 },
+      "MAGIC_DOG": { "rarity": "Special", "name": "Magic Dog", "companion": 1 },
+      "TOTEM": { "rarity": "Legendary", "name": "Totem", "companion": 1 },
+      "HP9-B": { "rarity": "Special", "name": "HP9-B", "companion": 1 },
+      "LITTLE_YOU": {
+        "rarity": "Legendary",
+        "name": "Little You",
+        "companion": 1
+      },
+      "SPOOKY_GHOST": {
+        "rarity": "Legendary",
+        "name": "Spooky Ghost",
+        "companion": 1
+      },
+      "BUGGY": { "rarity": "Legendary", "name": "Buggy", "companion": 1 },
+      "JACK_O_LANTERN": {
+        "rarity": "Legendary",
+        "name": "Jack o' Lantern",
+        "companion": 1
+      },
+      "PRESENT": { "rarity": "Legendary", "name": "Present", "companion": 1 },
+      "FIREFLY": { "rarity": "Legendary", "name": "Firefly", "companion": 1 },
+      "CYCLOPS": { "rarity": "Legendary", "name": "Cyclops", "companion": 1 }
+    },
+
+    "petLevels": {
+      "1": 0,
+      "2": 200,
+      "3": 210,
+      "4": 230,
+      "5": 250,
+      "6": 280,
+      "7": 310,
+      "8": 350,
+      "9": 390,
+      "10": 450,
+      "11": 500,
+      "12": 570,
+      "13": 640,
+      "14": 710,
+      "15": 800,
+      "16": 880,
+      "17": 980,
+      "18": 1080,
+      "19": 1190,
+      "20": 1300,
+      "21": 1420,
+      "22": 1540,
+      "23": 1670,
+      "24": 1810,
+      "25": 1950,
+      "26": 2100,
+      "27": 2260,
+      "28": 2420,
+      "29": 2580,
+      "30": 2760,
+      "31": 2940,
+      "32": 3120,
+      "33": 3310,
+      "34": 3510,
+      "35": 3710,
+      "36": 3920,
+      "37": 4140,
+      "38": 4360,
+      "39": 4590,
+      "40": 4820,
+      "41": 5060,
+      "42": 5310,
+      "43": 5560,
+      "44": 5820,
+      "45": 6090,
+      "46": 6360,
+      "47": 6630,
+      "48": 6920,
+      "49": 7210,
+      "50": 7500,
+      "51": 7800,
+      "52": 8110,
+      "53": 8420,
+      "54": 8740,
+      "55": 9070,
+      "56": 9400,
+      "57": 9740,
+      "58": 10080,
+      "59": 10430,
+      "60": 10780,
+      "61": 11150,
+      "62": 11510,
+      "63": 11890,
+      "64": 12270,
+      "65": 12650,
+      "66": 13050,
+      "67": 13440,
+      "68": 13850,
+      "69": 14260,
+      "70": 14680,
+      "71": 15100,
+      "72": 15530,
+      "73": 15960,
+      "74": 16400,
+      "75": 16850,
+      "76": 17300,
+      "77": 17760,
+      "78": 18230,
+      "79": 18700,
+      "80": 19180,
+      "81": 19660,
+      "82": 20150,
+      "83": 20640,
+      "84": 21150,
+      "85": 21650,
+      "86": 22170,
+      "87": 22690,
+      "88": 23210,
+      "89": 23750,
+      "90": 24280,
+      "91": 24830,
+      "92": 25380,
+      "93": 25930,
+      "94": 26500,
+      "95": 27070,
+      "96": 27640,
+      "97": 28220,
+      "98": 28810,
+      "99": 29400,
+      "100": 30000,
+      "101": 999999999
+    },
+
+    "petColors": {
+      "Common": "green",
+      "Rare": "blue",
+      "Epic": "darkPurple",
+      "Legendary": "gold",
+      "Tournament": "gold",
+      "Special": "aqua"
+    },
+
+    "historyRanks": {
+      "VIP": "<span class='green'>[VIP]</span>",
+      "VIP_PLUS": "<span class='green'>[VIP</span><span class='gold'>+</span><span class='green'>]</span>",
+
+      "MVP": "<span class='aqua'>[MVP]</span>",
+      "MVP_PLUS": "<span class='aqua'>[MVP</span><span class='red'>+</span><span class='aqua'>]</span>"
+    },
+
+    "socials": {
+      "YOUTUBE": "YouTube",
+      "TWITTER": "Twitter",
+      "TWITCH": "Twitch",
+      "HYPIXEL": "Hypixel",
+      "DISCORD": "Discord",
+      "INSTAGRAM": "Instagram"
+    }
+  },
+
+  "bedwars": {
+    "prestiges": {
+      "0": { "name": "Default", "color": "gray" },
+
+      "100": { "name": "Iron", "color": "white" },
+      "200": { "name": "Gold", "color": "gold" },
+      "300": { "name": "Diamond", "color": "aqua" },
+      "400": { "name": "Emerald", "color": "darkGreen" },
+      "500": { "name": "Sapphire", "color": "darkAqua" },
+      "600": { "name": "Ruby", "color": "darkRed" },
+      "700": { "name": "Crystal", "color": "lightPurple" },
+      "800": { "name": "Opal", "color": "blue" },
+      "900": { "name": "Amethyst", "color": "darkPurple" },
+
+      "1000": {
+        "name": "Rainbow",
+        "color": "red",
+        "scheme": [
+          "red",
+          "gold",
+          "yellow",
+          "green",
+          "aqua",
+          "lightPurple",
+          "darkPurple"
+        ]
+      },
+      "1100": {
+        "name": "Iron Prime",
+        "color": "white",
+        "scheme": ["gray", "white", "white", "white", "white", "gray", "gray"]
+      },
+      "1200": {
+        "name": "Gold Prime",
+        "color": "gold",
+        "scheme": [
+          "gray",
+          "yellow",
+          "yellow",
+          "yellow",
+          "yellow",
+          "gold",
+          "gray"
+        ]
+      },
+      "1300": {
+        "name": "Diamond Prime",
+        "color": "aqua",
+        "scheme": ["gray", "aqua", "aqua", "aqua", "aqua", "darkAqua", "gray"]
+      },
+      "1400": {
+        "name": "Emerald Prime",
+        "color": "darkGreen",
+        "scheme": [
+          "gray",
+          "green",
+          "green",
+          "green",
+          "green",
+          "darkGreen",
+          "gray"
+        ]
+      },
+      "1500": {
+        "name": "Sapphire Prime",
+        "color": "darkAqua",
+        "scheme": [
+          "gray",
+          "darkAqua",
+          "darkAqua",
+          "darkAqua",
+          "darkAqua",
+          "blue",
+          "gray"
+        ]
+      },
+      "1600": {
+        "name": "Ruby Prime",
+        "color": "darkRed",
+        "scheme": ["gray", "red", "red", "red", "red", "darkRed", "gray"]
+      },
+      "1700": {
+        "name": "Crystal Prime",
+        "color": "lightPurple",
+        "scheme": [
+          "gray",
+          "lightPurple",
+          "lightPurple",
+          "lightPurple",
+          "lightPurple",
+          "darkPurple",
+          "gray"
+        ]
+      },
+      "1800": {
+        "name": "Opal Prime",
+        "color": "blue",
+        "scheme": ["gray", "blue", "blue", "blue", "blue", "darkBlue", "gray"]
+      },
+      "1900": {
+        "name": "Amethyst Prime",
+        "color": "darkPurple",
+        "scheme": [
+          "gray",
+          "darkPurple",
+          "darkPurple",
+          "darkPurple",
+          "darkPurple",
+          "darkGray",
+          "gray"
+        ]
+      },
+
+      "2000": {
+        "name": "Mirror",
+        "color": "white",
+        "scheme": [
+          "darkGray",
+          "gray",
+          "white",
+          "white",
+          "gray",
+          "gray",
+          "darkGray"
+        ]
+      },
+      "2100": {
+        "name": "Light",
+        "color": "gold",
+        "scheme": ["white", "white", "yellow", "yellow", "gold", "gold", "gold"]
+      },
+      "2200": {
+        "name": "Dawn",
+        "color": "darkAqua",
+        "scheme": [
+          "gold",
+          "gold",
+          "white",
+          "white",
+          "aqua",
+          "darkAqua",
+          "darkAqua"
+        ]
+      },
+      "2300": {
+        "name": "Dusk",
+        "color": "yellow",
+        "scheme": [
+          "darkPurple",
+          "darkPurple",
+          "lightPurple",
+          "lightPurple",
+          "gold",
+          "yellow",
+          "yellow"
+        ]
+      },
+      "2400": {
+        "name": "Air",
+        "color": "darkGray",
+        "scheme": ["aqua", "aqua", "white", "white", "gray", "gray", "darkGray"]
+      },
+      "2500": {
+        "name": "Wind",
+        "color": "darkGreen",
+        "scheme": [
+          "white",
+          "white",
+          "green",
+          "green",
+          "darkGreen",
+          "darkGreen",
+          "darkGreen"
+        ]
+      },
+      "2600": {
+        "name": "Nebula",
+        "color": "darkPurple",
+        "scheme": [
+          "darkRed",
+          "darkRed",
+          "red",
+          "red",
+          "lightPurple",
+          "lightPurple",
+          "darkPurple"
+        ]
+      },
+      "2700": {
+        "name": "Thunder",
+        "color": "darkGray",
+        "scheme": [
+          "yellow",
+          "yellow",
+          "white",
+          "white",
+          "darkGray",
+          "darkGray",
+          "darkGray"
+        ]
+      },
+      "2800": {
+        "name": "Earth",
+        "color": "darkGreen",
+        "scheme": [
+          "green",
+          "green",
+          "darkGreen",
+          "darkGreen",
+          "gold",
+          "gold",
+          "yellow"
+        ]
+      },
+      "2900": {
+        "name": "Water",
+        "color": "blue",
+        "scheme": [
+          "aqua",
+          "aqua",
+          "darkAqua",
+          "darkAqua",
+          "blue",
+          "blue",
+          "darkBlue"
+        ]
+      },
+
+      "3000": {
+        "name": "Fire",
+        "color": "darkRed",
+        "scheme": ["yellow", "yellow", "gold", "gold", "red", "red", "darkRed"]
+      },
+      "3100": {
+        "name": "Sunrise",
+        "color": "blue",
+        "scheme": [
+          "blue",
+          "blue",
+          "darkAqua",
+          "darkAqua",
+          "gold",
+          "gold",
+          "yellow"
+        ]
+      },
+      "3200": {
+        "name": "Eclipse",
+        "color": "darkRed",
+        "scheme": ["red", "darkRed", "gray", "gray", "darkRed", "red", "red"]
+      },
+      "3300": {
+        "name": "Gamma",
+        "color": "blue",
+        "scheme": [
+          "blue",
+          "blue",
+          "blue",
+          "lightPurple",
+          "red",
+          "red",
+          "darkRed"
+        ]
+      },
+      "3400": {
+        "name": "Majestic",
+        "color": "darkGreen",
+        "scheme": [
+          "darkGreen",
+          "green",
+          "lightPurple",
+          "lightPurple",
+          "darkPurple",
+          "darkPurple",
+          "darkGreen"
+        ]
+      },
+      "3500": {
+        "name": "Andesine",
+        "color": "red",
+        "scheme": [
+          "red",
+          "red",
+          "darkRed",
+          "darkRed",
+          "darkGreen",
+          "green",
+          "green"
+        ]
+      },
+      "3600": {
+        "name": "Marine",
+        "color": "blue",
+        "scheme": [
+          "green",
+          "green",
+          "green",
+          "aqua",
+          "blue",
+          "blue",
+          "darkBlue"
+        ]
+      },
+      "3700": {
+        "name": "Element",
+        "color": "red",
+        "scheme": [
+          "darkRed",
+          "darkRed",
+          "red",
+          "red",
+          "aqua",
+          "darkAqua",
+          "darkAqua"
+        ]
+      },
+      "3800": {
+        "name": "Galaxy",
+        "color": "darkBlue",
+        "scheme": [
+          "darkBlue",
+          "darkBlue",
+          "blue",
+          "darkPurple",
+          "darkPurple",
+          "lightPurple",
+          "darkBlue"
+        ]
+      },
+      "3900": {
+        "name": "Atomic",
+        "color": "darkRed",
+        "scheme": ["red", "red", "green", "green", "darkAqua", "blue", "blue"]
+      },
+
+      "4000": {
+        "name": "Sunset",
+        "color": "red",
+        "scheme": [
+          "darkPurple",
+          "darkPurple",
+          "red",
+          "red",
+          "gold",
+          "gold",
+          "yellow"
+        ]
+      },
+      "4100": {
+        "name": "Time",
+        "color": "gold",
+        "scheme": [
+          "yellow",
+          "yellow",
+          "gold",
+          "red",
+          "lightPurple",
+          "lightPurple",
+          "darkPurple"
+        ]
+      },
+      "4200": {
+        "name": "Winter",
+        "color": "blue",
+        "scheme": [
+          "darkBlue",
+          "blue",
+          "darkAqua",
+          "aqua",
+          "white",
+          "gray",
+          "gray"
+        ]
+      },
+      "4300": {
+        "name": "Obsidian",
+        "color": "darkPurple",
+        "scheme": [
+          "black",
+          "darkPurple",
+          "darkGray",
+          "darkGray",
+          "darkPurple",
+          "darkPurple",
+          "black"
+        ]
+      },
+      "4400": {
+        "name": "Spring",
+        "color": "green",
+        "scheme": [
+          "darkGreen",
+          "darkGreen",
+          "green",
+          "yellow",
+          "gold",
+          "darkPurple",
+          "lightPurple"
+        ]
+      },
+      "4500": {
+        "name": "Ice",
+        "color": "darkAqua",
+        "scheme": [
+          "white",
+          "white",
+          "aqua",
+          "aqua",
+          "darkAqua",
+          "darkAqua",
+          "darkAqua"
+        ]
+      },
+      "4600": {
+        "name": "Summer",
+        "color": "gold",
+        "scheme": [
+          "darkAqua",
+          "aqua",
+          "yellow",
+          "yellow",
+          "gold",
+          "lightPurple",
+          "darkPurple"
+        ]
+      },
+      "4700": {
+        "name": "Spinel",
+        "color": "darkRed",
+        "scheme": ["white", "darkRed", "red", "red", "blue", "darkBlue", "blue"]
+      },
+      "4800": {
+        "name": "Autumn",
+        "color": "darkPurple",
+        "scheme": [
+          "darkPurple",
+          "darkPurple",
+          "red",
+          "gold",
+          "yellow",
+          "aqua",
+          "darkAqua"
+        ]
+      },
+      "4900": {
+        "name": "Mystic",
+        "color": "darkGreen",
+        "scheme": [
+          "darkGreen",
+          "green",
+          "white",
+          "white",
+          "green",
+          "green",
+          "darkGreen"
+        ]
+      },
+
+      "5000": {
+        "name": "Eternal",
+        "color": "black",
+        "scheme": [
+          "darkRed",
+          "darkRed",
+          "darkPurple",
+          "blue",
+          "blue",
+          "darkBlue",
+          "black"
+        ]
+      }
+    },
+
+    "emblems": {
+      "0": "✫",
+      "1100": "✪",
+      "2100": "⚝",
+      "3100": "✥"
+    }
+  },
+
+  "skywars": {
+    "levelling": {
+      "totals": [
+        0, 10, 35, 85, 160, 260, 510, 1010, 1760, 2760, 4010, 5510, 7260, 9260,
+        11760, 14760, 18260, 22260, 26760
+      ],
+      "amounts": [
+        10, 25, 50, 75, 100, 250, 500, 750, 1000, 1250, 1500, 1750, 2000, 2500,
+        3000, 3500, 4000, 4500, 5000
+      ]
+    },
+
+    "prestiges": {
+      "0": {
+        "name": "Stone",
+        "currentColor": "gray",
+        "nextColor": "white",
+        "startXP": 0,
+        "endXP": 2759
+      },
+      "10": {
+        "name": "Iron",
+        "currentColor": "white",
+        "nextColor": "gold",
+        "startXP": 2760,
+        "endXP": 31759
+      },
+      "20": {
+        "name": "Gold",
+        "currentColor": "gold",
+        "nextColor": "aqua",
+        "startXP": 31760,
+        "endXP": 81759
+      },
+      "30": {
+        "name": "Diamond",
+        "currentColor": "aqua",
+        "nextColor": "red",
+        "startXP": 81760,
+        "endXP": 131759
+      },
+      "40": {
+        "name": "Ruby",
+        "currentColor": "red",
+        "nextColor": "lightPurple",
+        "startXP": 131760,
+        "endXP": 181759
+      },
+      "50": {
+        "name": "Crystal",
+        "currentColor": "lightPurple",
+        "nextColor": "darkPurple",
+        "startXP": 181760,
+        "endXP": 231759
+      },
+      "60": {
+        "name": "Amethyst",
+        "currentColor": "darkPurple",
+        "nextColor": "blue",
+        "startXP": 231760,
+        "endXP": 281759
+      },
+      "70": {
+        "name": "Opal",
+        "currentColor": "blue",
+        "nextColor": "yellow",
+        "startXP": 281760,
+        "endXP": 331759
+      },
+      "80": {
+        "name": "Topaz",
+        "currentColor": "yellow",
+        "nextColor": "green",
+        "startXP": 331760,
+        "endXP": 381759
+      },
+      "90": {
+        "name": "Jade",
+        "currentColor": "green",
+        "nextColor": "gold",
+        "startXP": 381760,
+        "endXP": 431759
+      },
+      "100": {
+        "name": "Mythic I",
+        "currentColor": "gold",
+        "nextColor": "darkRed",
+        "startXP": 431760,
+        "endXP": 481759
+      },
+
+      "110": {
+        "name": "Bloody",
+        "currentColor": "darkRed",
+        "nextColor": "darkBlue",
+        "startXP": 481760,
+        "endXP": 531759
+      },
+      "120": {
+        "name": "Cobalt",
+        "currentColor": "darkBlue",
+        "nextColor": "red",
+        "startXP": 531760,
+        "endXP": 581759
+      },
+      "130": {
+        "name": "Content",
+        "currentColor": "red",
+        "nextColor": "darkRed",
+        "startXP": 581760,
+        "endXP": 631759
+      },
+      "140": {
+        "name": "Crimson",
+        "currentColor": "darkRed",
+        "nextColor": "gold",
+        "startXP": 631760,
+        "endXP": 681759
+      },
+      "150": {
+        "name": "Firefly",
+        "currentColor": "gold",
+        "nextColor": "darkGreen",
+        "startXP": 681760,
+        "endXP": 731759
+      },
+      "160": {
+        "name": "Emerald",
+        "currentColor": "darkGreen",
+        "nextColor": "blue",
+        "startXP": 731760,
+        "endXP": 781759
+      },
+      "170": {
+        "name": "Abyss",
+        "currentColor": "blue",
+        "nextColor": "darkAqua",
+        "startXP": 781760,
+        "endXP": 831759
+      },
+      "180": {
+        "name": "Sapphire",
+        "currentColor": "darkAqua",
+        "nextColor": "darkRed",
+        "startXP": 831760,
+        "endXP": 881759
+      },
+      "190": {
+        "name": "Emergency",
+        "currentColor": "darkRed",
+        "nextColor": "gold",
+        "startXP": 881760,
+        "endXP": 931759
+      },
+      "200": {
+        "name": "Mythic II",
+        "currentColor": "gold",
+        "nextColor": "darkPurple",
+        "startXP": 931760,
+        "endXP": 981759
+      },
+
+      "210": {
+        "name": "Mulberry",
+        "currentColor": "darkPurple",
+        "nextColor": "darkGray",
+        "startXP": 981759,
+        "endXP": 1031759
+      },
+      "220": {
+        "name": "Slate",
+        "currentColor": "darkGray",
+        "nextColor": "purple",
+        "startXP": 1031760,
+        "endXP": 1081759
+      },
+      "230": {
+        "name": "Blood God",
+        "currentColor": "purple",
+        "nextColor": "black",
+        "startXP": 1081760,
+        "endXP": 1131759
+      },
+      "240": {
+        "name": "Midnight",
+        "currentColor": "black",
+        "nextColor": "red",
+        "startXP": 1131760,
+        "endXP": 1181759
+      },
+      "250": {
+        "name": "Sun",
+        "currentColor": "red",
+        "nextColor": "gold",
+        "startXP": 1181760,
+        "endXP": 1231759
+      },
+      "260": {
+        "name": "Bulb",
+        "currentColor": "gold",
+        "nextColor": "darkAqua",
+        "startXP": 1231760,
+        "endXP": 1281759
+      },
+      "270": {
+        "name": "Twilight",
+        "currentColor": "darkAqua",
+        "nextColor": "darkGreen",
+        "startXP": 1281760,
+        "endXP": 1331759
+      },
+      "280": {
+        "name": "Natural",
+        "currentColor": "darkGreen",
+        "nextColor": "darkAqua",
+        "startXP": 1331760,
+        "endXP": 1381759
+      },
+      "290": {
+        "name": "Icicle",
+        "currentColor": "darkAqua",
+        "nextColor": "gold",
+        "startXP": 1381760,
+        "endXP": 1431759
+      },
+      "300": {
+        "name": "Mythic III",
+        "currentColor": "gold",
+        "nextColor": "gray",
+        "startXP": 1431760,
+        "endXP": 1481759
+      },
+
+      "310": {
+        "name": "Graphite",
+        "currentColor": "gray",
+        "nextColor": "green",
+        "startXP": 1531760,
+        "endXP": 1531759
+      },
+      "320": {
+        "name": "Punk",
+        "currentColor": "green",
+        "nextColor": "red",
+        "startXP": 1531760,
+        "endXP": 1581759
+      },
+      "330": {
+        "name": "Meltdown",
+        "currentColor": "red",
+        "nextColor": "aqua",
+        "startXP": 1581760,
+        "endXP": 1631759
+      },
+      "340": {
+        "name": "Iridescent",
+        "currentColor": "aqua",
+        "nextColor": "gold",
+        "startXP": 1631760,
+        "endXP": 1681759
+      },
+      "350": {
+        "name": "Marigold",
+        "currentColor": "gold",
+        "nextColor": "aqua",
+        "startXP": 1681760,
+        "endXP": 1731759
+      },
+      "360": {
+        "name": "Beach",
+        "currentColor": "aqua",
+        "nextColor": "yellow",
+        "startXP": 1731760,
+        "endXP": 1781759
+      },
+      "370": {
+        "name": "Spark",
+        "currentColor": "yellow",
+        "nextColor": "red",
+        "startXP": 1781760,
+        "endXP": 1831759
+      },
+      "380": {
+        "name": "Target",
+        "currentColor": "red",
+        "nextColor": "green",
+        "startXP": 1831760,
+        "endXP": 1881759
+      },
+      "390": {
+        "name": "Limelight",
+        "currentColor": "green",
+        "nextColor": "gold",
+        "startXP": 1881760,
+        "endXP": 1931759
+      },
+      "400": {
+        "name": "Mythic IV",
+        "currentColor": "gold",
+        "nextColor": "darkAqua",
+        "startXP": 1931760,
+        "endXP": 1981759
+      },
+
+      "410": {
+        "name": "Cerulean",
+        "currentColor": "darkAqua",
+        "nextColor": "darkPurple",
+        "startXP": 1981760,
+        "endXP": 2031759
+      },
+      "420": {
+        "name": "Magical",
+        "currentColor": "darkPurple",
+        "nextColor": "gold",
+        "startXP": 2031760,
+        "endXP": 2081759
+      },
+      "430": {
+        "name": "Luminous",
+        "currentColor": "gold",
+        "nextColor": "darkGreen",
+        "startXP": 2081760,
+        "endXP": 2131759
+      },
+      "440": {
+        "name": "Synthesis",
+        "currentColor": "darkGreen",
+        "nextColor": "red",
+        "startXP": 2131760,
+        "endXP": 2181759
+      },
+      "450": {
+        "name": "Burn",
+        "currentColor": "red",
+        "nextColor": "blue",
+        "startXP": 2181760,
+        "endXP": 2231759
+      },
+      "460": {
+        "name": "Dramatic",
+        "currentColor": "blue",
+        "nextColor": "darkGray",
+        "startXP": 2231760,
+        "endXP": 2281759
+      },
+      "470": {
+        "name": "Radiant",
+        "currentColor": "darkGray",
+        "nextColor": "darkBlue",
+        "startXP": 2281760,
+        "endXP": 2331759
+      },
+      "480": {
+        "name": "Tidal",
+        "currentColor": "darkBlue",
+        "nextColor": "red",
+        "startXP": 2331760,
+        "endXP": 2381759
+      },
+      "490": {
+        "name": "Firework",
+        "currentColor": "red",
+        "nextColor": "gold",
+        "startXP": 2381760,
+        "endXP": 2431759
+      },
+      "500": {
+        "name": "Mythic V",
+        "currentColor": "gold",
+        "nextColor": "black",
+        "startXP": 2431760,
+        "endXP": 2481759
+      },
+
+      "1000": {
+        "name": "???",
+        "currentColor": "black",
+        "nextColor": "black",
+        "startXP": 2481760,
+        "endXP": 4981759
+      }
+    },
+
+    "emblems": {
+      "default": "⋆",
+      "carrots_for_eyes": "^_^",
+      "formerly_known": "@_@",
+      "reflex_angle_eyebrows": "δvδ",
+      "two_tired": "zz_zz",
+      "slime": "■·■",
+      "same_great_taste": "ಠ_ಠ",
+      "misaligned": "o...0",
+      "converge_on_tongue": ">u<",
+      "no_evil": "v-v",
+      "three_fourths_jam": "༼つ◕_◕༽つ",
+      "alpha": "α",
+      "omega": "Ω",
+      "rich": "$",
+      "podium": "π",
+      "fallen_crest": "☬",
+      "null": "∅",
+      "sigma": "Σ",
+      "delta": "δ",
+      "florin": "ƒ"
+    },
+
+    "schemes": {
+      "default": "gray",
+
+      "stone_prestige": "gray",
+      "iron_prestige": "white",
+      "gold_prestige": "gold",
+      "diamond_prestige": "aqua",
+      "ruby_prestige": "red",
+      "crystal_prestige": "lightPurple",
+      "amethyst_prestige": "darkPurple",
+      "opal_prestige": "blue",
+      "topaz_prestige": "yellow",
+      "jade_prestige": "green",
+      "cobalt_prestige": "darkBlue",
+      "crimson_prestige": "darkRed",
+      "emerald_prestige": "darkGreen",
+      "sapphire_prestige": "darkAqua",
+      "slate_prestige": "darkGray",
+      "midnight_prestige": "black",
+      "bloody_prestige": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["red", "red", "red"],
+        "emblem": "red"
+      },
+      "content_prestige": {
+        "brackets": ["red", "red"],
+        "level": ["white", "white", "white"],
+        "emblem": "white"
+      },
+      "firefly_prestige": {
+        "brackets": ["gold", "gold"],
+        "level": ["yellow", "yellow", "yellow"],
+        "emblem": "yellow"
+      },
+      "abyss_prestige": {
+        "brackets": ["darkBlue", "darkBlue"],
+        "level": ["blue", "blue", "blue"],
+        "emblem": "blue"
+      },
+      "emergency_prestige": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["yellow", "yellow", "yellow"],
+        "emblem": "yellow"
+      },
+
+      "mulberry_prestige": {
+        "brackets": ["darkPurple", "darkPurple"],
+        "level": ["lightPurple", "lightPurple", "lightPurple"],
+        "emblem": "lightPurple"
+      },
+      "blood_god_prestige": {
+        "brackets": ["lightPurple", "lightPurple"],
+        "level": ["aqua", "aqua", "aqua"],
+        "emblem": "aqua"
+      },
+      "twilight_prestige": {
+        "brackets": ["darkBlue", "darkBlue"],
+        "level": ["darkAqua", "darkAqua", "darkAqua"],
+        "emblem": "darkAqua"
+      },
+      "icicle_prestige": {
+        "brackets": ["blue", "blue"],
+        "level": ["aqua", "aqua", "aqua"],
+        "emblem": "aqua"
+      },
+      "graphite_prestige": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["gray", "gray", "gray"],
+        "emblem": "gray"
+      },
+      "punk_prestige": {
+        "brackets": ["lightPurple", "lightPurple"],
+        "level": ["green", "green", "green"],
+        "emblem": "green"
+      },
+      "meltdown_prestige": {
+        "brackets": ["yellow", "yellow"],
+        "level": ["red", "red", "red"],
+        "emblem": "red"
+      },
+      "target_prestige": {
+        "brackets": ["red", "red"],
+        "level": ["white", "red", "red"],
+        "emblem": "white"
+      },
+      "limelight_prestige": {
+        "brackets": ["darkGreen", "darkGreen"],
+        "level": ["green", "green", "green"],
+        "emblem": "green"
+      },
+      "cerulean_prestige": {
+        "brackets": ["darkAqua", "darkAqua"],
+        "level": ["aqua", "aqua", "aqua"],
+        "emblem": "aqua"
+      },
+      "ancient": {
+        "brackets": ["gray", "gray"],
+        "level": ["darkGray", "darkGray", "darkGray"],
+        "emblem": "darkGray"
+      },
+      "the_new_default": {
+        "brackets": ["gold", "gold"],
+        "level": ["gray", "gray", "gray"],
+        "emblem": "gold"
+      },
+      "the_new_new_default": {
+        "brackets": ["aqua", "aqua"],
+        "level": ["gray", "gray", "gray"],
+        "emblem": "aqua"
+      },
+      "launch": {
+        "brackets": ["gold", "darkGray"],
+        "level": ["gold", "gold", "gold"],
+        "emblem": "darkGray"
+      },
+      "jersey": {
+        "brackets": ["white", "white"],
+        "level": ["white", "white", "white"],
+        "emblem": "red"
+      },
+      "spotlight": {
+        "brackets": ["black", "black"],
+        "level": ["white", "white", "white"],
+        "emblem": "white"
+      },
+      "earth": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["darkRed", "darkRed", "darkRed"],
+        "emblem": "green"
+      },
+      "glint": {
+        "brackets": ["lightPurple", "lightPurple"],
+        "level": ["lightPurple", "lightPurple", "lightPurple"],
+        "emblem": "aqua"
+      },
+      "strength": {
+        "brackets": ["red", "red"],
+        "level": ["lightPurple", "lightPurple", "lightPurple"],
+        "emblem": "lightPurple"
+      },
+      "adrenaline": {
+        "brackets": ["red", "red"],
+        "level": ["green", "green", "green"],
+        "emblem": "green"
+      },
+      "pumpkin": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["gold", "gold", "gold"],
+        "emblem": "gold"
+      },
+
+      "seashell": {
+        "brackets": ["yellow", "yellow"],
+        "level": ["yellow", "yellow", "yellow"],
+        "emblem": "red"
+      },
+      "obsidian": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["darkGray", "darkGray", "darkGray"],
+        "emblem": "darkPurple"
+      },
+      "support": {
+        "brackets": ["white", "white"],
+        "level": ["red", "red", "red"],
+        "emblem": "red"
+      },
+      "mahogany": {
+        "brackets": ["yellow", "yellow"],
+        "level": ["gold", "gold", "gold"],
+        "emblem": "gold"
+      },
+      "spell": {
+        "brackets": ["lightPurple", "yellow"],
+        "level": ["lightPurple", "lightPurple", "yellow"],
+        "emblem": "yellow"
+      },
+      "pillar": {
+        "brackets": ["white", "white"],
+        "level": ["gold", "gold", "gold"],
+        "emblem": "gold"
+      },
+      "agile": {
+        "brackets": ["green", "green"],
+        "level": ["white", "white", "white"],
+        "emblem": "white"
+      },
+      "bone": {
+        "brackets": ["white", "white"],
+        "level": ["gray", "gray", "gray"],
+        "emblem": "white"
+      },
+      "slimy": {
+        "brackets": ["green", "green"],
+        "level": ["darkGreen", "darkGreen", "darkGreen"],
+        "emblem": "darkGreen"
+      },
+      "holiday": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["green", "green", "green"],
+        "emblem": "green"
+      },
+      "iconic": {
+        "brackets": ["black", "black"],
+        "level": ["black", "black", "black"],
+        "emblem": "white"
+      },
+      "level-conic": {
+        "brackets": ["black", "black"],
+        "level": ["white", "white", "white"],
+        "emblem": "black"
+      },
+      "safari": {
+        "brackets": ["darkGreen", "gold"],
+        "level": ["darkGreen", "darkGreen", "gold"],
+        "emblem": "gold"
+      },
+      "gummy_worm": {
+        "brackets": ["red", "aqua"],
+        "level": ["red", "red", "aqua"],
+        "emblem": "aqua"
+      },
+      "timetravel": {
+        "brackets": ["gray", "gray"],
+        "level": ["black", "black", "gray"],
+        "emblem": "gray"
+      },
+      "horned": {
+        "brackets": ["red", "red"],
+        "level": ["darkGray", "darkGray", "darkGray"],
+        "emblem": "darkGray"
+      },
+      "basic": {
+        "brackets": ["gray", "gray"],
+        "level": ["white", "white", "white"],
+        "emblem": "white"
+      },
+      "basic+": {
+        "brackets": ["gray", "gray"],
+        "level": ["gold", "gold", "gold"],
+        "emblem": "gold"
+      },
+      "basic++": {
+        "brackets": ["gray", "gray"],
+        "level": ["aqua", "aqua", "aqua"],
+        "emblem": "aqua"
+      },
+      "sun_prestige": {
+        "brackets": ["red", "red"],
+        "level": ["gold", "yellow", "yellow"],
+        "emblem": "gold"
+      },
+      "bulb_prestige": {
+        "brackets": ["black", "black"],
+        "level": ["yellow", "gold", "gold"],
+        "emblem": "yellow"
+      },
+
+      "natural_prestige": {
+        "brackets": ["green", "darkGreen"],
+        "level": ["darkGreen", "green", "yellow"],
+        "emblem": "green"
+      },
+      "iridescent_prestige": {
+        "brackets": ["aqua", "green"],
+        "level": ["green", "aqua", "lightPurple"],
+        "emblem": "green"
+      },
+      "marigold_prestige": {
+        "brackets": ["white", "gold"],
+        "level": ["white", "yellow", "yellow"],
+        "emblem": "gold"
+      },
+      "spark_prestige": {
+        "brackets": ["yellow", "darkGray"],
+        "level": ["yellow", "white", "white"],
+        "emblem": "darkGray"
+      },
+      "magical_prestige": {
+        "brackets": ["black", "black"],
+        "level": ["darkPurple", "darkGray", "darkGray"],
+        "emblem": "darkPurple"
+      },
+      "luminous_prestige": {
+        "brackets": ["gold", "darkAqua"],
+        "level": ["gold", "white", "white"],
+        "emblem": "aqua"
+      },
+      "synthesis_prestige": {
+        "brackets": ["green", "white"],
+        "level": ["darkGreen", "green", "yellow"],
+        "emblem": "white"
+      },
+      "dramatic_prestige": {
+        "brackets": ["blue", "darkRed"],
+        "level": ["aqua", "darkAqua", "lightPurple"],
+        "emblem": "darkPurple"
+      },
+      "radiant_prestige": {
+        "brackets": ["black", "darkGray"],
+        "level": ["darkGray", "gray", "white"],
+        "emblem": "gray"
+      },
+      "sandy": {
+        "brackets": ["gold", "yellow"],
+        "level": ["yellow", "white", "yellow"],
+        "emblem": "gold"
+      },
+      "brutus": {
+        "brackets": ["blue", "white"],
+        "level": ["blue", "darkGray", "darkGray"],
+        "emblem": "white"
+      },
+      "coinsmith": {
+        "brackets": ["yellow", "yellow"],
+        "level": ["darkGray", "darkGray", "darkGray"],
+        "emblem": "gold"
+      },
+      "soulsmith": {
+        "brackets": ["gray", "white"],
+        "level": ["aqua", "aqua", "white"],
+        "emblem": "white"
+      },
+      "grand_slam": {
+        "brackets": ["darkGreen", "darkGreen"],
+        "level": ["green", "green", "green"],
+        "emblem": "white"
+      },
+      "fleet": {
+        "brackets": ["black", "black"],
+        "level": ["red", "yellow", "green"],
+        "emblem": "green"
+      },
+      "vengeance": {
+        "brackets": ["black", "black"],
+        "level": ["darkGray", "darkGray", "darkGray"],
+        "emblem": "yellow"
+      },
+      "dry": {
+        "brackets": ["yellow", "yellow"],
+        "level": ["white", "white", "white"],
+        "emblem": "gold"
+      },
+      "prickly": {
+        "brackets": ["yellow", "yellow"],
+        "level": ["green", "green", "green"],
+        "emblem": "white"
+      },
+      "cast_iron": {
+        "brackets": ["gray", "darkAqua"],
+        "level": ["gray", "darkGray", "darkGray"],
+        "emblem": "darkAqua"
+      },
+      "explosive": {
+        "brackets": ["red", "gold"],
+        "level": ["red", "yellow", "yellow"],
+        "emblem": "gold"
+      },
+      "verdant": {
+        "brackets": ["darkGreen", "yellow"],
+        "level": ["green", "green", "yellow"],
+        "emblem": "gold"
+      },
+
+      "enchantment": {
+        "brackets": ["white", "white"],
+        "level": ["lightPurple", "darkPurple", "darkPurple"],
+        "emblem": "lightPurple"
+      },
+      "void": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["darkPurple", "darkPurple", "darkPurple"],
+        "emblem": "lightPurple"
+      },
+      "fragile": {
+        "brackets": ["black", "black"],
+        "level": ["darkAqua", "darkAqua", "darkAqua"],
+        "emblem": "green"
+      },
+      "mite": {
+        "brackets": ["darkPurple", "yellow"],
+        "level": ["lightPurple", "lightPurple", "gold"],
+        "emblem": "yellow"
+      },
+      "ender": {
+        "brackets": ["darkAqua", "darkAqua"],
+        "level": ["darkGreen", "darkGray", "darkGreen"],
+        "emblem": "green"
+      },
+      "shulker": {
+        "brackets": ["darkPurple", "darkPurple"],
+        "level": ["yellow", "yellow", "yellow"],
+        "emblem": "white"
+      },
+      "redstone": {
+        "brackets": ["black", "black"],
+        "level": ["red", "red", "red"],
+        "emblem": "darkRed"
+      },
+      "technical": {
+        "brackets": ["red", "darkGray"],
+        "level": ["red", "gray", "gray"],
+        "emblem": "darkGray"
+      },
+      "melon": {
+        "brackets": ["green", "green"],
+        "level": ["darkGreen", "green", "darkGreen"],
+        "emblem": "yellow"
+      },
+      "driftwood": {
+        "brackets": ["darkAqua", "darkRed"],
+        "level": ["darkAqua", "yellow", "yellow"],
+        "emblem": "darkRed"
+      },
+      "river": {
+        "brackets": ["darkGreen", "darkGreen"],
+        "level": ["blue", "blue", "blue"],
+        "emblem": "green"
+      },
+      "mangrove": {
+        "brackets": ["darkRed", "darkGreen"],
+        "level": ["darkRed", "red", "red"],
+        "emblem": "darkGreen"
+      },
+      "jeremiah": {
+        "brackets": ["darkAqua", "darkAqua"],
+        "level": ["gold", "gold", "gold"],
+        "emblem": "yellow"
+      },
+      "poppy": {
+        "brackets": ["red", "red"],
+        "level": ["darkRed", "black", "black"],
+        "emblem": "darkRed"
+      },
+      "creeper": {
+        "brackets": ["white", "darkGreen"],
+        "level": ["white", "green", "green"],
+        "emblem": "darkGreen"
+      },
+      "camo": {
+        "brackets": ["darkGray", "green"],
+        "level": ["darkGray", "darkGreen", "darkGreen"],
+        "emblem": "green"
+      },
+      "first_aid": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["white", "white", "white"],
+        "emblem": "red"
+      },
+      "penguin": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["blue", "blue", "blue"],
+        "emblem": "yellow"
+      },
+      "nether": {
+        "brackets": ["gray", "red"],
+        "level": ["gray", "darkAqua", "darkAqua"],
+        "emblem": "red"
+      },
+      "wilderness": {
+        "brackets": ["darkGreen", "gold"],
+        "level": ["darkGreen", "darkAqua", "darkAqua"],
+        "emblem": "gold"
+      },
+      "one_stone": {
+        "brackets": ["gray", "gray"],
+        "level": ["darkGreen", "darkGreen", "darkGray"],
+        "emblem": "darkGray"
+      },
+
+      "circus": {
+        "brackets": ["red", "darkGreen"],
+        "level": ["red", "gold", "gold"],
+        "emblem": "darkGreen"
+      },
+      "veracious": {
+        "brackets": ["darkPurple", "darkPurple"],
+        "level": ["white", "white", "white"],
+        "emblem": "gold"
+      },
+      "valiant": {
+        "brackets": ["red", "red"],
+        "level": ["white", "white", "white"],
+        "emblem": "green"
+      },
+      "venerable": {
+        "brackets": ["blue", "blue"],
+        "level": ["white", "white", "white"],
+        "emblem": "yellow"
+      },
+      "portal": {
+        "brackets": ["green", "red"],
+        "level": ["green", "lightPurple", "lightPurple"],
+        "emblem": "red"
+      },
+      "socratic": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["white", "white", "white"],
+        "emblem": "yellow"
+      },
+      "parallel_dimension": {
+        "brackets": ["blue", "lightPurple"],
+        "level": ["blue", "darkGray", "darkGray"],
+        "emblem": "lightPurple"
+      },
+      "tomb": {
+        "brackets": ["gold", "yellow"],
+        "level": ["blue", "gold", "blue"],
+        "emblem": "yellow"
+      },
+      "irigation": {
+        "brackets": ["aqua", "yellow"],
+        "level": ["aqua", "green", "gold"],
+        "emblem": "yellow"
+      },
+      "snout": {
+        "brackets": ["darkPurple", "darkPurple"],
+        "level": ["black", "lightPurple", "lightPurple"],
+        "emblem": "black"
+      },
+      "potato": {
+        "brackets": ["yellow", "darkGray"],
+        "level": ["lightPurple", "lightPurple", "red"],
+        "emblem": "red"
+      },
+      "royal": {
+        "brackets": ["blue", "red"],
+        "level": ["blue", "gold", "gold"],
+        "emblem": "red"
+      },
+      "bubblegum": {
+        "brackets": ["darkPurple", "lightPurple"],
+        "level": ["lightPurple", "lightPurple", "white"],
+        "emblem": "white"
+      },
+      "insane": {
+        "brackets": ["gray", "gray"],
+        "level": ["white", "white", "white"],
+        "emblem": "gold"
+      },
+      "smoke": {
+        "brackets": ["black", "white"],
+        "level": ["black", "gray", "gray"],
+        "emblem": "white"
+      },
+      "scarlet": {
+        "brackets": ["darkGray", "red"],
+        "level": ["darkGray", "darkRed", "darkRed"],
+        "emblem": "red"
+      },
+      "afterburn": {
+        "brackets": ["aqua", "gray"],
+        "level": ["aqua", "gold", "darkGray"],
+        "emblem": "darkGray"
+      },
+      "normal": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["gray", "gray", "gray"],
+        "emblem": "gold"
+      },
+      "salmon": {
+        "brackets": ["red", "darkGreen"],
+        "level": ["red", "darkAqua", "darkAqua"],
+        "emblem": "darkGreen"
+      },
+      "lucky": {
+        "brackets": ["black", "black"],
+        "level": ["darkGreen", "darkGreen", "darkGreen"],
+        "emblem": "gold"
+      },
+      "likeable": {
+        "brackets": ["darkRed", "white"],
+        "level": ["darkRed", "red", "red"],
+        "emblem": "white"
+      },
+
+      "lunar": {
+        "brackets": ["white", "darkGray"],
+        "level": ["white", "white", "gray"],
+        "emblem": "darkGray"
+      },
+      "hypixel": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["gold", "gold", "gold"],
+        "emblem": "yellow"
+      },
+      "sky": {
+        "brackets": ["yellow", "white"],
+        "level": ["yellow", "aqua", "aqua"],
+        "emblem": "white"
+      },
+      "frosty": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["white", "white", "white"],
+        "emblem": "gray"
+      },
+      "treasure": {
+        "brackets": ["gold", "yellow"],
+        "level": ["gold", "white", "white"],
+        "emblem": "yellow"
+      },
+      "gemstone": {
+        "brackets": ["darkRed", "darkRed"],
+        "level": ["red", "white", "white"],
+        "emblem": "red"
+      },
+      "dark_magic": {
+        "brackets": ["darkRed", "red"],
+        "level": ["darkRed", "darkPurple", "darkPurple"],
+        "emblem": "red"
+      },
+      "reflections": {
+        "brackets": ["darkBlue", "darkPurple"],
+        "level": ["black", "black", "lightPurple"],
+        "emblem": "lightPurple"
+      },
+      "brewery": {
+        "brackets": ["darkPurple", "darkPurple"],
+        "level": ["green", "green", "green"],
+        "emblem": "lightPurple"
+      },
+      "leo": {
+        "brackets": ["yellow", "darkRed"],
+        "level": ["yellow", "yellow", "gold"],
+        "emblem": "darkRed"
+      },
+      "zebra": {
+        "brackets": ["gray", "darkGray"],
+        "level": ["darkGray", "gray", "darkGray"],
+        "emblem": "white"
+      },
+      "emit": {
+        "brackets": ["darkPurple", "darkPurple"],
+        "level": ["lightPurple", "white", "white"],
+        "emblem": "lightPurple"
+      },
+      "smoldering": {
+        "brackets": ["black", "black"],
+        "level": ["darkRed", "darkRed", "darkRed"],
+        "emblem": "red"
+      },
+      "stormy": {
+        "brackets": ["yellow", "gray"],
+        "level": ["yellow", "white", "white"],
+        "emblem": "gray"
+      },
+      "borealis": {
+        "brackets": ["lightPurple", "green"],
+        "level": ["lightPurple", "aqua", "aqua"],
+        "emblem": "green"
+      },
+      "devil": {
+        "brackets": ["black", ""],
+        "level": ["darkGray", "darkGray", "darkRed"],
+        "emblem": "darkRed"
+      },
+      "demigod": {
+        "brackets": ["darkGray", "darkGray"],
+        "level": ["gold", "yellow", "gray"],
+        "emblem": "darkGray"
+      },
+      "laurel": {
+        "brackets": ["darkGreen", "white"],
+        "level": ["darkGreen", "gold", "gold"],
+        "emblem": "white"
+      },
+      "uplifting": {
+        "brackets": ["darkGray", "yellow"],
+        "level": ["darkGray", "gray", "gray"],
+        "emblem": "yellow"
+      },
+      "the_world_moves_on": {
+        "brackets": ["darkGray", "red"],
+        "level": ["darkGray", "gold", "gold"],
+        "emblem": "red"
+      },
+      "swine": {
+        "brackets": ["darkPurple", "white"],
+        "level": ["darkPurple", "lightPurple", "lightPurple"],
+        "emblem": "white"
+      },
+
+      "beagle": {
+        "brackets": ["white", "white"],
+        "level": ["gray", "gray", "gray"],
+        "emblem": "white"
+      },
+      "mythic_i_prestige": {
+        "brackets": ["red", "lightPurple"],
+        "level": ["gold", "yellow", "green"],
+        "emblem": "aqua"
+      },
+      "mythic_ii_prestige": {
+        "brackets": ["gold", "red"],
+        "level": ["yellow", "green", "aqua"],
+        "emblem": "lightPurple"
+      },
+      "mythic_iii_prestige": {
+        "brackets": ["yellow", "gold"],
+        "level": ["green", "aqua", "lightPurple"],
+        "emblem": "red"
+      },
+      "beach_prestige": {
+        "brackets": ["blue", "yellow"],
+        "level": ["darkAqua", "aqua", "white"],
+        "emblem": "yellow"
+      },
+      "mythic_iv_prestige": {
+        "brackets": ["green", "yellow"],
+        "level": ["aqua", "lightPurple", "red"],
+        "emblem": "gold"
+      },
+      "burn_prestige": {
+        "brackets": ["darkRed", "white"],
+        "level": ["darkRed", "red", "gold"],
+        "emblem": "yellow"
+      },
+      "tidal_prestige": {
+        "brackets": ["darkBlue", "white"],
+        "level": ["darkBlue", "blue", "darkAqua"],
+        "emblem": "aqua"
+      },
+      "firework_prestige": {
+        "brackets": ["blue", "darkRed"],
+        "level": ["darkAqua", "white", "white"],
+        "emblem": "red"
+      },
+      "mythic_v_prestige": {
+        "brackets": ["aqua", "green"],
+        "level": ["lightPurple", "red", "gold"],
+        "emblem": "yellow"
+      },
+      "the_prestige_prestige": {
+        "brackets": ["gray", "lightPurple"],
+        "level": ["white", "gold", "aqua"],
+        "emblem": "red"
+      },
+      "opalsmith": {
+        "brackets": ["blue", "darkPurple"],
+        "level": ["blue", "aqua", "darkAqua"],
+        "emblem": "lightPurple"
+      },
+      "scurvy": {
+        "brackets": ["blue", "darkGreen"],
+        "level": ["darkAqua", "aqua", "white"],
+        "emblem": "green"
+      },
+      "fools_mythic": {
+        "brackets": ["darkRed", "darkPurple"],
+        "level": ["red", "gold", "darkGreen"],
+        "emblem": "blue"
+      },
+      "eponymous": {
+        "brackets": ["darkAqua", "gold"],
+        "level": ["darkAqua", "darkGreen", "green"],
+        "emblem": "yellow"
+      },
+      "bandage": {
+        "brackets": ["black", "darkRed"],
+        "level": ["darkGray", "gray", "white"],
+        "emblem": "red"
+      },
+      "clown": {
+        "brackets": ["darkGreen", "darkRed"],
+        "level": ["green", "white", "white"],
+        "emblem": "red"
+      },
+      "tropical": {
+        "brackets": ["yellow", "darkBlue"],
+        "level": ["blue", "gold", "darkAqua"],
+        "emblem": "red"
+      },
+      "sugar_crash": {
+        "brackets": ["white", "white"],
+        "level": ["yellow", "red", "lightPurple"],
+        "emblem": "aqua"
+      },
+      "ultraviolence": {
+        "brackets": ["darkGreen", "darkPurple"],
+        "level": ["green", "white", "white"],
+        "emblem": "lightPurple"
+      },
+
+      "???_prestige": "black"
+    },
+
+    "descentSlots": 126,
+
+    "descentInfo": {
+      "avarice": { "type": "stat", "cost": 1, "tiers": 5, "req": 15 },
+      "projectiletrail_kings": {
+        "type": "package",
+        "cost": 1,
+        "tiers": 1,
+        "req": 15
+      },
+      "grand_slam": { "type": "stat", "cost": 1, "tiers": 3, "req": 12 },
+      "tenacity": { "type": "stat", "cost": 1, "tiers": 1, "req": 13 },
+      "shard_seeker": { "type": "stat", "cost": 1, "tiers": 5, "req": 15 },
+      "emblem_sigma_icon": {
+        "type": "package",
+        "cost": 2,
+        "tiers": 1,
+        "req": 15
+      },
+      "meticulous_miner": { "type": "stat", "cost": 1, "tiers": 5, "req": 15 },
+      "hide_and_seek": { "type": "stat", "cost": 2, "tiers": 3, "req": 17 },
+      "killeffect_vaporized": {
+        "type": "package",
+        "cost": 3,
+        "tiers": 1,
+        "req": 15
+      },
+      "midas_gift": { "type": "stat", "cost": 1, "tiers": 4, "req": 15 },
+      "angels_offering": { "type": "stat", "cost": 5, "tiers": 1, "req": 22 },
+      "killmessages_flex": {
+        "type": "package",
+        "cost": 4,
+        "tiers": 1,
+        "req": 15
+      },
+      "first_blood": { "type": "stat", "cost": 1, "tiers": 1, "req": 15 },
+      "fortune_teller": { "type": "stat", "cost": 2, "tiers": 1, "req": 15 },
+      "cage_piston": { "type": "package", "cost": 5, "tiers": 1, "req": 30 },
+      "fireproof": { "type": "stat", "cost": 3, "tiers": 5, "req": 15 },
+      "corrupted_coinage": { "type": "stat", "cost": 3, "tiers": 2, "req": 15 },
+      "victorydance_super_sheep": {
+        "type": "package",
+        "cost": 6,
+        "tiers": 1,
+        "req": 15
+      },
+      "luckier_charm": { "type": "stat", "cost": 2, "tiers": 3, "req": 15 },
+      "apothecary": { "type": "stat", "cost": 4, "tiers": 1, "req": 15 },
+      "killeffect_purple_tornado": {
+        "type": "package",
+        "cost": 8,
+        "tiers": 1,
+        "req": 45
+      },
+      "librarian": { "type": "stat", "cost": 10, "tiers": 1, "req": 46 },
+      "sorcerers_spell": { "type": "stat", "cost": 4, "tiers": 5, "req": 46 },
+      "cloak_falling_angel": {
+        "type": "vanity",
+        "cost": 7,
+        "tiers": 1,
+        "req": 15
+      },
+      "fruit_finder": { "type": "stat", "cost": 10, "tiers": 1, "req": 15 },
+      "ender_end_game": { "type": "stat", "cost": 5, "tiers": 1, "req": 15 },
+      "killmessages_rainbow": {
+        "type": "package",
+        "cost": 9,
+        "tiers": 1,
+        "req": 15
+      },
+      "smarty_pants": { "type": "stat", "cost": 2, "tiers": 1, "req": 15 },
+      "diamond_in_the_rough": {
+        "type": "stat",
+        "cost": 2,
+        "tiers": 5,
+        "req": 15
+      },
+      "cage_balancing_act": {
+        "type": "package",
+        "cost": 10,
+        "tiers": 1,
+        "req": 15
+      },
+      "telekinesis": { "type": "stat", "cost": 5, "tiers": 1, "req": 15 },
+      "kit_basic_solo_archeologist": {
+        "type": "package",
+        "cost": 13,
+        "tiers": 1,
+        "req": 15
+      },
+
+      "distillery_discount": {
+        "type": "stat",
+        "cost": 3,
+        "tiers": 3,
+        "req": 15
+      },
+      "chilled_quiver": { "type": "stat", "cost": 2, "tiers": 5, "req": 15 },
+      "opalsmith": { "type": "stat", "cost": 7, "tiers": 1, "req": 15 },
+      "double_edged_sword": {
+        "type": "stat",
+        "cost": 9,
+        "tiers": 1,
+        "req": 15
+      },
+      "quest_masters_friend": {
+        "type": "stat",
+        "cost": 3,
+        "tiers": 4,
+        "req": 15
+      },
+      "dragons_pledge": { "type": "stat", "cost": 10, "tiers": 1, "req": 15 },
+      "balloon_dual_dragon": {
+        "type": "package",
+        "cost": 12,
+        "tiers": 1,
+        "req": 15
+      },
+      "deathcry_eponymous_dragon": {
+        "type": "package",
+        "cost": 12,
+        "tiers": 1,
+        "req": 15
+      },
+      "kill_xp_boost": { "type": "stat", "cost": 10, "tiers": 1, "req": 15 },
+      "perk_slot": { "type": "stat", "cost": 20, "tiers": 1, "req": 15 },
+      "projectiletrail_descent_dragon": {
+        "type": "package",
+        "cost": 12,
+        "tiers": 1,
+        "req": 15
+      },
+      "emblem_delta_icon": {
+        "type": "package",
+        "cost": 14,
+        "tiers": 1,
+        "req": 15
+      },
+      "victorydance_double_dragons_descent": {
+        "type": "package",
+        "cost": 16,
+        "tiers": 1,
+        "req": 15
+      },
+      "cloak_angels_prestige": {
+        "type": "vanity",
+        "cost": 18,
+        "tiers": 1,
+        "req": 15
+      },
+      "scheme_demigod": {
+        "type": "package",
+        "cost": 20,
+        "tiers": 1,
+        "req": 15
+      },
+      "fallen_angel_kit": {
+        "type": "package",
+        "cost": 20,
+        "tiers": 1,
+        "req": 15
+      }
+    },
+
+    "descentFormatting": {
+      "avarice": {
+        "name": "Avarice",
+        "location": 4,
+        "description": "<span class='gray'>+</span><span class='gold'>5% base coins</span><span class='gray'> per tier.</span>"
+      },
+      "tenacity": {
+        "name": "Tenacity",
+        "location": 9,
+        "description": "<span class='gray'>Heal <span class='red'>1❤</span> on kill.</span>"
+      },
+      "grand_slam": {
+        "name": "Grand Slam",
+        "location": 10,
+        "description": "<span class='gray'>+</span><span class='aqua'>2 souls</span><span class='gray'> per tier on win.</span>"
+      },
+      "projectiletrail_kings": {
+        "name": "King's Projectile Trail",
+        "location": 11,
+        "description": "<span class='gray'>Show off like a </span><span class='gold'>True King.</span>"
+      },
+      "shard_seeker": {
+        "name": "Soul Seeker",
+        "location": 12,
+        "description": "<span class='gray'>+</span><span class='aqua'>2% souls</span><span class='gray'> per tier at end of game.</span>"
+      },
+      "emblem_sigma_icon": {
+        "name": "Sigma Emblem",
+        "location": 13,
+        "description": "<span class='aqua'>Σ</span>"
+      },
+      "meticulous_miner": {
+        "name": "Meticulous Miner",
+        "location": 19,
+        "description": "<span class='gray'>+</span><span class='green'>2%</span><span class='gray'> chance per tier for double drops.</span>"
+      },
+      "killmessages_flex": {
+        "name": "Flex Kill Messages",
+        "location": 23,
+        "description": "<span class='gray'>Flex your might.</span>"
+      },
+      "angels_offering": {
+        "name": "Angel's Offering",
+        "location": 24,
+        "description": "<span class='gray'>+</span><span class='green'>1%</span><span class='gray'> corruption chance.</span>"
+      },
+      "midas_gift": {
+        "name": "Midas' Gift",
+        "location": 25,
+        "description": "<span class='gray'>+</span><span class='gold'>20 coins</span><span class='gray'> per tier and <span class='aqua'>1 soul</span> on lucky kill.</span>"
+      },
+      "hide_and_seek": {
+        "name": "Hide and Seek",
+        "location": 26,
+        "description": "<span class='gray'>Compass</span><span class='green'> 10 sec</span><span class='gray'> per tier before refill.</span>"
+      },
+      "killeffect_vaporized": {
+        "name": "Vaporized Kill Effect",
+        "location": 27,
+        "description": "<span class='gray'>Prestige-colored cloud kill effect.</span>"
+      },
+      "first_blood": {
+        "name": "First Blood",
+        "location": 31,
+        "description": "<span class='gold'>2x coins</span><span class='gray'> on first kill of every game.</span>"
+      },
+      "fortune_teller": {
+        "name": "Fortune Teller",
+        "location": 38,
+        "description": "<span class='gray'>Lvl 2 enchant on Armor guarantees Prot 1</span><br><span class='gray'>Lvl 2 enchant on Swords guarantees Sharp 1.</span>"
+      },
+      "killeffect_purple_tornado": {
+        "name": "Purple Tornado Kill Effect",
+        "location": 40,
+        "description": "<span class='gray'>A purple tornado will appear.</span>"
+      },
+      "cloak_falling_angel": {
+        "name": "Falling Angel Cloak",
+        "location": 41,
+        "description": "<span class='gray'>Showcase your Level and Prestige.</span>"
+      },
+      "cage_piston": {
+        "name": "Piston Cage",
+        "location": 44,
+        "description": "<span class='gray'>Show off your redstone prowess.</span>"
+      },
+      "fireproof": {
+        "name": "Steel Quiver",
+        "location": 45,
+        "description": "<span class='gray'>+</span><span class='green'>2%</span><span class='gray'> chance of blazing arrows per tier.</span>"
+      },
+      "victorydance_super_sheep": {
+        "name": "Super Sheep Victory Dance",
+        "location": 48,
+        "description": "<span class='gray'>A</span><span class='lightPurple'> Super Sheep</span><span class='gray'> will spawn.</span>"
+      },
+      "corrupted_coinage": {
+        "name": "Corrupted Coinage",
+        "location": 52,
+        "description": "<span class='gray'>+</span><span class='gold'>100% coins</span><span class='gray'> per tier in corrupted games.</span>"
+      },
+      "librarian": {
+        "name": "Librarian",
+        "location": 53,
+        "description": "<span class='green'>10%</span><span class='gray'> chance to Power,</span><br><span class='gray'> Prot, or Sharp 1 book on kill.</span>"
+      },
+      "luckier_charm": {
+        "name": "Luckier Charm",
+        "location": 54,
+        "description": "<span class='gray'>+</span><span class='green'>1%</span><span class='gray'> chance per tier of gap on kill.</span>"
+      },
+      "apothecary": {
+        "name": "Apothecary",
+        "location": 55,
+        "description": "<span class='gray'>Extend positive potion</span><br><span class='gray'>effects by</span><span class='green'> 10%</span>"
+      },
+      "sorcerers_spell": {
+        "name": "Sorcerer's Spell",
+        "location": 62,
+        "description": "<span class='gray'>+</span><span class='green'>1%</span><span class='gray'> chance for the Black Magic Perk.</span>"
+      },
+      "killmessages_rainbow": {
+        "name": "Rainbow Kill Messages",
+        "location": 66,
+        "description": "<span class='red'>D</span><span class='gold'>O</span><span class='yellow'>U</span><span class='green'>B</span><span class='blue'>L</span><span class='lightPurple'>E</span><span class='red'> R</span><span class='gold'>A</span><span class='yellow'>I</span><span class='green'>N</span><span class='blue'>B</span><span class='lightPurple'>O</span><span class='darkPurple'>W</span><span class='gray'> ALL THE WAY!</span>"
+      },
+      "smarty_pants": {
+        "name": "Big Brain",
+        "location": 67,
+        "description": "<span class='gray'>Kills grant <span class='green'>+2 EXP levels</span>.</span>"
+      },
+      "ender_end_game": {
+        "name": "Ender End Game",
+        "location": 68,
+        "description": "<span class='gray'>+</span><span class='green'>10%</span><span class='gray'> chance of a pearl on chest refills.</span>"
+      },
+      "fruit_finder": {
+        "name": "Fruit Finder",
+        "location": 69,
+        "description": "<span class='gray'>1st mid chest will have a gap.</span>"
+      },
+      "diamond_in_the_rough": {
+        "name": "Diamond In The Rough",
+        "location": 74,
+        "description": "<span class='gray'>+</span><span class='green'>5%</span><span class='gray'> chance per tier of diamond from kill.</span>"
+      },
+      "cage_balancing_act": {
+        "name": "Balancing Act Cage",
+        "location": 80,
+        "description": "<span class='gray'>Dominate the skies.</span>"
+      },
+      "telekinesis": {
+        "name": "Adrenaline",
+        "location": 81,
+        "description": "<span class='gray'>Gain <span class='green'>7s</span> of <span class='blue'>Speed I</span> at the start<br>of the game.</span>"
+      },
+      "distillery_discount": {
+        "name": "Distillery Discount",
+        "location": 82,
+        "description": "<span class='gray'>Potions in the <span class='red'>Angel's Brewery</span> cost<br><span class='gold'>-15% coins</span>.</span>"
+      },
+      "chilled_quiver": {
+        "name": "Chilled Quiver",
+        "location": 83,
+        "description": "<span class='gray'><br>Bow crits have additional <span class='green'>+2%</span> chance<br>per tier to inflict <span class='blue'>Slowness I</span> for <span class='green'>3s</span>.</span>"
+      },
+      "kit_basic_solo_archeologist": {
+        "name": "Archeologist Kit",
+        "location": 88,
+        "description": "<span class='gray'>Pay homage to 5 years of SkyWars</span><br><br><span class='gold'>Legionnaire's Chestplate</span><br><span class='gold'>Blazing Potion</span><br><span class='red'>Red Socks</span><br><span class='lightPurple'>Potion of Hearts</span><br><span class='white'>Simple Fishing Rod</span><br><span class='gold'>Knight's Helmet</span>"
+      },
+      "scheme_demigod": {
+        "name": "Demigod Prestige Scheme",
+        "location": 93,
+        "description": "<span class='gray'>Fallen from grace.</span><br><br><span class='darkGray'>{</span><span class='gold'>9</span><span class='yellow'>9</span><span class='gray'>9</span><span class='darkGray'>⋆}</span>"
+      },
+      "opalsmith": {
+        "name": "Opalsmith",
+        "location": 95,
+        "description": "<span class='blue'>Opals</span> <span class='gray'>only cost</span> <span class='aqua'>1,250 Souls</span> <span class='gray'>to forge.</span>"
+      },
+      "balloon_dual_dragon": {
+        "name": "Dual Dragon Balloon",
+        "location": 97,
+        "description": "<span class='gray'>Double the dragon, double the flex!</span>"
+      },
+      "cloak_angels_prestige": {
+        "name": "Angel's Prestige Cloak",
+        "location": 100,
+        "description": "<span class='gray'>Show off your max</span> <span class='lightPurple'>Kit Prestiges</span><span class='gray'>.</span>"
+      },
+      "double_edged_sword": {
+        "name": "Double-Edged Sword",
+        "location": 102,
+        "description": "<span class='gray'>First</span> <span class='green'>3</span> <span class='gray'>sword kills put one sharpness<br>level on your sword but inflict </span><span class='red'>-2 Max ❤</span><span class='gray'>.</span>"
+      },
+      "quest_masters_friend": {
+        "name": "Quest Master's Best Friend",
+        "location": 103,
+        "description": "<span class='gray'>Quests reward</span> <span class='gold'>+5% coins</span> per tier.</span>"
+      },
+      "dragons_pledge": {
+        "name": "Dragon's Pledge",
+        "location": 104,
+        "description": "<span class='gray'>A pearl replaces loot in 1 island chest.<br>You start with only</span> <span class='red'>7 Max ❤</span>.</span>"
+      },
+      "victorydance_double_dragons_descent": {
+        "name": "Double Dragon's Descent Victory Dance",
+        "location": 107,
+        "description": "<span class='gray'>Two dragons descend through the map.</span>"
+      },
+      "kill_xp_boost": {
+        "name": "Kill XP Boost",
+        "location": 109,
+        "description": "<span class='gray'>Kills and assists grant additional <span class='lightPurple'>+1XP</span>.</span>"
+      },
+      "deathcry_eponymous_dragon": {
+        "name": "Eponymous Dragon Death Cry",
+        "location": 111,
+        "description": "<span class='gray'>It's in the name!</span>"
+      },
+      "emblem_delta_icon": {
+        "name": "Delta Emblem",
+        "location": 114,
+        "description": "<span class='aqua'>δ</span>"
+      },
+      "projectiletrail_descent_dragon": {
+        "name": "Descent Dragon Projectile Trail",
+        "location": 115,
+        "description": "<span class='gray'>Prestige-ified version of the <span class='gold'>Double<br>Dragon Projectile Trail></span></span>"
+      },
+      "perk_slot": {
+        "name": "7th Perk Slot",
+        "location": 116,
+        "description": "<span class='gray'>Unlocks a <span class='green'>7th perk slot</span> in<br>Normal and Mega SkyWars.</span>"
+      },
+      "fallen_angel_kit": {
+        "name": "Fallen Angel Kit",
+        "location": 123,
+        "description": "<span class='gray'>Commemerate your fall from grace<br>with this totally tubular kit!<br><br><span class='aqua'>Diamond Hoe</span></span>"
+      }
+    },
+
+    "angelOfDeath": [
+      { "cost": 50000, "total": 50000 },
+      { "cost": 200000, "total": 250000 },
+      { "cost": 500000, "total": 750000 },
+      { "cost": 1000000, "total": 1750000 },
+      { "cost": 2000000, "total": 3750000 },
+      { "cost": 5000000, "total": 8750000 },
+      { "cost": 10000000, "total": 18750000 },
+      { "cost": 15000000, "total": 33750000 },
+      { "cost": 20000000, "total": 53750000 },
+      { "cost": 30000000, "total": 83750000 },
+      { "cost": 50000000, "total": 133750000 },
+      { "cost": 75000000, "total": 208750000 }
+    ],
+
+    "heads": [
+      {
+        "color": "red",
+        "heads": [
+          {
+            "name": "sweet",
+            "xp": 25,
+            "req": "Admin Rank"
+          },
+          {
+            "name": "special",
+            "xp": 25,
+            "req": "YouTube Rank"
+          },
+          {
+            "name": "indescribable",
+            "xp": 25,
+            "req": "100,000 Kills"
+          },
+          {
+            "name": "ethereal",
+            "xp": 20,
+            "req": "50,000 Kills"
+          }
+        ]
+      },
+      {
+        "color": "darkPurple",
+        "heads": [
+          {
+            "name": "heavenly",
+            "xp": 15,
+            "req": "25,000 Kills"
+          },
+          {
+            "name": "divine",
+            "xp": 10,
+            "req": "10,000 Kills"
+          },
+          {
+            "name": "succulent",
+            "xp": 7,
+            "req": "5,000 Kills"
+          }
+        ]
+      },
+      {
+        "color": "darkAqua",
+        "heads": [
+          {
+            "name": "tasty",
+            "xp": 6,
+            "req": "2,000 Kills"
+          },
+          {
+            "name": "salty",
+            "xp": 5,
+            "req": "1,000 Kills"
+          },
+          {
+            "name": "decent",
+            "xp": 4,
+            "req": "500 Kills"
+          }
+        ]
+      },
+      {
+        "color": "darkGray",
+        "heads": [
+          {
+            "name": "meh",
+            "xp": 3,
+            "req": "200 Kills"
+          },
+          {
+            "name": "yucky",
+            "xp": 2,
+            "req": "50 Kills"
+          },
+          {
+            "name": "eww",
+            "xp": 1,
+            "req": "0 Kills"
+          }
+        ]
+      }
+    ],
+
+    "brewery": {
+      "gilded_tonic": {
+        "name": "Gilded Tonic",
+        "color": "darkAqua",
+        "description": "<span class='gray'>10% chance of <span class='gold'>golden apple</span> for kills<br> 10% chance of <span class='aqua'>double souls</span> for wins<br> +10% <span class='lightPurple'>SkyWars XP</span> for wins<br> +100% <span class='gold'>coins</span> for wins</span>",
+        "req": 0,
+        "cost": [
+          {
+            "type": "opal",
+            "amount": 1
+          }
+        ]
+      },
+      "ender_elixir": {
+        "name": "Ender Elixir",
+        "color": "blue",
+        "description": "<span class='gray'>15% chance of <span class='blue'>pearl</span> for void kills<br><span class='aqua'>Double souls</span> for wins<br> +10% <span class='lightPurple'>SkyWars XP</span> for wins<br> +10% <span class='gold'>coins</span> for wins</span>",
+        "req": 1000,
+        "cost": [
+          {
+            "type": "coin",
+            "amount": 1000000
+          }
+        ]
+      },
+      "corrupting_brew": {
+        "name": "Corrupting Brew",
+        "color": "darkPurple",
+        "description": "<span class='gray'>2x chance of <span class='darkPurple'>corrupting</span> a game<br> 20% chance of <span class='aqua'>double souls</span> for wins<br> +20% <span class='lightPurple'>SkyWars XP</span> for wins<br> +20% <span class='gold'>coins</span> for wins</span>",
+        "req": 2000,
+        "cost": [
+          {
+            "type": "opal",
+            "amount": 1
+          },
+          {
+            "type": "coin",
+            "amount": 500000
+          }
+        ]
+      },
+      "builders_blend": {
+        "name": "Builder's Blend",
+        "color": "darkGreen",
+        "description": "<span class='gray'> 90% chance to keep blocks<br> 15% chance of <span class='aqua'>double souls</span> for wins<br> +30% <span class='lightPurple'>SkyWars XP</span> for wins<br> +30% <span class='gold'>coins</span> for wins</span>",
+        "req": 3000,
+        "cost": [
+          {
+            "type": "opal",
+            "amount": 1
+          },
+          {
+            "type": "coin",
+            "amount": 1000000
+          }
+        ]
+      },
+      "robinhoods_concoction": {
+        "name": "Robinhood's Concoction",
+        "color": "darkAqua",
+        "description": "<span class='gray'>+5% chance of firing a <span class='red'>flaming arrow</span><br> +3 <span class='green'>arrows</span> from bow kills<br> +30% <span class='lightPurple'>SkyWars XP</span> from bow kills<br> +20% <span class='lightPurple'>SkyWars XP</span> for wins<br> +30% <span class='gold'>coins</span> for wins</span>",
+        "req": 0,
+        "cost": [
+          {
+            "type": "opal",
+            "amount": 2
+          },
+          {
+            "type": "coin",
+            "amount": 500000
+          }
+        ]
+      },
+      "brawlers_refreshment": {
+        "name": "Brawler's Refreshment",
+        "color": "blue",
+        "description": "<span class='gray'>+1 <span class='green'>HP</span> for melee kills<br> +30% <span class='lightPurple'>SkyWars XP</span> for melee kills<br> 10% chance of <span class='aqua'>double souls</span> for wins<br> +20% <span class='lightPurple'>SkyWars XP</span> for wins<br> +30% <span class='gold'>coins</span> for wins</span>",
+        "req": 7000,
+        "cost": [
+          {
+            "type": "opal",
+            "amount": 2
+          },
+          {
+            "type": "coin",
+            "amount": 1000000
+          }
+        ]
+      },
+      "level_up_energy": {
+        "name": "Level UP Energy",
+        "color": "darkPurple",
+        "description": "<span class='gray'>+50% <span class='lightPurple'>SkyWars XP</span> for kills<br> +10 <span class='lightPurple'>SkyWars XP</span> for wins<br> 50% chance of <span class='aqua'>double souls</span> for wins<br> +30% <span class='lightPurple'>SkyWars XP</span> for wins<br> +50% <span class='gold'>coins</span> for wins</span>",
+        "req": 10000,
+        "cost": [
+          {
+            "type": "opal",
+            "amount": 3
+          },
+          {
+            "type": "coin",
+            "amount": 2500000
+          }
+        ]
+      }
+    },
+
+    "kitNames": {
+      "normal": {
+        "kit_advanced_solo_pyro": "Pyro",
+        "kit_advanced_solo_armorer": "Armorer",
+        "kit_enderchest_solo_enderchest": "Enderchest",
+        "kit_basic_solo_armorsmith": "Armorsmith",
+        "kit_basic_solo_scout": "Scout",
+        "kit_basic_solo_ecologist": "Ecologist",
+        "kit_basic_solo_energix": "Energix",
+        "kit_advanced_solo_enderman": "Enderman",
+        "kit_basic_solo_rookie": "Rookie",
+        "kit_advanced_solo_knight": "Knight",
+        "kit_basic_solo_snowman": "Snowman",
+        "kit_advanced_solo_enchanter": "Enchanter",
+        "kit_advanced_solo_salmon": "Salmon",
+        "kit_advanced_solo_zookeeper": "Zookeeper",
+        "kit_advanced_solo_cannoneer": "Cannoneer",
+        "kit_basic_solo_speleologist": "Speleologist",
+        "kit_advanced_solo_farmer": "Farmer",
+        "kit_basic_solo_frog": "Frog",
+        "kit_basic_solo_fisherman": "Fisherman",
+        "kit_basic_solo_default": "Default",
+        "kit_advanced_solo_engineer": "Engineer",
+        "kit_advanced_solo_hunter": "Hunter",
+        "kit_advanced_solo_slime": "Slime",
+        "kit_advanced_solo_sloth": "Sloth",
+        "kit_advanced_solo_jester": "Jester",
+        "kit_basic_solo_troll": "Troll",
+        "kit_basic_solo_disco": "Disco",
+        "kit_basic_solo_baseball-player": "Baseball Player",
+        "kit_advanced_solo_pig-rider": "Pig Rider",
+        "kit_advanced_solo_magician": "Magician",
+        "kit_basic_solo_grenade": "Grenade",
+        "kit_basic_solo_batguy": "Batguy",
+        "kit_advanced_solo_guardian": "Guardian",
+        "kit_basic_solo_princess": "Princess",
+        "kit_basic_solo_healer": "Healer",
+        "kit_basic_solo_pharaoh": "Pharaoh",
+        "kit_basic_solo_cactus": "Cactus",
+        "kit_basic_solo_warlock": "Warlock",
+        "kit_basic_solo_archeologist": "Archeologist",
+        "kit_basic_solo_fallen-angel": "Fallen Angel"
+      },
+      "insane": {
+        "kit_mining_team_default": "Default",
+        "kit_defending_team_armorer": "Armorer",
+        "kit_supporting_team_armorsmith": "Armorsmith",
+        "kit_defending_team_baseball-player": "Baseball Player",
+        "kit_defending_team_batguy": "Batguy",
+        "kit_mining_team_cannoneer": "Cannoneer",
+        "kit_defending_team_disco": "Disco",
+        "kit_supporting_team_ecologist": "Ecologist",
+        "kit_supporting_team_enchanter": "Enchanter",
+        "kit_enderchest_team_enderchest": "Enderchest",
+        "kit_attacking_team_enderman": "Enderman",
+        "kit_attacking_team_energix": "Energix",
+        "kit_attacking_team_engineer": "Engineer",
+        "kit_defending_team_farmer": "Farmer",
+        "kit_attacking_team_fisherman": "Fisherman",
+        "kit_defending_team_frog": "Frog",
+        "kit_defending_team_golem": "Golem",
+        "kit_attacking_team_grenade": "Grenade",
+        "kit_defending_team_guardian": "Guardian",
+        "kit_supporting_team_healer": "Healer",
+        "kit_attacking_team_hunter": "Hunter",
+        "kit_attacking_team_jester": "Jester",
+        "kit_attacking_team_knight": "Knight",
+        "kit_attacking_team_magician": "Magician",
+        "kit_supporting_team_pharaoh": "Pharaoh",
+        "kit_attacking_team_pig-rider": "Pig Rider",
+        "kit_supporting_team_princess": "Princess",
+        "kit_supporting_team_rookie": "Rookie",
+        "kit_supporting_team_pyro": "Pyro",
+        "kit_attacking_team_salmon": "Salmon",
+        "kit_attacking_team_scout": "Scout",
+        "kit_attacking_team_slime": "Slime",
+        "kit_attacking_team_sloth": "Sloth",
+        "kit_attacking_team_snowman": "Snowman",
+        "kit_mining_team_speleologist": "Speleologist",
+        "kit_supporting_team_troll": "Troll",
+        "kit_supporting_team_zookeeper": "Zookeeper",
+        "kit_defending_team_cactus": "Cactus",
+        "kit_supporting_team_warlock": "Warlock",
+        "kit_attacking_team_archeologist": "Archeologist",
+        "kit_attacking_team_fallen-angel": "Fallen Angel"
+      },
+      "ranked": {
+        "kit_ranked_ranked_default": "Default",
+        "kit_ranked_ranked_scout": "Scout",
+        "kit_ranked_ranked_magician": "Magician",
+        "kit_ranked_ranked_armorer": "Armorer",
+        "kit_ranked_ranked_champion": "Champion",
+        "kit_ranked_ranked_bowman": "Bowman",
+        "kit_ranked_ranked_athlete": "Athelete",
+        "kit_blacksmith_ranked_blacksmith": "Blacksmith",
+        "kit_ranked_ranked_healer": "Healer",
+        "kit_ranked_ranked_pyromancer": "Pyromancer",
+        "kit_ranked_ranked_hound": "Hound",
+        "kit_ranked_ranked_paladin": "Paladin"
+      },
+      "mega": {
+        "kit_mega_mega_armorer": "Armorer",
+        "kit_mega_mega_armorsmith": "Armorsmith",
+        "kit_mega_mega_baseball-player": "Baseball Player",
+        "kit_mega_mega_cannoneer": "Cannoneer",
+        "kit_mega_mega_healer": "Healer",
+        "kit_mega_mega_hunter": "Hunter",
+        "kit_mega_mega_knight": "Knight",
+        "kit_mega_mega_paladin": "Paladin",
+        "kit_mega_mega_scout": "Scout",
+        "kit_mega_mega_skeletor": "Skeletor",
+        "kit_mega_mega_witch": "Witch",
+        "kit_mega_mega_hellhound": "Hellhound",
+        "kit_mega_mega_fisherman": "Fisherman",
+        "kit_mega_mega_pyromaniac": "Pyromaniac",
+        "kit_mega_mega_enderman": "Enderman",
+        "kit_mega_mega_default": "Default"
+      },
+      "mythic": {
+        "kit_mythical_end-lord": "End Lord",
+        "kit_mythical_nether-lord": "Nether Lord",
+        "kit_mythical_monster-trainer": "Monster Trainer",
+        "kit_mythical_fishmonger": "Fishmonger",
+        "kit_mythical_thundermeister": "Thundermeister",
+        "kit_mythical_chronobreaker": "Chronobreaker",
+        "kit_mythical_cryomancer": "Cryomancer"
+      }
+    },
+
+    "kitPrestiges": {
+      "1": 1000,
+      "2": 2500,
+      "3": 5000,
+      "4": 10000,
+      "5": 25000,
+      "6": 50000,
+      "7": 75000
+    },
+
+    "ranked": {
+      "rewards": {
+        "gold": [
+          {
+            "key": "projectiletrail_hearts",
+            "name": "Hearts"
+          },
+          {
+            "key": "victorydance_guardians",
+            "name": "Guardians"
+          },
+          {
+            "key": "killeffect_blood_explosion",
+            "name": "Blood Explosion"
+          }
+        ],
+        "diamond": [
+          {
+            "key": "projectiletrail_notes",
+            "name": "Notes"
+          },
+          {
+            "key": "projectiletrail_green_star",
+            "name": "Green Star"
+          },
+          {
+            "key": "killeffect_heart_explosion",
+            "name": "Heart Explosion"
+          },
+          {
+            "key": "cage_magic-box-cage",
+            "name": "Magic Box"
+          },
+          {
+            "key": "deathcry_bazinga",
+            "name": "Bazinga"
+          },
+          {
+            "key": "deathcry_sad_puppy",
+            "name": "Sad Puppy"
+          },
+          {
+            "key": "deathcry_monster_burp",
+            "name": "Monster Burp"
+          },
+          {
+            "key": "deathcry_grumpy_villager",
+            "name": "Grumpy Villager"
+          }
+        ],
+        "masters": [
+          {
+            "key": "killeffect_head_rocket",
+            "name": "Head Rocket"
+          },
+          {
+            "key": "killeffect_final_smash",
+            "name": "Final Smash"
+          },
+          {
+            "key": "victorydance_dragon_rider",
+            "name": "Dragon Rider"
+          }
+        ]
+      },
+      "seasons": [
+        "_3_18",
+        "_4_18",
+        "_5_18",
+        "_6_18",
+        "_7_18",
+        "_8_18",
+        "_9_18",
+        "_10_18",
+        "_11_18",
+        "_12_18",
+        "_1_19",
+        "_2_19",
+        "_3_19",
+        "_4_19",
+        "_5_19",
+        "_6_19",
+        "_7_19",
+        "_8_19",
+        "_9_19",
+        "_10_19",
+        "_11_19",
+        "_12_19",
+        "_1_20",
+        "_2_20",
+        "_3_20",
+        "_4_20",
+        "_5_20",
+        "_6_20",
+        "_7_20",
+        "_8_20",
+        "_9_20",
+        "_10_20",
+        "_11_20",
+        "_12_20",
+        "_1_21",
+        "_2_21",
+        "_3_21",
+        "_4_21",
+        "_5_21",
+        "_6_21",
+        "_7_21",
+        "_8_21",
+        "_9_21",
+        "_10_21",
+        "_11_21",
+        "_12_21",
+        "_1_22",
+        "_2_22",
+        "_3_22",
+        "_4_22",
+        "_5_22",
+        "_6_22",
+        "_7_22"
+      ],
+      "history": [
+        {
+          "number": 1,
+          "leaderboard": [
+            {
+              "uuid": "46405168e9ce40a099a40b989a912c77",
+              "name": "Illumina",
+              "rating": 3900,
+              "position": 1
+            },
+            {
+              "uuid": "a6ac917690594aa588b74afc25325e15",
+              "name": "Shooter",
+              "rating": 3174,
+              "position": 2
+            },
+            {
+              "uuid": "2e0b3baee6db4a0fa971679b6bb2f723",
+              "name": "enalala",
+              "rating": 3146,
+              "position": 3
+            },
+            {
+              "uuid": "2391f36f56c74822a2592348041b1332",
+              "name": "Pododude",
+              "rating": 3113,
+              "position": 4
+            },
+            {
+              "uuid": "c938ee7975394436b7501728e9314a74",
+              "name": "Delucaco",
+              "rating": 3100,
+              "position": 5
+            },
+            {
+              "uuid": "82532f97bfd64a39aec9d535bff8dead",
+              "name": "ashv",
+              "rating": 3090,
+              "position": 6
+            },
+            {
+              "uuid": "28ecc419f0c2414ea28b6608f51705b2",
+              "name": "iHarmV2",
+              "rating": 2560,
+              "position": 7
+            },
+            {
+              "uuid": "f96e966813d54db09dd91d37b0360fb8",
+              "name": "Hamzah",
+              "rating": 2553,
+              "position": 8
+            },
+            {
+              "uuid": "7a30c6535dbf45ff8b4f8aa5fb66f07e",
+              "name": "peter_tha_gamer",
+              "rating": 2551,
+              "position": 9
+            },
+            {
+              "uuid": "2e08d654a79b44239744ad745ce23b50",
+              "name": "nail181",
+              "rating": 2542,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "leaderboard": [
+            {
+              "uuid": "0593eb6757a241d2afde4517e00a35b5",
+              "name": "Dctr",
+              "rating": 3756,
+              "position": 1
+            },
+            {
+              "uuid": "1aa5ae2b91284e81835d7ecf2e482268",
+              "name": "ReoccurisMASTER",
+              "rating": 3725,
+              "position": 2
+            },
+            {
+              "uuid": "82532f97bfd64a39aec9d535bff8dead",
+              "name": "ashv",
+              "rating": 3527,
+              "position": 3
+            },
+            {
+              "uuid": "3d1913a7b9d043fb996c16ba4a42e3ad",
+              "name": "PabllooGG",
+              "rating": 3318,
+              "position": 4
+            },
+            {
+              "uuid": "28967d1b6e8f4f24ab175e936b36ce5c",
+              "name": "xKaos",
+              "rating": 3313,
+              "position": 5
+            },
+            {
+              "uuid": "7d85d599e18b4fc884f9706e18ba34a6",
+              "name": "Sarlies",
+              "rating": 3200,
+              "position": 6
+            },
+            {
+              "uuid": "08f6b8823b88451d9cb8fe8c6cf0115f",
+              "name": "Dannyxv8",
+              "rating": 3170,
+              "position": 7
+            },
+            {
+              "uuid": "b0469422f58e4c70bf9ec03a210a081d",
+              "name": "Bi2f",
+              "rating": 3166,
+              "position": 8
+            },
+            {
+              "uuid": "7f5f515511e746dfb3762d5c46e3e462",
+              "name": "Jsh",
+              "rating": 3166,
+              "position": 9
+            },
+            {
+              "uuid": "866d694e0f784a8c9566ddb2fc671695",
+              "name": "2Pi",
+              "rating": 3158,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "leaderboard": [
+            {
+              "uuid": "430fcd60bb2f45699a7e3f4feb41d56f",
+              "name": "Kqwqii",
+              "rating": 3357,
+              "position": 1
+            },
+            {
+              "uuid": "951c2d1b15b34255a1879035820ad61f",
+              "name": "icecreamflinger",
+              "rating": 3341,
+              "position": 2
+            },
+            {
+              "uuid": "7443ef6359fc4a7cb82afb009753eef0",
+              "name": "Kevos",
+              "rating": 3302,
+              "position": 3
+            },
+            {
+              "uuid": "83f44cd9ca9d4712a6bf9e618574f0de",
+              "name": "xBasil",
+              "rating": 3300,
+              "position": 4
+            },
+            {
+              "uuid": "b876ec32e396476ba1158438d83c67d4",
+              "name": "Technoblade",
+              "rating": 3166,
+              "position": 5
+            },
+            {
+              "uuid": "2b6730f28210470fbc371f14d63cb862",
+              "name": "Boogei",
+              "rating": 3156,
+              "position": 6
+            },
+            {
+              "uuid": "2a8e54f82e68489a9ece6cadfd24b09c",
+              "name": "Ashua",
+              "rating": 3150,
+              "position": 7
+            },
+            {
+              "uuid": "debad0c4347949279e1811649f4ef513",
+              "name": "RaymonO_o",
+              "rating": 3140,
+              "position": 8
+            },
+            {
+              "uuid": "69364957314a4a9da8f069eb05c2d4a1",
+              "name": "SalilPT",
+              "rating": 3130,
+              "position": 9
+            },
+            {
+              "uuid": "5d5b41a75c774d309509777d2e9e6120",
+              "name": "Romantic",
+              "rating": 3130,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 4,
+          "leaderboard": [
+            {
+              "uuid": "82c8266ad3274041af1b56839b5dff4f",
+              "name": "Naidemoc",
+              "rating": 4001,
+              "position": 1
+            },
+            {
+              "uuid": "d8770b43d7a04e0ca647187dd5d7d59c",
+              "name": "aaronhk",
+              "rating": 0,
+              "position": 2
+            },
+            {
+              "uuid": "37cbd55acbb547d69fe8798567081a9e",
+              "name": "Nickthemurph",
+              "rating": 0,
+              "position": 3
+            },
+            {
+              "uuid": "96f04ca6446048679a827bca37f23c4d",
+              "name": "BorkQi",
+              "rating": 0,
+              "position": 4
+            },
+            {
+              "uuid": "d4d6b93a32904513ada27edd54af20d8",
+              "name": "nafen",
+              "rating": 0,
+              "position": 5
+            },
+            {
+              "uuid": "cff3fe2c1c504d7f976400d3a1b35bc0",
+              "name": "DuckDuckBelle",
+              "rating": 0,
+              "position": 7
+            },
+            {
+              "uuid": "ea90769943e0428e9bab23ba04e7850a",
+              "name": "Robbieciaron",
+              "rating": 0,
+              "position": 8
+            },
+            {
+              "uuid": "2e0b3baee6db4a0fa971679b6bb2f723",
+              "name": "enalala",
+              "rating": 3720,
+              "position": 9
+            },
+            {
+              "uuid": "512efc6128754b5cb1e809b28c1baccd",
+              "name": "kuuulq",
+              "rating": 0,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 5,
+          "leaderboard": [
+            {
+              "uuid": "e429928b12ae4ee68c49fd9b0b467a49",
+              "name": "SrafeZ",
+              "rating": 4119,
+              "position": 1
+            },
+            {
+              "uuid": "83f44cd9ca9d4712a6bf9e618574f0de",
+              "name": "xBasil",
+              "rating": 3534,
+              "position": 2
+            },
+            {
+              "uuid": "1e8fe224a5724029a66ebbf625e00553",
+              "name": "BigDaddyDrock",
+              "rating": 3512,
+              "position": 3
+            },
+            {
+              "uuid": "6fa3474c11b44681a7bbf7e7ddfa1c6d",
+              "name": "R1singL3gend",
+              "rating": 3340,
+              "position": 4
+            },
+            {
+              "uuid": "d4252acb819949a6aa39e9785993f784",
+              "name": "Defone",
+              "rating": 3330,
+              "position": 5
+            },
+            {
+              "uuid": "66b8c2cd0d814e7581a6a83715744250",
+              "name": "Psychic_Lemur",
+              "rating": 3306,
+              "position": 6
+            },
+            {
+              "uuid": "4c3a59c4ddb04a8e8b23009f694c1e0d",
+              "name": "Babs",
+              "rating": 3304,
+              "position": 7
+            },
+            {
+              "uuid": "1aa5ae2b91284e81835d7ecf2e482268",
+              "name": "ReoccurisMASTER",
+              "rating": 3302,
+              "position": 8
+            },
+            {
+              "uuid": "742d6b659f2a4245b94643cb835c4911",
+              "name": "Blacker_S",
+              "rating": 3286,
+              "position": 9
+            },
+            {
+              "uuid": "3075f56a40ea4f14b1d754fdfc69f7b6",
+              "name": "Gnarlak",
+              "rating": 3130,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 6
+        },
+        {
+          "number": 7,
+          "leaderboard": [
+            {
+              "uuid": "53c5537c00534d328342057c29d37963",
+              "name": "TGV",
+              "rating": 4121,
+              "position": 1
+            },
+            {
+              "uuid": "4ce231a79af8473faf1dab7ecf4de2ad",
+              "name": "Palikka",
+              "rating": 3500,
+              "position": 2
+            },
+            {
+              "uuid": "82235fcee1854def82d2d219d9fbefd7",
+              "name": "munckie",
+              "rating": 3306,
+              "position": 3
+            },
+            {
+              "uuid": "e4daf7ad046f4ff59f65fba95d27d636",
+              "name": "Temp33sT",
+              "rating": 3304,
+              "position": 4
+            },
+            {
+              "uuid": "7ae0d81ea98f49b695349579cbc0da9b",
+              "name": "Saviorr",
+              "rating": 3167,
+              "position": 5
+            },
+            {
+              "uuid": "a5a1b37458104c7c814042b1d31cf6d8",
+              "name": "RussianPvP",
+              "rating": 3167,
+              "position": 6
+            },
+            {
+              "uuid": "a60439cb045c40ff9d25136f2789eae2",
+              "name": "iKick",
+              "rating": 3162,
+              "position": 7
+            },
+            {
+              "uuid": "447e080048364a11a64537e7c5e02838",
+              "name": "SUPPACOOL",
+              "rating": 3162,
+              "position": 8
+            },
+            {
+              "uuid": "a336071cf30d44a8aa9c0e3e681a6678",
+              "name": "ItsNice",
+              "rating": 3154,
+              "position": 9
+            },
+            {
+              "uuid": "052e67ad951042648ee5e8f18b3683f8",
+              "name": "Vyrinnn",
+              "rating": 3152,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 8,
+          "leaderboard": [
+            {
+              "uuid": "8edc188a258c461b91ac9844a44ec989",
+              "name": "A0E",
+              "rating": 3700,
+              "position": 1
+            },
+            {
+              "uuid": "99958e88c8bb4462a1cb37ad89b9e955",
+              "name": "xBarton",
+              "rating": 3362,
+              "position": 2
+            },
+            {
+              "uuid": "24a3164b9152447885fd7da509837f98",
+              "name": "LEGENDFF",
+              "rating": 3350,
+              "position": 3
+            },
+            {
+              "uuid": "17bf6b765bec4a589020dc227091809d",
+              "name": "Avihay",
+              "rating": 3322,
+              "position": 4
+            },
+            {
+              "uuid": "342cca75186c47af85581218c368a31f",
+              "name": "suiCILD",
+              "rating": 3320,
+              "position": 5
+            },
+            {
+              "uuid": "28fce07d561f41d0b38625b374eb09ca",
+              "name": "WelshFairyBean",
+              "rating": 3318,
+              "position": 6
+            },
+            {
+              "uuid": "15440fc02de24ebbb0ba37136eef7071",
+              "name": "SingaL",
+              "rating": 3318,
+              "position": 7
+            },
+            {
+              "uuid": "1920fdd4e09943d2b2a1022e737277fe",
+              "name": "Decalz",
+              "rating": 3316,
+              "position": 8
+            },
+            {
+              "uuid": "d7562d29c8a74c90ba93197cf1a92459",
+              "name": "mmazza",
+              "rating": 3312,
+              "position": 9
+            },
+            {
+              "uuid": "8eea25366b7746d4b1f771baf38347a7",
+              "name": "Mrcheese1140",
+              "rating": 3302,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 9,
+          "leaderboard": [
+            {
+              "uuid": "b3562f5804cf48528c1690b42759a91b",
+              "name": "xdtogle",
+              "rating": 3516,
+              "position": 1
+            },
+            {
+              "uuid": "cbd3603716af46f9812b81eabc6f9c50",
+              "name": "NightColor",
+              "rating": 3333,
+              "position": 2
+            },
+            {
+              "uuid": "de614ca3786142358e60d136f373f138",
+              "name": "Max166",
+              "rating": 3308,
+              "position": 3
+            },
+            {
+              "uuid": "d5c5c530ade042e8911a2f32a81e7650",
+              "name": "OoFaeganoO",
+              "rating": 3156,
+              "position": 4
+            },
+            {
+              "uuid": "84e8ef383f9d459ea9144c8db6c54f67",
+              "name": "TediR",
+              "rating": 3155,
+              "position": 5
+            },
+            {
+              "uuid": "1c8ad9e0871b40a2918c5ec79229322c",
+              "name": "iAxeHD",
+              "rating": 3136,
+              "position": 6
+            },
+            {
+              "uuid": "98e7d688bbb74316955004d7343c9fbe",
+              "name": "unz",
+              "rating": 3132,
+              "position": 7
+            },
+            {
+              "uuid": "f4703db54c8e499d9f42954a552c442f",
+              "name": "_II_II_II_",
+              "rating": 3121,
+              "position": 8
+            },
+            {
+              "uuid": "2b6730f28210470fbc371f14d63cb862",
+              "name": "Boogei",
+              "rating": 3106,
+              "position": 9
+            }
+          ]
+        },
+        {
+          "number": 10,
+          "leaderboard": [
+            {
+              "uuid": "6f10654d242c40eaa91f87a91f1cb369",
+              "name": "iCasual",
+              "rating": 4062,
+              "position": 1
+            },
+            {
+              "uuid": "e4daf7ad046f4ff59f65fba95d27d636",
+              "name": "Temp33sT",
+              "rating": 3904,
+              "position": 2
+            },
+            {
+              "uuid": "df59d10ee8734c84be2efe21f6268674",
+              "name": "Zoomba",
+              "rating": 3900,
+              "position": 3
+            },
+            {
+              "uuid": "84d3fcceb2804ad0ad33b4f34884f839",
+              "name": "WorthyOrigin",
+              "rating": 3894,
+              "position": 4
+            },
+            {
+              "uuid": "78205666dda743de820906ce86a0c5d2",
+              "name": "Deltiq",
+              "rating": 3720,
+              "position": 5
+            },
+            {
+              "uuid": "2aaec75694b148178f383923b72fc0b0",
+              "name": "Fono",
+              "rating": 3700,
+              "position": 6
+            },
+            {
+              "uuid": "c7fb57cd41f54921a55f07fe1bb40f43",
+              "name": "Mowhering",
+              "rating": 3630,
+              "position": 7
+            },
+            {
+              "uuid": "bc0389c8bcb4496f89859ce4a964eb61",
+              "name": "MaxPigman",
+              "rating": 3570,
+              "position": 8
+            },
+            {
+              "uuid": "1bc6b8e957b846658eed9a4f81c0b09e",
+              "name": "SkyVox_",
+              "rating": 3524,
+              "position": 9
+            },
+            {
+              "uuid": "16e7f72fd451477690951d26d319a827",
+              "name": "Nyanic",
+              "rating": 3523,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "leaderboard": [
+            {
+              "uuid": "342df099dcf44b41a2ed86d8839a6ff4",
+              "name": "DelayNoMore",
+              "rating": 3307,
+              "position": 5
+            },
+            {
+              "uuid": "a7f3071485ad4effa638eaeba29b04ac",
+              "name": "FlaiTHEnMC",
+              "rating": 3152,
+              "position": 6
+            },
+            {
+              "uuid": "446dea472dd0494b89260421b9981d15",
+              "name": "tayber123456789",
+              "rating": 3152,
+              "position": 7
+            },
+            {
+              "uuid": "9168e67b8918477c8f4313984f927cd3",
+              "name": "HealthyLife",
+              "rating": 3130,
+              "position": 8
+            },
+            {
+              "uuid": "85bec943bdcb46a584c8193a55943b8b",
+              "name": "xxxSnowy",
+              "rating": 3130,
+              "position": 9
+            },
+            {
+              "uuid": "84d3fcceb2804ad0ad33b4f34884f839",
+              "name": "WorthyOrigin",
+              "rating": 3130,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 12,
+          "leaderboard": [
+            {
+              "uuid": "28fce07d561f41d0b38625b374eb09ca",
+              "name": "WelshFairyBean",
+              "rating": 3700,
+              "position": 1
+            },
+            {
+              "uuid": "757c44b6b8b247618931fb2a5d412a5f",
+              "name": "OhVape",
+              "rating": 3330,
+              "position": 2
+            },
+            {
+              "uuid": "70630e985db84ae7bba11922259150bf",
+              "name": "Yourtuber",
+              "rating": 3163,
+              "position": 3
+            },
+            {
+              "uuid": "d13bfa7733d04e5bb7b60654d38d2faf",
+              "name": "SarahLovesPawel",
+              "rating": 3158,
+              "position": 4
+            },
+            {
+              "uuid": "7558a9bd4abd497280c453e73091817b",
+              "name": "iiFlux",
+              "rating": 3156,
+              "position": 5
+            },
+            {
+              "uuid": "1d346a48776643a2927dbf723aa07254",
+              "name": "Optay",
+              "rating": 3155,
+              "position": 6
+            },
+            {
+              "uuid": "1cd4932d04cd4fbda32a54c1d5356f92",
+              "name": "NoVoid",
+              "rating": 3152,
+              "position": 7
+            },
+            {
+              "uuid": "e6aff2acab974d0da33f4febb47ebe1c",
+              "name": "SaJaTo",
+              "rating": 3150,
+              "position": 8
+            },
+            {
+              "uuid": "1920fdd4e09943d2b2a1022e737277fe",
+              "name": "Decalz",
+              "rating": 3133,
+              "position": 9
+            },
+            {
+              "uuid": "174a62b074fb4264bf0d6bee780493f0",
+              "name": "Zany",
+              "rating": 3104,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 13,
+          "leaderboard": [
+            {
+              "uuid": "28ecc419f0c2414ea28b6608f51705b2",
+              "name": "iHarmv2",
+              "rating": 2500,
+              "position": 1
+            },
+            {
+              "uuid": "c54a519f03854554934b0db6a0a440f0",
+              "name": "Mahteus",
+              "rating": 2499,
+              "position": 2
+            },
+            {
+              "uuid": "d4d6b93a32904513ada27edd54af20d8",
+              "name": "nafen",
+              "rating": 2498,
+              "position": 3
+            },
+            {
+              "uuid": "1920fdd4e09943d2b2a1022e737277fe",
+              "name": "Decalz",
+              "rating": 2497,
+              "position": 4
+            },
+            {
+              "uuid": "3ce4a44bd49243ef8629b302d64dc077",
+              "name": "ChickadeeBirdy",
+              "rating": 2496,
+              "position": 5
+            },
+            {
+              "uuid": "81fe994d53274f739fff934653d7eb3c",
+              "name": "armknock",
+              "rating": 2495,
+              "position": 6
+            },
+            {
+              "uuid": "28fce07d561f41d0b38625b374eb09ca",
+              "name": "WelshFairyBean",
+              "rating": 2494,
+              "position": 7
+            },
+            {
+              "uuid": "d13bfa7733d04e5bb7b60654d38d2faf",
+              "name": "SarahLovesPawel",
+              "rating": 2493,
+              "position": 8
+            },
+            {
+              "uuid": "1c8ad9e0871b40a2918c5ec79229322c",
+              "name": "iAxeHD",
+              "rating": 2492,
+              "position": 9
+            },
+            {
+              "uuid": "ab5afa493d8c40b6b3de56e7f9c8160a",
+              "name": "Kamilczak7",
+              "rating": 2491,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 14,
+          "leaderboard": [
+            {
+              "uuid": "9aa9e586e0cb40f7aeee95c6894cbbc6",
+              "name": "Childish",
+              "rating": 3621,
+              "position": 1
+            },
+            {
+              "uuid": "341a3344c49c4acba75eed7a60384bd8",
+              "name": "Vexerr",
+              "rating": 3470,
+              "position": 2
+            },
+            {
+              "uuid": "8edc188a258c461b91ac9844a44ec989",
+              "name": "A0E",
+              "rating": 3130,
+              "position": 3
+            },
+            {
+              "uuid": "1d346a48776643a2927dbf723aa07254",
+              "name": "Optay",
+              "rating": 3126,
+              "position": 4
+            },
+            {
+              "uuid": "28fce07d561f41d0b38625b374eb09ca",
+              "name": "WelshFairyBean",
+              "rating": 3110,
+              "position": 5
+            },
+            {
+              "uuid": "1920fdd4e09943d2b2a1022e737277fe",
+              "name": "Decalz",
+              "rating": 3107,
+              "position": 6
+            },
+            {
+              "uuid": "28f703165ce941ab9739d9b9d3ea2113",
+              "name": "ToggleShift",
+              "rating": 3103,
+              "position": 7
+            },
+            {
+              "uuid": "cbd3603716af46f9812b81eabc6f9c50",
+              "name": "NightColor",
+              "rating": 3077,
+              "position": 8
+            },
+            {
+              "uuid": "25f1841b99094b39acc1897e23068717",
+              "name": "Mario3573",
+              "rating": 3073,
+              "position": 9
+            },
+            {
+              "uuid": "70630e985db84ae7bba11922259150bf",
+              "name": "Yourtuber",
+              "rating": 3057,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 15,
+          "leaderboard": [
+            {
+              "uuid": "a336071cf30d44a8aa9c0e3e681a6678",
+              "name": "JollyCuvs",
+              "rating": 3503,
+              "position": 1
+            },
+            {
+              "uuid": "9aa9e586e0cb40f7aeee95c6894cbbc6",
+              "name": "Childish",
+              "rating": 3442,
+              "position": 2
+            },
+            {
+              "uuid": "4ce231a79af8473faf1dab7ecf4de2ad",
+              "name": "Palikka",
+              "rating": 3322,
+              "position": 3
+            },
+            {
+              "uuid": "37d7a2fa6e304990bfc30ded621da7fb",
+              "name": "0o_noob_o0",
+              "rating": 3300,
+              "position": 4
+            },
+            {
+              "uuid": "1bd1944080bd42e1811969c923ab3d2a",
+              "name": "MystifiedSD",
+              "rating": 3283,
+              "position": 5
+            },
+            {
+              "uuid": "b6372697f58c49d69587dbd150ecfc86",
+              "name": "FreeFzd",
+              "rating": 3220,
+              "position": 6
+            },
+            {
+              "uuid": "28fce07d561f41d0b38625b374eb09ca",
+              "name": "haaBESTmasters",
+              "rating": 3218,
+              "position": 7
+            },
+            {
+              "uuid": "341a3344c49c4acba75eed7a60384bd8",
+              "name": "FaZecOrE",
+              "rating": 3205,
+              "position": 8
+            },
+            {
+              "uuid": "cbd3603716af46f9812b81eabc6f9c50",
+              "name": "NightColor",
+              "rating": 3201,
+              "position": 9
+            },
+            {
+              "uuid": "bd6c14a3f40344008454ce42d44004cb",
+              "name": "0val",
+              "rating": 3183,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 16,
+          "leaderboard": [
+            {
+              "uuid": "9aa9e586e0cb40f7aeee95c6894cbbc6",
+              "name": "Childish",
+              "rating": 9040,
+              "position": 1
+            },
+            {
+              "uuid": "724c85313c1e419d88bbd6982a88ab74",
+              "name": "Wolvax",
+              "rating": 8300,
+              "position": 2
+            },
+            {
+              "uuid": "4ce231a79af8473faf1dab7ecf4de2ad",
+              "name": "Palikka",
+              "rating": 7012,
+              "position": 3
+            },
+            {
+              "uuid": "07e7e8a97ee84c748ee777f13e5ed55f",
+              "name": "Core",
+              "rating": 6120,
+              "position": 4
+            },
+            {
+              "uuid": "ab5afa493d8c40b6b3de56e7f9c8160a",
+              "name": "Kamilczak7",
+              "rating": 5693,
+              "position": 5
+            },
+            {
+              "uuid": "8e245f8f22894a84819aaf2754993001",
+              "name": "Hydoxous",
+              "rating": 5606,
+              "position": 6
+            },
+            {
+              "uuid": "423191d804f241c0a867a148a76d5ded",
+              "name": "Auror_",
+              "rating": 5505,
+              "position": 7
+            },
+            {
+              "uuid": "341a3344c49c4acba75eed7a60384bd8",
+              "name": "Vexerr",
+              "rating": 5333,
+              "position": 8
+            },
+            {
+              "uuid": "51952f4327c74275a29b55c8d2c52a2b",
+              "name": "Qwikkspell",
+              "rating": 5294,
+              "position": 9
+            },
+            {
+              "uuid": "93cc3887ab604bb4b95839c86e326332",
+              "name": "CosQ",
+              "rating": 5205,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 17,
+          "leaderboard": [
+            {
+              "uuid": "1c8ad9e0871b40a2918c5ec79229322c",
+              "name": "iAxeHD",
+              "rating": 3063,
+              "position": 1
+            },
+            {
+              "uuid": "316b2538c4c943449cdf90442538f9a8",
+              "name": "RKY",
+              "rating": 3057,
+              "position": 2
+            },
+            {
+              "uuid": "bf24504257704110bced35f44b97cded",
+              "name": "katjahsiung",
+              "rating": 3042,
+              "position": 3
+            },
+            {
+              "uuid": "600a4158a9a2490693038240b34d3086",
+              "name": "freecuba",
+              "rating": 3015,
+              "position": 4
+            },
+            {
+              "uuid": "86431575a30343038341a5b4ed7ca6a9",
+              "name": "xJackalope",
+              "rating": 3007,
+              "position": 5
+            },
+            {
+              "uuid": "e0d5b0f0f95343ff9236ba41ecf79725",
+              "name": "Hype",
+              "rating": 3006,
+              "position": 6
+            },
+            {
+              "uuid": "be24a88af8db4bcd8919212f4d406730",
+              "name": "Uselessness",
+              "rating": 3005,
+              "position": 7
+            },
+            {
+              "uuid": "0e944d6cc7e343d0a1b124b66e5eb10f",
+              "name": "Zombiez",
+              "rating": 3004,
+              "position": 8
+            },
+            {
+              "uuid": "a70c5cdd11094cb58c22d5ee1c662640",
+              "name": "ComplexData",
+              "rating": 3001,
+              "position": 9
+            },
+            {
+              "uuid": "1ad7088547044eaa86f2b5f1484f1843",
+              "name": "SpectroPlayer",
+              "rating": 3001,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 18,
+          "leaderboard": [
+            {
+              "uuid": "724c85313c1e419d88bbd6982a88ab74",
+              "name": "Wolvax",
+              "rating": 3130,
+              "position": 1
+            },
+            {
+              "uuid": "51772850102943c184e58d88f793d490",
+              "name": "nickypo",
+              "rating": 3105,
+              "position": 2
+            },
+            {
+              "uuid": "b151a056782044a7a64f94c114652e22",
+              "name": "ucz",
+              "rating": 3097,
+              "position": 3
+            },
+            {
+              "uuid": "e0d5b0f0f95343ff9236ba41ecf79725",
+              "name": "Hype",
+              "rating": 3093,
+              "position": 4
+            },
+            {
+              "uuid": "103a5a42eb784994915323cde1f96de8",
+              "name": "YouBot",
+              "rating": 3091,
+              "position": 5
+            },
+            {
+              "uuid": "1ad7088547044eaa86f2b5f1484f1843",
+              "name": "SpectroPlayer",
+              "rating": 3086,
+              "position": 6
+            },
+            {
+              "uuid": "341a3344c49c4acba75eed7a60384bd8",
+              "name": "Vexerr",
+              "rating": 3065,
+              "position": 7
+            },
+            {
+              "uuid": "c77204bbd0b741539e943e8871217181",
+              "name": "Lenify",
+              "rating": 3062,
+              "position": 8
+            },
+            {
+              "uuid": "6d18ff7cf8cc4963a9be0955bb248a2f",
+              "name": "Fauk",
+              "rating": 3059,
+              "position": 9
+            },
+            {
+              "uuid": "8e245f8f22894a84819aaf2754993001",
+              "name": "Hydoxous",
+              "rating": 3049,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 19,
+          "leaderboard": [
+            {
+              "uuid": "6e52e4ff3aea4fcbadbc71d9870bfc77",
+              "name": "Tyoh",
+              "rating": 3176,
+              "position": 1
+            },
+            {
+              "uuid": "9a1d10072b1144059130c60081a9894d",
+              "name": "yungmase",
+              "rating": 3161,
+              "position": 2
+            },
+            {
+              "uuid": "090a7e2353054b038a756039063c3db6",
+              "name": "Kausly",
+              "rating": 3119,
+              "position": 3
+            },
+            {
+              "uuid": "724c85313c1e419d88bbd6982a88ab74",
+              "name": "Wolvax",
+              "rating": 3101,
+              "position": 4
+            },
+            {
+              "uuid": "1c93da1210ee44c0accf47c3dc8abb6b",
+              "name": "Cerni",
+              "rating": 3081,
+              "position": 5
+            },
+            {
+              "uuid": "37cbd55acbb547d69fe8798567081a9e",
+              "name": "Nickthemurph",
+              "rating": 3044,
+              "position": 6
+            },
+            {
+              "uuid": "28fce07d561f41d0b38625b374eb09ca",
+              "name": "WelshFairyBean",
+              "rating": 3039,
+              "position": 7
+            },
+            {
+              "uuid": "9b849764c0df431e935c2d5cb6580685",
+              "name": "abitha",
+              "rating": 3038,
+              "position": 8
+            },
+            {
+              "uuid": "0e944d6cc7e343d0a1b124b66e5eb10f",
+              "name": "Zombiez",
+              "rating": 3020,
+              "position": 9
+            },
+            {
+              "uuid": "b274b907073e41c7b4476ad6e9307f18",
+              "name": "Zenection",
+              "rating": 3018,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 20,
+          "leaderboard": [
+            {
+              "uuid": "1c93da1210ee44c0accf47c3dc8abb6b",
+              "name": "Cerni",
+              "rating": 3096,
+              "position": 1
+            },
+            {
+              "uuid": "9aa9e586e0cb40f7aeee95c6894cbbc6",
+              "name": "Childish",
+              "rating": 3041,
+              "position": 2
+            },
+            {
+              "uuid": "93cc3887ab604bb4b95839c86e326332",
+              "name": "CosQ",
+              "rating": 3033,
+              "position": 3
+            },
+            {
+              "uuid": "724c85313c1e419d88bbd6982a88ab74",
+              "name": "Wolvax",
+              "rating": 3032,
+              "position": 4
+            },
+            {
+              "uuid": "0e944d6cc7e343d0a1b124b66e5eb10f",
+              "name": "Zombiez",
+              "rating": 3028,
+              "position": 5
+            },
+            {
+              "uuid": "37cbd55acbb547d69fe8798567081a9e",
+              "name": "Nickthemurph",
+              "rating": 3020,
+              "position": 6
+            },
+            {
+              "uuid": "8e245f8f22894a84819aaf2754993001",
+              "name": "Hydoxous",
+              "rating": 3019,
+              "position": 7
+            },
+            {
+              "uuid": "f2d2f2fcb3d24975b21d6cffc096a12c",
+              "name": "Microchip",
+              "rating": 3013,
+              "position": 8
+            },
+            {
+              "uuid": "724dd7e587814bd4a1d375e3a195d5f8",
+              "name": "Onyc",
+              "rating": 3013,
+              "position": 9
+            },
+            {
+              "uuid": "b6372697f58c49d69587dbd150ecfc86",
+              "name": "Fzd",
+              "rating": 3004,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 21,
+          "leaderboard": [
+            {
+              "uuid": "103a5a42eb784994915323cde1f96de8",
+              "name": "YouBot",
+              "rating": 3069,
+              "position": 1
+            },
+            {
+              "uuid": "9aa9e586e0cb40f7aeee95c6894cbbc6",
+              "name": "Childish",
+              "rating": 3060,
+              "position": 2
+            },
+            {
+              "uuid": "5390ac726490442e8863218cf9098ab8",
+              "name": "acidiclol",
+              "rating": 3060,
+              "position": 3
+            },
+            {
+              "uuid": "372acb5965ff488b80440ef88904f7b5",
+              "name": "gdo",
+              "rating": 3057,
+              "position": 4
+            },
+            {
+              "uuid": "d9f694c29da640ffa892d9068b28569a",
+              "name": "Julian",
+              "rating": 3051,
+              "position": 5
+            },
+            {
+              "uuid": "12bf05b8b66343feb47f9dbcf2983174",
+              "name": "NoHaxJustBaByy",
+              "rating": 3051,
+              "position": 6
+            },
+            {
+              "uuid": "1c93da1210ee44c0accf47c3dc8abb6b",
+              "name": "Cerni",
+              "rating": 3042,
+              "position": 7
+            },
+            {
+              "uuid": "423191d804f241c0a867a148a76d5ded",
+              "name": "Auror_",
+              "rating": 3006,
+              "position": 8
+            },
+            {
+              "uuid": "79ce391a5c6048fa91aef77080674f1a",
+              "name": "russiadogjewz",
+              "rating": 2971,
+              "position": 9
+            },
+            {
+              "uuid": "4712b0bb476744a4b38be7ff712418bb",
+              "name": "WopHopOnYouTube",
+              "rating": 2872,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 22,
+          "leaderboard": [
+            {
+              "uuid": "12bf05b8b66343feb47f9dbcf2983174",
+              "name": "NoHaxJustBaByy",
+              "rating": 3124,
+              "position": 1
+            },
+            {
+              "uuid": "93cc3887ab604bb4b95839c86e326332",
+              "name": "CosQ",
+              "rating": 3102,
+              "position": 2
+            },
+            {
+              "uuid": "4d2cd70d696f4201a4d5b7720b31487b",
+              "name": "Pelter",
+              "rating": 3071,
+              "position": 3
+            },
+            {
+              "uuid": "4882e6e463fc4a2cbe38bc5f3b3343b9",
+              "name": "L1E",
+              "rating": 3058,
+              "position": 4
+            },
+            {
+              "uuid": "6ed0cc458b4d47b8b1dc433ebc93702b",
+              "name": "Conventionality",
+              "rating": 3028,
+              "position": 5
+            },
+            {
+              "uuid": "1c8ad9e0871b40a2918c5ec79229322c",
+              "name": "iAxeHD",
+              "rating": 3018,
+              "position": 6
+            },
+            {
+              "uuid": "8e245f8f22894a84819aaf2754993001",
+              "name": "Hydoxous",
+              "rating": 3015,
+              "position": 7
+            },
+            {
+              "uuid": "0e944d6cc7e343d0a1b124b66e5eb10f",
+              "name": "Zombiez",
+              "rating": 3013,
+              "position": 8
+            },
+            {
+              "uuid": "fb587e34f48f42efa9632584ea29405e",
+              "name": "Sybill",
+              "rating": 3010,
+              "position": 9
+            },
+            {
+              "uuid": "8edc188a258c461b91ac9844a44ec989",
+              "name": "A0E",
+              "rating": 3001,
+              "position": 10
+            }
+          ]
+        },
+        {
+          "number": 23,
+          "leaderboard": [
+            {
+              "uuid": "1ad7088547044eaa86f2b5f1484f1843",
+              "name": "SpectroPlayer",
+              "rating": 3138,
+              "position": 1
+            },
+            {
+              "uuid": "e5d787945bbf4218b75cedcdd18e7863",
+              "name": "X_R7",
+              "rating": 3121,
+              "position": 2
+            },
+            {
+              "uuid": "6ed0cc458b4d47b8b1dc433ebc93702b",
+              "name": "Conventionality",
+              "rating": 3119,
+              "position": 3
+            },
+            {
+              "uuid": "55b068ee3ff64fb2b2bebab92fb93c51",
+              "name": "NiSsePiP",
+              "rating": 3102,
+              "position": 4
+            },
+            {
+              "uuid": "f90043ead2834e33840832ecb868eb23",
+              "name": "HypickelDragon",
+              "rating": 3101,
+              "position": 5
+            },
+            {
+              "uuid": "1d346a48776643a2927dbf723aa07254",
+              "name": "Optay",
+              "rating": 3081,
+              "position": 6
+            },
+            {
+              "uuid": "112fe8f8596a4d90b1c8a99125c6ce7e",
+              "name": "PeterMC",
+              "rating": 3078,
+              "position": 7
+            },
+            {
+              "uuid": "b3f5a846983f4a44b9f59b2c600bc9c0",
+              "name": "Vladiss",
+              "rating": 3071,
+              "position": 8
+            },
+            {
+              "uuid": "b051defe261b45e6b745602a32fd6903",
+              "name": "Sackboy_Clank5",
+              "rating": 3068,
+              "position": 9
+            },
+            {
+              "uuid": "93cc3887ab604bb4b95839c86e326332",
+              "name": "CosQ",
+              "rating": 3027,
+              "position": 10
+            }
+          ]
+        }
+      ]
+    }
+  },
+
+  "duels": {
+    "divisions": {
+      "0": { "name": "None", "value": "", "color": "darkGray" },
+
+      "100": { "name": "Rookie", "value": "I", "color": "gray" },
+      "120": { "name": "Rookie", "value": "II", "color": "gray" },
+      "140": { "name": "Rookie", "value": "III", "color": "gray" },
+      "160": { "name": "Rookie", "value": "IV", "color": "gray" },
+      "180": { "name": "Rookie", "value": "V", "color": "gray" },
+
+      "200": { "name": "Iron", "value": "I", "color": "makeDarkGrayWhite" },
+      "260": { "name": "Iron", "value": "II", "color": "makeDarkGrayWhite" },
+      "320": { "name": "Iron", "value": "III", "color": "makeDarkGrayWhite" },
+      "380": { "name": "Iron", "value": "IV", "color": "makeDarkGrayWhite" },
+      "440": { "name": "Iron", "value": "V", "color": "makeDarkGrayWhite" },
+
+      "500": { "name": "Gold", "value": "I", "color": "gold" },
+      "600": { "name": "Gold", "value": "II", "color": "gold" },
+      "700": { "name": "Gold", "value": "III", "color": "gold" },
+      "800": { "name": "Gold", "value": "IV", "color": "gold" },
+      "900": { "name": "Gold", "value": "V", "color": "gold" },
+
+      "1000": { "name": "Diamond", "value": "I", "color": "darkAqua" },
+      "1200": { "name": "Diamond", "value": "II", "color": "darkAqua" },
+      "1400": { "name": "Diamond", "value": "III", "color": "darkAqua" },
+      "1600": { "name": "Diamond", "value": "IV", "color": "darkAqua" },
+      "1800": { "name": "Diamond", "value": "V", "color": "darkAqua" },
+
+      "2000": { "name": "Master", "value": "I", "color": "darkGreen" },
+      "2400": { "name": "Master", "value": "II", "color": "darkGreen" },
+      "2800": { "name": "Master", "value": "III", "color": "darkGreen" },
+      "3200": { "name": "Master", "value": "IV", "color": "darkGreen" },
+      "3600": { "name": "Master", "value": "V", "color": "darkGreen" },
+
+      "4000": { "name": "Legend", "value": "I", "color": "darkRed" },
+      "5200": { "name": "Legend", "value": "II", "color": "darkRed" },
+      "6400": { "name": "Legend", "value": "III", "color": "darkRed" },
+      "7600": { "name": "Legend", "value": "IV", "color": "darkRed" },
+      "8800": { "name": "Legend", "value": "V", "color": "darkRed" },
+
+      "10000": { "name": "Grandmaster", "value": "I", "color": "yellow" },
+      "12000": { "name": "Grandmaster", "value": "II", "color": "yellow" },
+      "14000": { "name": "Grandmaster", "value": "III", "color": "yellow" },
+      "16000": { "name": "Grandmaster", "value": "IV", "color": "yellow" },
+      "18000": { "name": "Grandmaster", "value": "V", "color": "yellow" },
+
+      "20000": { "name": "Godlike", "value": "I", "color": "darkPurple" },
+      "26000": { "name": "Godlike", "value": "II", "color": "darkPurple" },
+      "32000": { "name": "Godlike", "value": "III", "color": "darkPurple" },
+      "38000": { "name": "Godlike", "value": "IV", "color": "darkPurple" },
+      "44000": { "name": "Godlike", "value": "V", "color": "darkPurple" },
+
+      "50000": { "name": "Celestial", "value": "I", "color": "aqua" },
+      "60000": { "name": "Celestial", "value": "II", "color": "aqua" },
+      "70000": { "name": "Celestial", "value": "III", "color": "aqua" },
+      "80000": { "name": "Celestial", "value": "IV", "color": "aqua" },
+      "90000": { "name": "Celestial", "value": "V", "color": "aqua" },
+
+      "100000": { "name": "Divine", "value": "I", "color": "lightPurple" },
+      "120000": { "name": "Divine", "value": "II", "color": "lightPurple" },
+      "140000": { "name": "Divine", "value": "III", "color": "lightPurple" },
+      "160000": { "name": "Divine", "value": "IV", "color": "lightPurple" },
+      "180000": { "name": "Divine", "value": "V", "color": "lightPurple" },
+
+      "200000": { "name": "Ascended", "value": "I", "color": "red" },
+      "220000": { "name": "Ascended", "value": "II", "color": "red" },
+      "240000": { "name": "Ascended", "value": "III", "color": "red" },
+      "260000": { "name": "Ascended", "value": "IV", "color": "red" },
+      "280000": { "name": "Ascended", "value": "V", "color": "red" },
+      "300000": { "name": "Ascended", "value": "VI", "color": "red" },
+      "320000": { "name": "Ascended", "value": "VII", "color": "red" },
+      "340000": { "name": "Ascended", "value": "VIII", "color": "red" },
+      "360000": { "name": "Ascended", "value": "IX", "color": "red" },
+      "380000": { "name": "Ascended", "value": "X", "color": "red" },
+
+      "400000": { "name": "Ascended", "value": "XI", "color": "red" },
+      "420000": { "name": "Ascended", "value": "XII", "color": "red" },
+      "440000": { "name": "Ascended", "value": "XIII", "color": "red" },
+      "460000": { "name": "Ascended", "value": "XIV", "color": "red" },
+      "480000": { "name": "Ascended", "value": "XV", "color": "red" },
+      "500000": { "name": "Ascended", "value": "XVI", "color": "red" },
+      "520000": { "name": "Ascended", "value": "XVII", "color": "red" },
+      "540000": { "name": "Ascended", "value": "XVIII", "color": "red" },
+      "560000": { "name": "Ascended", "value": "XIX", "color": "red" },
+      "580000": { "name": "Ascended", "value": "XX", "color": "red" },
+
+      "600000": { "name": "Ascended", "value": "XXI", "color": "red" },
+      "620000": { "name": "Ascended", "value": "XXII", "color": "red" },
+      "640000": { "name": "Ascended", "value": "XXIII", "color": "red" },
+      "660000": { "name": "Ascended", "value": "XXIV", "color": "red" },
+      "680000": { "name": "Ascended", "value": "XXV", "color": "red" },
+      "700000": { "name": "Ascended", "value": "XXVI", "color": "red" },
+      "720000": { "name": "Ascended", "value": "XXVII", "color": "red" },
+      "740000": { "name": "Ascended", "value": "XXVIII", "color": "red" },
+      "760000": { "name": "Ascended", "value": "XXIX", "color": "red" },
+      "780000": { "name": "Ascended", "value": "XXX", "color": "red" },
+
+      "800000": { "name": "Ascended", "value": "XXXI", "color": "red" },
+      "820000": { "name": "Ascended", "value": "XXXII", "color": "red" },
+      "840000": { "name": "Ascended", "value": "XXXIII", "color": "red" },
+      "860000": { "name": "Ascended", "value": "XXXIV", "color": "red" },
+      "880000": { "name": "Ascended", "value": "XXXV", "color": "red" },
+      "900000": { "name": "Ascended", "value": "XXXVI", "color": "red" },
+      "920000": { "name": "Ascended", "value": "XXXVII", "color": "red" },
+      "940000": { "name": "Ascended", "value": "XXXVIII", "color": "red" },
+      "960000": { "name": "Ascended", "value": "XXXIX", "color": "red" },
+      "980000": { "name": "Ascended", "value": "XL", "color": "red" },
+
+      "1000000": { "name": "Ascended", "value": "XLI", "color": "red" },
+      "1020000": { "name": "Ascended", "value": "XLII", "color": "red" },
+      "1040000": { "name": "Ascended", "value": "XLIII", "color": "red" },
+      "1060000": { "name": "Ascended", "value": "XLIV", "color": "red" },
+      "1080000": { "name": "Ascended", "value": "XLV", "color": "red" },
+      "1100000": { "name": "Ascended", "value": "XLVI", "color": "red" },
+      "1120000": { "name": "Ascended", "value": "XLVII", "color": "red" },
+      "1140000": { "name": "Ascended", "value": "XLVIII", "color": "red" },
+      "1160000": { "name": "Ascended", "value": "XLIX", "color": "red" },
+      "1180000": { "name": "Ascended", "value": "L", "color": "red" },
+
+      "999999999": { "name": "N/A", "value": "", "color": "gray" }
+    }
+  },
+
+  "modes": {
+    "buildBattle": {
+      "titles": [
+        { "value": 0, "name": "Rookie", "color": "darkGray" },
+        { "value": 100, "name": "Untrained", "color": "gray" },
+        { "value": 250, "name": "Amateur", "color": "gold" },
+        { "value": 500, "name": "Apprentice", "color": "darkGreen" },
+        { "value": 1000, "name": "Experienced", "color": "lightPurple" },
+        { "value": 2000, "name": "Seasoned", "color": "blue" },
+        { "value": 3500, "name": "Trained", "color": "darkGreen" },
+        { "value": 5000, "name": "Skilled", "color": "darkAqua" },
+        { "value": 7500, "name": "Talented", "color": "red" },
+        { "value": 10000, "name": "Professional", "color": "darkPurple" },
+        { "value": 15000, "name": "Expert", "color": "darkBlue" },
+        { "value": 20000, "name": "Master", "color": "darkRed" },
+        { "value": 999999999, "name": "N/A", "color": "gray" }
+      ]
+    },
+
+    "cvc": {
+      "weapons": {
+        "pistol": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction"
+        ],
+        "handgun": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "sniper": ["damage_increase", "target_acquire", "sniper_charge_bonus"],
+        "smg": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "carbine": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "shotgun": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "knife": ["damage_increase", "attack_delay"],
+        "magnum": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "bullpup": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "rifle": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "scoped_rifle": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ],
+        "auto_shotgun": [
+          "damage_increase",
+          "recoil_reduction",
+          "reload_speed_reduction",
+          "cost_reduction"
+        ]
+      }
+    },
+
+    "megaWalls": {
+      "classes": {
+        "angel": "red",
+        "arcanist": "darkGreen",
+        "assassin": "gold",
+        "automaton": "darkRed",
+        "blaze": "gold",
+        "cow": "darkGreen",
+        "creeper": "red",
+        "dragon": "darkRed",
+        "dreadlord": "darkGreen",
+        "enderman": "gold",
+        "golem": "darkGreen",
+        "herobrine": "darkGreen",
+        "hunter": "gold",
+        "moleman": "red",
+        "phoenix": "red",
+        "pigman": "darkGreen",
+        "pirate": "red",
+        "renegade": "darkRed",
+        "shaman": "gold",
+        "shark": "red",
+        "sheep": "red",
+        "skeleton": "red",
+        "snowman": "darkRed",
+        "spider": "red",
+        "squid": "gold",
+        "werewolf": "gold",
+        "zombie": "darkGreen"
+      }
+    },
+
+    "pit": {
+      "levels": [
+        { "xp": 15, "color": "gray" },
+        { "xp": 30, "color": "blue" },
+        { "xp": 50, "color": "darkAqua" },
+        { "xp": 75, "color": "darkGreen" },
+        { "xp": 125, "color": "green" },
+        { "xp": 300, "color": "yellow" },
+        { "xp": 600, "color": "gold" },
+        { "xp": 800, "color": "red" },
+        { "xp": 900, "color": "darkRed" },
+        { "xp": 1000, "color": "darkPurple" },
+        { "xp": 1200, "color": "lightPurple" },
+        { "xp": 1500, "color": "white" },
+        { "xp": 1, "color": "aqua" }
+      ],
+
+      "prestiges": [
+        {
+          "multiplier": 1,
+          "xp": 65950,
+          "xpTotal": 65950,
+          "goldReq": 10000,
+          "renown": 0,
+          "color": "gray"
+        },
+        {
+          "multiplier": 1.1,
+          "xp": 72560,
+          "xpTotal": 138510,
+          "goldReq": 20000,
+          "renown": 10,
+          "color": "blue"
+        },
+        {
+          "multiplier": 1.2,
+          "xp": 79170,
+          "xpTotal": 217680,
+          "goldReq": 20000,
+          "renown": 10,
+          "color": "blue"
+        },
+        {
+          "multiplier": 1.3,
+          "xp": 85750,
+          "xpTotal": 303430,
+          "goldReq": 20000,
+          "renown": 10,
+          "color": "blue"
+        },
+        {
+          "multiplier": 1.4,
+          "xp": 92330,
+          "xpTotal": 395760,
+          "goldReq": 30000,
+          "renown": 10,
+          "color": "blue"
+        },
+        {
+          "multiplier": 1.5,
+          "xp": 98940,
+          "xpTotal": 494700,
+          "goldReq": 35000,
+          "renown": 10,
+          "color": "yellow"
+        },
+        {
+          "multiplier": 1.75,
+          "xp": 115440,
+          "xpTotal": 610140,
+          "goldReq": 40000,
+          "renown": 20,
+          "color": "yellow"
+        },
+        {
+          "multiplier": 2,
+          "xp": 131900,
+          "xpTotal": 742040,
+          "goldReq": 45000,
+          "renown": 20,
+          "color": "yellow"
+        },
+        {
+          "multiplier": 2.5,
+          "xp": 164890,
+          "xpTotal": 906930,
+          "goldReq": 50000,
+          "renown": 20,
+          "color": "yellow"
+        },
+        {
+          "multiplier": 3,
+          "xp": 197850,
+          "xpTotal": 1104780,
+          "goldReq": 60000,
+          "renown": 20,
+          "color": "yellow"
+        },
+        {
+          "multiplier": 4,
+          "xp": 263800,
+          "xpTotal": 1368580,
+          "goldReq": 70000,
+          "renown": 20,
+          "color": "gold"
+        },
+        {
+          "multiplier": 5,
+          "xp": 329750,
+          "xpTotal": 1698330,
+          "goldReq": 80000,
+          "renown": 30,
+          "color": "gold"
+        },
+        {
+          "multiplier": 6,
+          "xp": 395700,
+          "xpTotal": 2094030,
+          "goldReq": 90000,
+          "renown": 30,
+          "color": "gold"
+        },
+        {
+          "multiplier": 7,
+          "xp": 461650,
+          "xpTotal": 2555680,
+          "goldReq": 100000,
+          "renown": 30,
+          "color": "gold"
+        },
+        {
+          "multiplier": 8,
+          "xp": 527600,
+          "xpTotal": 3083280,
+          "goldReq": 125000,
+          "renown": 30,
+          "color": "gold"
+        },
+        {
+          "multiplier": 9,
+          "xp": 593550,
+          "xpTotal": 3676830,
+          "goldReq": 150000,
+          "renown": 30,
+          "color": "red"
+        },
+        {
+          "multiplier": 10,
+          "xp": 659500,
+          "xpTotal": 4336330,
+          "goldReq": 175000,
+          "renown": 40,
+          "color": "red"
+        },
+        {
+          "multiplier": 12,
+          "xp": 791400,
+          "xpTotal": 5127730,
+          "goldReq": 200000,
+          "renown": 40,
+          "color": "red"
+        },
+        {
+          "multiplier": 14,
+          "xp": 923300,
+          "xpTotal": 6051030,
+          "goldReq": 250000,
+          "renown": 40,
+          "color": "red"
+        },
+        {
+          "multiplier": 16,
+          "xp": 1055200,
+          "xpTotal": 7106230,
+          "goldReq": 300000,
+          "renown": 40,
+          "color": "red"
+        },
+        {
+          "multiplier": 18,
+          "xp": 1187100,
+          "xpTotal": 8293330,
+          "goldReq": 350000,
+          "renown": 40,
+          "color": "darkPurple"
+        },
+        {
+          "multiplier": 20,
+          "xp": 1319000,
+          "xpTotal": 9612330,
+          "goldReq": 400000,
+          "renown": 50,
+          "color": "darkPurple"
+        },
+        {
+          "multiplier": 24,
+          "xp": 1582800,
+          "xpTotal": 11195130,
+          "goldReq": 500000,
+          "renown": 50,
+          "color": "darkPurple"
+        },
+        {
+          "multiplier": 28,
+          "xp": 1846600,
+          "xpTotal": 13041730,
+          "goldReq": 600000,
+          "renown": 50,
+          "color": "darkPurple"
+        },
+        {
+          "multiplier": 32,
+          "xp": 2110400,
+          "xpTotal": 15152130,
+          "goldReq": 700000,
+          "renown": 50,
+          "color": "darkPurple"
+        },
+        {
+          "multiplier": 36,
+          "xp": 2374200,
+          "xpTotal": 17526330,
+          "goldReq": 800000,
+          "renown": 50,
+          "color": "lightPurple"
+        },
+        {
+          "multiplier": 40,
+          "xp": 2638000,
+          "xpTotal": 20164330,
+          "goldReq": 900000,
+          "renown": 75,
+          "color": "lightPurple"
+        },
+        {
+          "multiplier": 45,
+          "xp": 2967750,
+          "xpTotal": 23132080,
+          "goldReq": 1000000,
+          "renown": 75,
+          "color": "lightPurple"
+        },
+        {
+          "multiplier": 50,
+          "xp": 3297500,
+          "xpTotal": 26429580,
+          "goldReq": 1000000,
+          "renown": 75,
+          "color": "lightPurple"
+        },
+        {
+          "multiplier": 75,
+          "xp": 4946250,
+          "xpTotal": 31375830,
+          "goldReq": 1000000,
+          "renown": 75,
+          "color": "lightPurple"
+        },
+        {
+          "multiplier": 100,
+          "xp": 6595000,
+          "xpTotal": 37970830,
+          "goldReq": 1000000,
+          "renown": 250,
+          "color": "white"
+        },
+        {
+          "multiplier": 101,
+          "xp": 6660950,
+          "xpTotal": 44631780,
+          "goldReq": 1000000,
+          "renown": 100,
+          "color": "white"
+        },
+        {
+          "multiplier": 101,
+          "xp": 6660950,
+          "xpTotal": 51292730,
+          "goldReq": 1000000,
+          "renown": 100,
+          "color": "white"
+        },
+        {
+          "multiplier": 101,
+          "xp": 6660950,
+          "xpTotal": 57953680,
+          "goldReq": 1000000,
+          "renown": 100,
+          "color": "white"
+        },
+        {
+          "multiplier": 101,
+          "xp": 6660950,
+          "xpTotal": 64614630,
+          "goldReq": 1000000,
+          "renown": 100,
+          "color": "white"
+        },
+        {
+          "multiplier": 101,
+          "xp": 6660950,
+          "xpTotal": 71275580,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "aqua"
+        },
+        {
+          "multiplier": 200,
+          "xp": 13190000,
+          "xpTotal": 84465580,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "aqua"
+        },
+        {
+          "multiplier": 300,
+          "xp": 19785000,
+          "xpTotal": 104250580,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "aqua"
+        },
+        {
+          "multiplier": 400,
+          "xp": 26380000,
+          "xpTotal": 130630580,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "aqua"
+        },
+        {
+          "multiplier": 500,
+          "xp": 32975000,
+          "xpTotal": 163605580,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "aqua"
+        },
+        {
+          "multiplier": 750,
+          "xp": 49462500,
+          "xpTotal": 213068080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 1000,
+          "xp": 65950000,
+          "xpTotal": 279018080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 1250,
+          "xp": 82437500,
+          "xpTotal": 361455580,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 1500,
+          "xp": 98925000,
+          "xpTotal": 460380580,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 1750,
+          "xp": 115412500,
+          "xpTotal": 575793080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 2000,
+          "xp": 131900000,
+          "xpTotal": 707693080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 3000,
+          "xp": 197850000,
+          "xpTotal": 905543080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 5000,
+          "xp": 329750000,
+          "xpTotal": 1235293080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 10000,
+          "xp": 659500000,
+          "xpTotal": 1894793080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 50000,
+          "xp": 3297500000,
+          "xpTotal": 5192293080,
+          "goldReq": 2000000,
+          "renown": 100,
+          "color": "darkBlue"
+        },
+        {
+          "multiplier": 100000,
+          "xp": 6595000000,
+          "xpTotal": 11787293080,
+          "goldReq": 0,
+          "renown": 100,
+          "color": "darkBlue"
+        }
+      ]
+    },
+
+    "smashHeroes": {
+      "heroes": {
+        "BOTMUN": { "name": "Botmon", "color": "darkGreen" },
+        "THE_BULK": { "name": "Bulk", "color": "gold" },
+        "CAKE_MONSTER": { "name": "Cake Monster", "color": "gold" },
+        "FROSTY": { "name": "Cryomancer", "color": "red" },
+        "GENERAL_CLUCK": { "name": "General Cluck", "color": "darkGreen" },
+        "GREEN_HOOD": { "name": "Green Hood", "color": "darkRed" },
+        "GOKU": { "name": "Karakot", "color": "red" },
+        "MARAUDER": { "name": "Marauder", "color": "gold" },
+        "PUG": { "name": "Pug", "color": "gold" },
+        "SANIC": { "name": "Sanic", "color": "gold" },
+        "SERGEANT_SHIELD": { "name": "Sgt. Shield", "color": "red" },
+        "SHOOP_DA_WHOOP": { "name": "Shoop", "color": "red" },
+        "SKULLFIRE": { "name": "Skullfire", "color": "red" },
+        "SPODERMAN": { "name": "Spooderman", "color": "darkRed" },
+        "TINMAN": { "name": "Tinman", "color": "darkGreen" },
+        "DUSK_CRAWLER": { "name": "Void Crawler", "color": "gold" }
+      }
+    },
+
+    "speedUHC": {
+      "titles": [
+        { "value": 0, "name": "Hiker" },
+        { "value": 50, "name": "Jogger" },
+        { "value": 300, "name": "Runner" },
+        { "value": 1050, "name": "Sprinter" },
+        { "value": 2560, "name": "Turbo" },
+        { "value": 5550, "name": "Sanic" },
+        { "value": 15550, "name": "Hot Rod" },
+        { "value": 30550, "name": "Bolt" },
+        { "value": 55550, "name": "Zoom" },
+        { "value": 85550, "name": "God Speed" },
+        { "value": 999999999, "name": "N/A" }
+      ]
+    },
+
+    "UHC": {
+      "titles": [
+        { "value": 0, "name": "Recruit", "color": "makeDarkGrayLightGray" },
+        { "value": 10, "name": "Initiate", "color": "makeDarkGrayLightGray" },
+        { "value": 60, "name": "Soldier", "color": "makeDarkGrayLightGray" },
+        { "value": 210, "name": "Sergeant", "color": "makeDarkGrayLightGray" },
+        { "value": 460, "name": "Knight", "color": "makeDarkGrayLightGray" },
+        { "value": 960, "name": "Captain", "color": "makeDarkGrayLightGray" },
+        {
+          "value": 1710,
+          "name": "Centurion",
+          "color": "makeDarkGrayLightGray"
+        },
+        {
+          "value": 2710,
+          "name": "Gladiator",
+          "color": "makeDarkGrayLightGray"
+        },
+        { "value": 5210, "name": "Warlord", "color": "makeDarkGrayLightGray" },
+        {
+          "value": 10210,
+          "name": "Champion",
+          "color": "makeDarkGrayLightGray"
+        },
+        {
+          "value": 13210,
+          "name": "Champion",
+          "color": "makeDarkGrayLightGray"
+        },
+        { "value": 16210, "name": "Bronze Champion", "color": "brown" },
+        {
+          "value": 19210,
+          "name": "Silver Champion",
+          "color": "makeDarkGrayLightGray"
+        },
+        { "value": 22210, "name": "Gold Champion", "color": "gold" },
+        { "value": 25210, "name": "High Champion", "color": "darkAqua" },
+        { "value": 999999999, "name": "N/A", "color": "gray" }
+      ]
+    },
+
+    "warlords": {
+      "weaponTypes": {
+        "common": "darkGreen",
+        "rare": "blue",
+        "epic": "darkPurple",
+        "legendary": "gold"
+      },
+
+      "weaponNames": {
+        "WOOD_AXE": "Steel Sword",
+        "STONE_AXE": "Training Sword",
+        "IRON_AXE": "Demonblade",
+        "GOLD_AXE": "Venomstrike",
+        "DIAMOND_AXE": "Diamondspark",
+        "WOOD_HOE": "Zweireaper",
+        "STONE_HOE": "Runeblade",
+        "IRON_HOE": "Elven Greatsword",
+        "GOLD_HOE": "Hatchet",
+        "DIAMOND_HOE": "Gem Axe",
+        "WOOD_SPADE": "Nomegusta",
+        "STONE_SPADE": "Drakefang",
+        "IRON_SPADE": "Hammer",
+        "GOLD_SPADE": "Stone Mallet",
+        "DIAMOND_SPADE": "Gemcrusher",
+        "WOOD_PICKAXE": "Abbadon",
+        "STONE_PICKAXE": "Walking Stick",
+        "IRON_PICKAXE": "World Tree Branch",
+        "GOLD_PICKAXE": "Flameweaver",
+        "DIAMOND_PICKAXE": "Void Twig",
+        "SALMON": "Scimitar",
+        "PUFFERFISH": "Golden Gladius",
+        "CLOWNFISH": "Magmasword",
+        "COD": "Frostbite",
+        "ROTTEN_FLESH": "Pike",
+        "POTATO": "Halberd",
+        "MELON": "Divine Reach",
+        "POISONOUS_POTATO": "Ruby Thorn",
+        "STRING": "Hammer of Light",
+        "RAW_CHICKEN": "Nethersteel Katana",
+        "MUTTON": "Claws",
+        "PORK": "Mandibles",
+        "RAW_BEEF": "Katar",
+        "APPLE": "Enderfist",
+        "PUMPKIN_PIE": "Orc Axe",
+        "COOKED_COD": "Doubleaxe",
+        "BREAD": "Runic Axe",
+        "MUSHROOM_STEW": "Lunar Relic",
+        "RABBIT_STEW": "Bludgeon",
+        "COOKED_RABBIT": "Cudgel",
+        "COOKED_CHICKEN": "Tenderizer",
+        "BAKED_POTATO": "Broccomace",
+        "COOKED_SALMON": "Felflame Blade",
+        "COOKED_MUTTON": "Amaranth",
+        "COOKED_BEEF": "Armblade",
+        "GRILLED_PORK": "Gemini",
+        "COOKED_PORKCHOP": "Gemini",
+        "GOLDEN_CARROT": "Void Edge"
+      },
+
+      "weaponClasses": [
+        ["Pyromancer", "Cryomancer", "Aquamancer"],
+        ["Berserker", "Defender", "Revenant"],
+        ["Avenger", "Crusader", "Protector"],
+        ["Thunderlord", "Earthwarden", "Spiritguard"]
+      ],
+
+      "weaponScores": {
+        "COMMON": [
+          { "score": 276, "prefix": "Crumbly" },
+          { "score": 302, "prefix": "Flimsy" },
+          { "score": 327, "prefix": "Rough" },
+          { "score": 352, "prefix": "Honed" },
+          { "score": 378, "prefix": "Refined" },
+          { "score": 403, "prefix": "Balanced" }
+        ],
+        "RARE": [
+          { "score": 359, "prefix": "Savage" },
+          { "score": 400, "prefix": "Vicious" },
+          { "score": 440, "prefix": "Deadly" },
+          { "score": 481, "prefix": "Perfect" }
+        ],
+        "EPIC": [
+          { "score": 450, "prefix": "Fierce" },
+          { "score": 489, "prefix": "Mighty" },
+          { "score": 527, "prefix": "Brutal" },
+          { "score": 566, "prefix": "Gladiator's" }
+        ],
+        "LEGENDARY": [
+          { "score": 595, "prefix": "Vanquisher's" },
+          { "score": 665, "prefix": "Champion's" },
+          { "score": 735, "prefix": "Warlord's" }
+        ]
+      }
+    },
+
+    "woolGames": {
+      "prestiges": [
+        { "level": 0, "color": "gray", "name": "None" },
+        { "level": 100, "color": "white", "name": "Sheep" },
+        { "level": 200, "color": "red", "name": "First Arc" },
+        { "level": 300, "color": "gold", "name": "Second Arc" },
+        { "level": 400, "color": "yellow", "name": "Third Arc" },
+        { "level": 500, "color": "green", "name": "Fourth Arc" },
+        { "level": 600, "color": "darkAqua", "name": "Fifth Arc" },
+        { "level": 700, "color": "purple", "name": "Sixth Arc" },
+        { "level": 800, "color": "pink", "name": "Final Arc" },
+        { "level": 900, "color": "red", "name": "Full Rainbow" },
+        { "level": 1000, "color": "black", "name": "Void Sheep" },
+        { "level": 999999999, "color": "gray", "name": "N/A" }
+      ],
+
+      "icons": {
+        "HEART": "❤",
+        "PLUS": "✙",
+        "STAR": "☆",
+        "PLANE": "✈",
+        "CROSS": "✠",
+        "CROWN": "♕",
+        "LIGHTNING": "⚡",
+        "NUKE": "☢",
+        "PENSUL": "✏",
+        "YIN_YANG": "☯"
+      }
+    },
+
+    "classic": {
+      "turboKartRacers": {
+        "kartQuality": [
+          { "name": "Starter", "color": "gray" },
+          { "name": "Mini", "color": "gray" },
+          { "name": "Auxiliary", "color": "darkGreen" },
+          { "name": "Standard", "color": "darkGreen" },
+          { "name": "Primary", "color": "darkGreen" },
+          { "name": "Experimental", "color": "darkGreen" },
+          { "name": "Dynamic", "color": "blue" },
+          { "name": "Stellar", "color": "blue" },
+          { "name": "Kinetic", "color": "blue" },
+          { "name": "Multi-phase", "color": "blue" },
+          { "name": "Turbocharged", "color": "lightPurple" },
+          { "name": "Quantum", "color": "lightPurple" },
+          { "name": "Superluminal", "color": "lightPurple" },
+          { "name": "Psi", "color": "lightPurple" },
+          { "name": "Eternal", "color": "darkPurple" }
+        ]
+      }
+    }
+  }
+}

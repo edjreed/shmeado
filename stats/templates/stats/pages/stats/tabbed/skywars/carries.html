@@ -1,0 +1,11 @@
+{% load humanize %}
+<h2>
+    Carries
+    {% include "stats/components/carries_tooltip.html" %}
+</h2>
+<br>
+{% with s=player.stats.skywars %}
+    <h2>{% rank player.rank player.name True %} has been carried {{ s.carries|intcomma }} times!</h2>
+    <br>
+    {% include "stats/components/table.html" with table=player.stats.skywars.table_carries %}
+{% endwith %}

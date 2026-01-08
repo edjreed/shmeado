@@ -1,0 +1,88 @@
+{% load humanize %}
+{% with s=player.stats.general %}
+    <!-- Written Stats -->
+    <div class="block">
+        <p>
+            <b>Level:</b> {{ s.network_level|intcomma }} 
+            <a class="hoverOpacity hidden" href="" target="_blank">
+                <i class="shmeadoColor bi bi-calculator-fill"></i>
+            </a>
+        </p>
+        <p><b>Coin Multiplier:</b> {{ s.coin_multiplier }}</p>
+        <p><b>Experience:</b> {{ s.network_experience|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Quests:</b> {{ s.quests.completed|intcomma }}</p>
+        <p><b>Challenges:</b> {{ s.challenges.completed|intcomma }}</p>
+        <p><b>Achievement Points:</b> {{ s.achievements.points|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Karma:</b> {{ s.karma|intcomma }}</p>
+
+        <!-- First Login -->
+        <p class="pointer hoverOpacity" onclick="loginToggle('first')">
+            <b id="firstLoginTitle">First Login: </b>
+            {% with t=s.first_login %}
+                <span id="firstLogin">{{ t|format_timestamp }}</span>
+                <span id="firstLoginAgo" class="hidden">{{ t|time_since_timestamp }} ago</span>
+            {% endwith %}
+        </p>
+
+        <!-- Last Login -->
+        <p class="pointer hoverOpacity" onclick="loginToggle('last')">
+            <b id="lastLoginTitle">Last Login: </b>
+            {% with t=s.last_login %}
+                <span id="lastLogin">
+                    {% if t == 0 %}
+                        Unknown
+                    {% else %}
+                        {{ t|format_timestamp }}
+                    {% endif %}
+                </span>
+                <span id="lastLoginAgo" class="hidden">{{ t|time_since_timestamp }} ago</span>
+            {% endwith %}
+        </p>
+    </div>
+
+    <!-- Further Information Requests -->
+    <div class="block">
+        <p id="onlineError" class="hidden"><b>
+            <span id="onlineError" class="red">Error Loading Online Status</span>
+        </p></b>
+        <p id="onlineContainer"><b>
+            <span id="onlineStatusButton" class="pointer hoverOpacity" onclick="requestHandler('online', onlineStatus)">
+                <span id="onlineStatusText">Online Status</span>
+                <span id="onlineStatusCurrently" class="hidden">Currently</span>
+                <span id="onlineStatusOffline" class="hidden red">Offline</span>
+                <span id="onlineStatusOnline" class="hidden makeDarkGreenLightGreen">Online</span>
+            </span>
+        </b></p>
+
+        <p id="recentError" class="hidden"><b>
+            <span id="recentError" class="red">Error Loading Recent Games</span>
+        </p></b>
+        <p id="recentContainer"><b>
+            <span id="recentGamesButton" class="pointer hoverOpacity" onclick="requestHandler('recent', recentGames)">
+                Recent Games
+                <span id="recentGamesLoaded" class="hidden">
+                    <span class="gray">•</span>
+                    <span class="makeDarkGreenLightGreen">Loaded</span>
+                </span>
+            </span>
+        </b></p>
+
+        <p id="guildError" class="hidden"><b>
+            <span id="guildError" class="red">Error Loading Guild Information</span>
+        </p></b>
+        <p id="guildContainer"><b>
+            <span id="guildButton" class="pointer hoverOpacity" onclick="requestHandler('guild', guild)">
+                Guild Information
+                <span id="guildLoaded" class="hidden">
+                    <span class="gray">•</span>
+                    <span class="makeDarkGreenLightGreen">Loaded</span>
+                </span>
+            </span>
+            <span id="noGuild" class="hidden">Guild: <span class="notBold">None</span></span>
+        </b></p>
+    </div>
+{% endwith %}

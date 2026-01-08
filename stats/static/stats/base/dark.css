@@ -1,0 +1,526 @@
+/*============================================================================*/
+/* LIGHT THEME DECLARATIONS
+/*============================================================================*/
+
+body {
+  --background: #aaaaaa;
+  --bold: bold;
+  --text: #111;
+  --p-text: #1f1f1f;
+  --shmeado-color: #2a3142;
+  --shmeado-color-text: var(--shmeado-color);
+  --anchor: #0200ec;
+
+  --make-blue-light: #5555ff;
+  --make-dark-blue-light: #0000aa;
+  --make-dark-blue-dark-aqua: #0000aa;
+  --make-dark-red-red: #aa0000;
+  --make-dark-gray-white: #555555;
+  --make-gray-white: #aaaaaa;
+  --make-white-gray: #ffffff;
+  --make-dark-aqua-light: #00aaaa;
+  --make-dark-gray-light-gray: #555555;
+  --make-dark-green-light-green: #00aa00;
+  --make-light-green-dark-green: #55ff55;
+
+  --make-green-visible: #38ba5b;
+  --make-aqua-visible: #00cccc;
+
+  --header: var(--shmeado-color);
+  --sidebar: #2a3142cc;
+  --hover: var(--sidebar);
+  --header-search-bar: #2a3142aa;
+  --main-element: rgba(256, 256, 256, 0.85);
+  --online-details-container: rgb(41, 41, 41, 0.85);
+
+  --nav-game-general: linear-gradient(
+      to right,
+      rgba(170, 170, 170, 0.1) 20%,
+      rgba(170, 170, 170, 0.1)
+    ),
+    url(/static/stats/main/images/navGameGeneral.png);
+  --nav-game-modes: linear-gradient(
+      to right,
+      rgba(170, 170, 170, 0.1) 20%,
+      rgba(170, 170, 170, 0.1)
+    ),
+    url(/static/stats/main/images/navGameModes.png);
+  --nav-game-bedwars: linear-gradient(
+      to right,
+      rgba(170, 170, 170, 0.1) 20%,
+      rgba(170, 170, 170, 0.1)
+    ),
+    url(/static/stats/main/images/navGameBedWars.png);
+  --nav-game-skywars: linear-gradient(
+      to right,
+      rgba(170, 170, 170, 0.1) 20%,
+      rgba(170, 170, 170, 0.1)
+    ),
+    url(/static/stats/main/images/navGameSkyWars.png);
+  --nav-game-duels: linear-gradient(
+      to right,
+      rgba(170, 170, 170, 0.1) 20%,
+      rgba(170, 170, 170, 0.1)
+    ),
+    url(/static/stats/main/images/navGameDuels.png);
+
+  --nav-tab-button-background: var(--shmeado-color);
+  --nav-tab-button-selected-background: #ffffff;
+  --nav-tab-button-selected-text: var(--shmeado-color);
+
+  --scrollbar-track: #f1f1f1;
+  --scrollbar-thumb: var(--background);
+  --scrollbar-thumb-hover: #555555;
+
+  --placeholder-border: 3px;
+  --placeholder-margin: 10px;
+  --pill-selected-background: var(--shmeado-color);
+  --pill-selected-text: #ffffff;
+  --scroll-row: 1px #aaaaaa solid;
+  --skin-shadow: drop-shadow(0px 0px 6px);
+
+  --divider-color: var(--shmeado-color);
+  --table-th-background: var(--shmeado-color);
+  --table-tr-background: #ffffff;
+  --table-text: #333333;
+  --table-hover: #d3d3d3;
+
+  --home-search: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/static/stats/home/images/homeSearchBackground.png);
+  --home-search-container: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 1)
+  );
+  --home-search-navbar: var(--sidebar);
+
+  --popular-profiles-title: var(--shmeado-color-text);
+
+  --search-border: var(--shmeado-color);
+  --search-term-text: #000000;
+  --search-background: #ffffff;
+  --search-button-background: var(--shmeado-color);
+  --search-button-border: 0px;
+  --search-button-border-full: 0px;
+  --search-button-color: #ffffff;
+  --select-items: #ffffff;
+  --select-items-hover: #d3d3d3;
+
+  --leaderboard-select: var(--shmeado-color);
+  --leaderboard-question: var(--shmeado-color);
+  --selected-limit-text: #ffffff;
+  --unselected-limit-text: var(--shmeado-color);
+  --leaderboard-bottom-line: #aaaaaa;
+
+  --faqa: #ffffff;
+}
+
+/*============================================================================*/
+/* DARK THEME DECLARATIONS
+/*============================================================================*/
+
+body.dark-theme {
+  --background: #222222;
+  --bold: normal;
+  --text: #eeeeee;
+  --p-text: var(--text);
+  --shmeado-color: #181818;
+  --shmeado-color-text: var(--text);
+  --anchor: #5555ff;
+
+  --make-blue-light: var(--text);
+  --make-dark-blue-light: var(--text);
+  --make-dark-blue-dark-aqua: #00aaaa;
+  --make-dark-red-red: #ff5555;
+  --make-dark-gray-white: var(--text);
+  --make-gray-white: var(--text);
+  --make-white-gray: #aaaaaa;
+  --make-dark-aqua-light: #55ffff;
+  --make-dark-gray-light-gray: #aaaaaa;
+  --make-dark-green-light-green: #55ff55;
+
+  --make-green-visible: #55ff55;
+  --make-aqua-visible: #55ffff;
+
+  --header: #292929;
+  --sidebar: #181818aa;
+  --hover: #29292980;
+  --header-search-bar: var(--sidebar);
+  --main-element: var(--shmeado-color);
+  --online-details-container: var(--background);
+
+  --nav-game-background: var(--shmeado-color);
+  --nav-game-general: var(--nav-game-background);
+  --nav-game-modes: var(--nav-game-background);
+  --nav-game-bedwars: var(--nav-game-background);
+  --nav-game-skywars: var(--nav-game-background);
+  --nav-game-duels: var(--nav-game-background);
+
+  --nav-tab-button-background: var(--header);
+  --nav-tab-button-selected-background: var(--shmeado-color);
+  --nav-tab-button-selected-text: var(--text);
+
+  --scrollbar-track: var(--background);
+  --scrollbar-thumb: var(--header);
+  --scrollbar-thumb-hover: #aaaaaa;
+
+  --placeholder-border: 1px;
+  --placeholder-margin: 14.2px;
+  --pill-selected-background: var(--header);
+  --pill-selected-text: var(--text);
+  --scroll-row: 1px var(--header) solid;
+  --skin-shadow: none;
+
+  --divider-color: var(--header);
+  --table-th-background: var(--header);
+  --table-tr-background: none;
+  --table-text: var(--text);
+  --table-hover: var(--background);
+
+  --home-search: linear-gradient(
+      to right,
+      rgba(27, 27, 27, 1),
+      rgba(27, 27, 27, 0.75)
+    ),
+    url(/static/stats/home/images/homeSearchBackgroundDark.png);
+  --home-search-container: linear-gradient(
+    to left,
+    rgba(27, 27, 27, 0.5),
+    rgba(27, 27, 27, 1)
+  );
+  --home-search-navbar: #29292988;
+
+  --popular-profiles-title: var(--shmeado-color-text);
+
+  --search-border: var(--background);
+  --search-term-text: var(--text);
+  --search-background: var(--header);
+  --search-button-background: var(--header);
+  --search-button-border: 3px 3px 3px 0px;
+  --search-button-border-full: 3px;
+  --search-button-color: #aaaaaa;
+  --select-items: var(--header);
+  --select-items-hover: var(--background);
+
+  --leaderboard-select: var(--text);
+  --leaderboard-question: #aaaaaa;
+  --selected-limit-text: var(--text);
+  --unselected-limit-text: var(--text);
+  --leaderboard-bottom-line: var(--header);
+
+  --faqa: var(--hover);
+}
+
+/*============================================================================*/
+/* MAIN STYLES
+/*============================================================================*/
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+body,
+h2,
+h5,
+h6 {
+  color: var(--text);
+}
+p,
+#twitter {
+  color: var(--p-text);
+}
+p b {
+  font-weight: var(--bold);
+}
+a,
+a:visited {
+  color: var(--anchor);
+}
+
+.makeThin {
+  font-weight: var(--bold);
+}
+
+.makeTextLight {
+  color: var(--text);
+}
+
+.makeBlueLight {
+  color: var(--make-blue-light);
+}
+
+.makeDarkBlueLight {
+  color: var(--make-dark-blue-light);
+}
+
+.makeDarkBlueDarkAqua {
+  color: var(--make-dark-blue-dark-aqua);
+}
+
+.makeDarkRedRed {
+  color: var(--make-dark-red-red);
+}
+
+.makeDarkGrayWhite {
+  color: var(--make-dark-gray-white);
+}
+
+.makeGrayWhite {
+  color: var(--make--white);
+}
+
+.makeWhiteGray {
+  color: var(--make-white-gray);
+}
+
+.makeDarkAquaAqua {
+  color: var(--make-dark-aqua-light);
+}
+
+.makeDarkGrayLightGray {
+  color: var(--make-dark-gray-light-gray);
+}
+
+.makeDarkGreenLightGreen {
+  color: var(--make-dark-green-light-green);
+}
+
+.makeLightGreenDarkGreen {
+  color: var(--make-light-green-dark-green);
+}
+
+.makeGreenVisible {
+  color: var(--make-green-visible);
+}
+
+.makeAquaVisible {
+  color: var(--make-aqua-visible);
+}
+
+.shmeadoColor {
+  color: var(--shmeado-color-text);
+}
+
+.mainElement {
+  background: var(--main-element);
+}
+
+.navGameName {
+  text-shadow: 2px 2px var(--header);
+}
+
+#navGameGeneral {
+  background: var(--nav-game-general);
+  background-size: cover;
+}
+
+#navGameModes {
+  background: var(--nav-game-modes);
+  background-size: cover;
+  background-position: 50%;
+}
+
+#navGameBedWars {
+  background: var(--nav-game-bedwars);
+  background-size: cover;
+  background-position: 50%;
+}
+
+#navGameSkyWars {
+  background: var(--nav-game-skywars);
+  background-size: cover;
+  background-position: 50%;
+}
+
+#navGameDuels {
+  background: var(--nav-game-duels);
+  background-size: cover;
+  background-position: 50%;
+}
+
+.navTabButtonSelected {
+  background: var(--nav-tab-button-selected-background);
+  color: var(--nav-tab-button-selected-text);
+  font-weight: var(--bold);
+}
+
+.navTabButtonSelected:hover {
+  color: var(--nav-tab-button-selected-text);
+}
+
+.placeHolder {
+  font-weight: var(--bold);
+  border-width: var(--placeholder-border);
+  margin-bottom: var(--placeholder-margin);
+}
+
+.placeHolderText {
+  font-weight: var(--bold);
+}
+
+/*============================================================================*/
+/* BASE STYLES
+/*============================================================================*/
+
+#sidebar {
+  background: var(--sidebar);
+}
+
+#header::before,
+.mainHeader,
+.navTabBar {
+  background: var(--header);
+}
+
+#headerSearchBar,
+#headerSearchButton {
+  border-color: var(--header);
+  background-color: var(--header-search-bar);
+}
+
+/*============================================================================*/
+/* HOME STYLES
+/*============================================================================*/
+
+#homeSearch {
+  background: var(--home-search);
+  background-position: center center;
+  background-size: cover;
+}
+
+#homeSearchContainer {
+  background-image: var(--home-search-container);
+}
+
+.homeSearchNavbar {
+  background-color: var(--home-search-navbar);
+}
+
+.searchTerm {
+  border-color: var(--search-border);
+  color: var(--search-term-text);
+  background: var(--search-background);
+}
+
+.searchButton {
+  border-width: var(--search-button-border);
+  border-color: var(--search-border);
+  background: var(--search-button-background);
+}
+
+#popularProfilesTitle {
+  color: var(--popular-profiles-title);
+}
+
+.promoBody {
+  background-image: var(--promo-body);
+}
+
+.popularTile,
+.showMoreButton,
+#showKitsButton {
+  background-color: var(--header);
+}
+
+.popularTile:hover,
+.showMoreButton:hover,
+#showKitsButton:hover {
+  background-color: var(--hover);
+}
+
+/*============================================================================*/
+/* STATS STYLES
+/*============================================================================*/
+
+#onlineStatusDetails {
+  background: var(--sidebar);
+}
+
+.pillSelected {
+  background: var(--pill-selected-background);
+  color: var(--pill-selected-text) !important;
+  font-weight: var(--bold);
+}
+
+.pill {
+  color: var(--shmeado-color-text);
+  font-weight: var(--bold);
+}
+
+.achievementExtra {
+  color: var(--text);
+}
+
+.table {
+  border-color: var(--table-th-background);
+  color: var(--table-text);
+}
+
+.table th {
+  background-color: var(--table-th-background);
+}
+
+.table tr {
+  background-color: var(--table-tr-background);
+}
+
+.table td {
+  border-color: var(--table-th-background);
+}
+
+.table tr:hover,
+#leaderboard tr:hover {
+  background-color: var(--table-hover);
+}
+
+.tableButton {
+  background-color: var(--nav-tab-button-background);
+}
+
+.scrollRow {
+  border-top: var(--scroll-row);
+}
+
+.scrollRowContainer:last-child {
+  border-bottom: var(--scroll-row);
+}
+
+#generalHistorySkin,
+.compareSkin {
+  filter: var(--skin-shadow);
+}
+
+.divider:before,
+.divider:after {
+  border-color: var(--divider-color);
+}
+
+#kitPrestigeHeaderRow {
+  background-color: var(--nav-tab-button-background);
+}
+
+/*============================================================================*/
+/* ABOUT STYLES
+/*============================================================================*/
+
+.q {
+  background-color: var(--header);
+}
+
+.q:hover {
+  background-color: var(--hover);
+}
+
+.a {
+  background-color: var(--faqa);
+}

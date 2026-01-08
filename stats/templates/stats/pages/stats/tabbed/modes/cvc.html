@@ -1,0 +1,67 @@
+{% load humanize %}
+{% with s=player.stats.modes.cvc %}
+
+    <h2>Cops & Crims</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p><br>
+            <p><b>Game Wins:</b> {{ s.game_wins|intcomma }}</p>
+            <p><b>Round Wins:</b> {{ s.round_wins|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p><br>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Assists:</b> {{ s.assists|intcomma }}</p>
+            <p><b>Shots Fired:</b> {{ s.shots_fired|intcomma }}</p>
+            <p><b>Headshot Kills:</b> {{ s.headshot_kills|intcomma }}</p>
+            <p><b>Headshot Accuracy:</b> {{ s.headshot_accuracy }}%</p>
+        </div>
+        <div class="block">
+            <p><b>Cop Kills:</b> {{ s.cop_kills|intcomma }}</p>
+            <p><b>Criminal Kills:</b> {{ s.criminal_kills|intcomma }}</p>
+            <p><b>Bombs Planted:</b> {{ s.bombs_planted|intcomma }}</p>
+            <p><b>Bombs Diffused:</b> {{ s.bombs_defused|intcomma }}</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Table -->
+    {% include "stats/components/table.html" with table=s.table %}
+
+    <br>
+
+    <!-- Weapons -->
+    <h2 class="divider">Weapons</h2>
+
+    <div class="wrappedFlex">
+        <div class="block">
+        {% for weapon, stats in constants.modes.cvc.weapons.items %}
+            {% if forloop.counter0 == 6 %}
+                </div>
+                <div class="block">
+            {% endif %}
+
+            <b class="makeDarkRedRed">{% if weapon == "smg" %}SMG{% else %}{{ weapon|remove_underscores|title }}{% endif %}</b>
+            {% for stat in stats %}
+                {% with key=weapon|add:'_'|add:stat %}
+                    {% with level=s|get_item:key %}
+                        <p>
+                            <b>[{% for x in level|get_range %}<span class="red">|</span>{% endfor %}{% for x in 9|subtract:level|get_range %}<span class="gray">|</span>{% endfor %}]</b>
+                            {{ stat|remove_underscores|title }}
+                            <b class="dark{% if level == 9 %}Red{% else %}Gray{% endif %}">({{ level }}/9)</b>
+                        </p>
+                    {% endwith %}
+                {% endwith %}
+            {% endfor %}
+            <br>
+        {% endfor %}
+        </div>
+    </div>
+
+{% endwith %}

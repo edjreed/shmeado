@@ -1,0 +1,278 @@
+/* Global Variables */
+:root {
+  /* Manage size of gap in header to create transparent searchbar effect */
+  --header-clip-path-width: min(calc(100% - 374px), 1000px);
+}
+
+/* Body */
+body {
+  background-image: url();
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+#pageFooter {
+  height: 12px;
+}
+
+/*============================================================================*/
+/* HEADER
+/*============================================================================*/
+
+/* Main Styling */
+#header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  z-index: 1;
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(
+    0px 0px,
+    0px 80px,
+    252px 80px,
+    252px 21px,
+    var(--header-clip-path-width) 21px,
+    var(--header-clip-path-width) 58px,
+    252px 58px,
+    252px 80px,
+    100% 80px,
+    100% 0px
+  );
+}
+
+/* Icon & Domain */
+#headerIcon {
+  margin-left: 20px;
+  margin-top: 11px;
+}
+
+#headerIconPlaceholder {
+  width: 36px;
+}
+
+#headerDomain {
+  margin-left: 18px;
+}
+
+/* Searchbar */
+#headerSearchBarContainer {
+  max-width: 745px;
+  margin-left: 22px;
+  margin-top: 23px;
+  margin-right: 374px;
+}
+
+#headerSearchBar {
+  color: #ffffff;
+  border: 8px solid;
+  border-right: none;
+  border-radius: 16px 0px 0px 16px;
+  margin: -8px;
+}
+
+#headerSearchBar::placeholder {
+  color: #ffffff;
+}
+
+#headerSearchButton {
+  display: block;
+  border: 8px solid;
+  border-left: none;
+  border-radius: 0px 16px 16px 0px;
+  margin: -8px;
+  margin-left: 8px;
+  height: 51px;
+}
+
+/* API Status */
+#apiStatusContainer {
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+}
+
+#apiStatus {
+  max-width: 0px;
+  overflow: hidden;
+  right: 98px;
+  position: absolute;
+  line-height: 24px;
+  text-align: right;
+  font-size: 16px;
+}
+
+#apiStatusIcon {
+  right: 58px;
+  position: absolute;
+}
+
+.apiStatusShown {
+  max-width: 300px !important;
+}
+
+/* Theme Toggle */
+#themeToggleContainer {
+  right: 20px;
+  position: absolute;
+  margin-top: 1px;
+}
+
+#themeToggleContainer .fa-sun {
+  color: #ffcc4d;
+}
+
+#themeToggleContainer .fa-sun:hover {
+  color: #ffcc4d80;
+}
+
+/*============================================================================*/
+/* SIDEBAR
+/*============================================================================*/
+
+/* Main Styling */
+#sidebar {
+  height: 100%;
+  width: 178px;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  margin-top: 80px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  z-index: 1;
+  position: fixed;
+}
+
+#sidebar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebarElement {
+  padding: 8px 16px 10px 6px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  display: block;
+  transition: 0.2s;
+  display: flex;
+  border-left: 3px solid transparent;
+}
+
+.sidebarElementSelected {
+  border-color: #ffffff;
+}
+
+.sidebarElementIcon {
+  width: 36px;
+  text-align: center;
+}
+
+#sidebarThemeToggle {
+  display: none;
+}
+
+#sidebarButton {
+  display: none;
+}
+
+/*============================================================================*/
+/* API STATUS WARNINGS
+/*============================================================================*/
+
+.apiStatusWarning {
+  max-width: 100%;
+  padding: 12px;
+}
+
+.apiStatusWarningUnresponsive {
+  background: rgba(220, 0, 0, 0.5) !important;
+}
+
+.apiStatusWarningSlow {
+  background: rgba(255, 69, 0, 0.5) !important;
+}
+
+/*============================================================================*/
+/* MEDIA QUERIES
+/*============================================================================*/
+
+@media only screen and (max-width: 560px) {
+  #header {
+    justify-content: space-between;
+    position: static;
+  }
+  #headerDomain {
+    margin-left: 0px;
+  }
+  #apiStatusContainer {
+    display: none;
+  }
+  #themeToggleContainer {
+    display: none;
+  }
+
+  #sidebarButton {
+    display: block;
+    margin-right: 16px;
+  }
+  #sidebar {
+    width: 100%;
+    display: none;
+    height: auto;
+    position: relative;
+    margin-top: 0px;
+  }
+  #sidebarThemeToggle {
+    display: block;
+  }
+
+  #main {
+    margin-left: 0px;
+    padding-top: 0px;
+  }
+
+  .navGameName {
+    display: none;
+  }
+  .navGameIcon {
+    position: absolute;
+    right: 50%;
+    margin-right: -20px;
+    left: 50%;
+    margin-left: -20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #header::before {
+    clip-path: none;
+    height: 80px;
+  }
+  #headerSearchBarContainer {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 561px) {
+  #sidebar {
+    display: block;
+  }
+}

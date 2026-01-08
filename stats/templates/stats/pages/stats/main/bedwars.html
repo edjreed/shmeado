@@ -1,0 +1,23 @@
+{% load humanize %}
+{% with s=player.stats.bedwars %}
+    <div class="block">
+        <p><b>Wins:</b> {{ s.wins_bedwars|intcomma }}</p>
+        <p><b>Losses:</b> {{ s.losses_bedwars|intcomma }}</p>
+        <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Final Kills:</b> {{ s.final_kills_bedwars|intcomma }}</p>
+        <p><b>Final Deaths:</b> {{ s.final_deaths_bedwars|intcomma }}</p>
+        <p><b>Final K/D Ratio:</b> {{ s.final_kill_death|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Winstreak:</b> {{ s.winstreak|intcomma }}</p>
+        <p><b>Level:</b> {{ s.level|intcomma }}</p>
+        <p><b>Experience:</b> {{ s.Experience|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Kills:</b> {{ s.kills_bedwars|intcomma }}</p>
+        <p><b>Deaths:</b> {{ s.deaths_bedwars|intcomma }}</p>
+        <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+    </div>
+{% endwith %}

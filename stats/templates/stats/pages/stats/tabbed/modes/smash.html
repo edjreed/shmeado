@@ -1,0 +1,38 @@
+{% load humanize %}
+{% with s=player.stats.modes.smash %}
+
+    <h2>Smash Heroes</h2>
+
+    <!-- Main Stats -->
+    <div class="wrappedFlex">
+        <div class="block">
+            <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+            <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+            <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+            <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+            <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+        </div>
+        <div class="block">
+            <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+            <p><b>Smash Level:</b> {{ s.smashLevel|intcomma }}</p>
+            <p><b>Damage Dealt:</b> {{ s.damage_dealt|intcomma }}</p>
+        </div>
+        <div class="block hideOnMobile"></div>
+    </div>
+
+    <br>
+
+    <!-- Modes Table -->
+    <h2 class="divider">Modes</h2><br>
+    {% include "stats/components/table.html" with table=s.table_modes %}
+
+    <br>
+
+    <!-- Heroes Table -->
+    <h2 class="divider">Heroes</h2><br>
+    {% include "stats/components/table.html" with table=s.table_heroes %}
+
+{% endwith %}

@@ -1,0 +1,62 @@
+{% load humanize %}
+{% load static %}
+{% with s=player.stats.skywars %}
+    <h2>Angel's Brewery</h2>
+    <h3>Hover over an item to see details</h3>
+    <h3>View on desktop for a better experience</h3>
+    <br>
+    <p>
+        <b>Eligibility: 
+            {% if s.level >= 25 %}
+                <span class="darkGreen">Eligible</span>
+            {% else %}
+                <span class="red">Ineligible</span>
+            {% endif %}
+        </b>
+    </p>
+    <p>Level 25 <b>(<span class="{{ s.prestige.progress.current.color }}">{{ s.level|round_down }}</span>/<span class="gold">25</span>)</b></p>
+    <br>
+    <div id="brewery" class="wrappedFlex">
+        {% for potion, info in constants.skywars.brewery.items %}
+            <div class="evenFlex breweryPotion">
+                <div class="breweryPotionTitle">
+                    <h6><span class="{{ info.color }}">{{ info.name }}</span></h6>
+                </div>
+                <br>
+                <div class="slot">
+                    <div class="item">
+                        <img src="{% static 'stats/stats/skywars/angels_brewery/'|add:potion|add:'.png' %}" alt="{{ info.name }}">
+                        <div class="itemText">
+                            <span class="green">{{ info.name }}</span><br><br>
+                            {{ info.description|safe }}<br><br>
+                            <span class="lightPurple">Required Heads:</span> <span class="darkPurple">{{ info.req }}</span><br><br>
+                            <span class="gray">Cost:</span>
+                            {% for c in info.cost %}
+                                <br><span class="gray"> - </span>
+                                <span class="{% if c.type == "opal" %}blue{% endif %}{% if c.type == "coin" %}gold{% endif %}">{{ c.amount|intcomma }} {{ c.type }}s</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div><br><br>
+                <p>
+                    {% if s.brewery_active == potion %}
+                        <b class="darkGreen">Enabled</b>
+                    {% else %}
+                        <b class="red">Disabled</b>
+                    {% endif %}
+                </p>
+                <p>
+                    <b>
+                        {% with games=s.brewery|get_item:potion %}
+                            {% if games == None or games < 0 %}
+                                0
+                            {% else %}
+                                {{ games }}
+                            {% endif %}
+                        {% endwith %} games left
+                    </b>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endwith %}

@@ -1,0 +1,10 @@
+{% with s=player.stats.skywars %}
+    <h2>Playtime</h2>
+    <h3>NOTE: There may be slight inconsistencies when adding up totals.</h3>
+    <h3>Playtime was added to the API at a later date than the release of SkyWars itself.</h3>
+    <h3>Therefore, OG players will often have higher stats, with lower playtime.</h3>
+    <br>
+    <h2>{% rank player.rank player.name True %} has spent {{ s.time_played|format_duration }} playing SkyWars!</h2>
+    <br>
+    {% include "stats/components/table.html" with table=s.table_playtime %}
+{% endwith %}

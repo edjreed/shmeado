@@ -1,0 +1,10 @@
+{% with s=player.stats.duels %}
+    <h2>Custom Titles</h2>
+    <br>
+    <p>Currently Selected - <span class="smallPrestige">{{ s.current_custom_title|replace_color_tags|safe }}</span></p>
+    <br>
+    <b>Custom Titles Owned: {{ s.custom_titles|length }}</b>
+    {% for t in s.custom_titles %}
+        <p class="smallPrestige">{{ t|replace_color_tags|safe }}</p>
+    {% endfor %}
+{% endwith %}

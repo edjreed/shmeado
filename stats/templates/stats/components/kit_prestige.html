@@ -1,0 +1,32 @@
+{% load humanize %}
+
+<div id="kitPrestigeHeaderRow" class="wrappedFlex">
+    <div class="evenFlex"><b>Kit</b></div>
+    <div class="evenFlex center"><b>Current</b></div>
+    <div class="evenFlex center hideOnMobile"><b>Next</b></div>
+    <div class="doubleFlex center hideOnMobile"><b>Progress</b></div>
+</div>
+{% for kit in kits %}
+<div class="scrollRow kitPrestigeRow">
+    {% with name=kit.0 xp=kit.8 tierInfo=kit.8|skywars_kit_tier:constants.skywars.kitPrestiges %}
+        <div class="shmeadoColor makeThin">{{ name }}</div>
+        <div class="darkGray makeThin center smallPrestige noShadow">
+            <span class="darkPurple">{{ tierInfo.current_prestige|romanize }}</span> • <span class="lightPurple">{{ tierInfo.current_xp|intcomma }}XP</span>
+        </div>
+        <div class="darkGray makeThin center smallPrestige noShadow hideOnMobile">
+            {% if tierInfo.next_prestige %}
+                <span class="darkPurple">{{ tierInfo.next_prestige|romanize }}</span> • <span class="lightPurple">{{ tierInfo.next_xp|intcomma }}XP</span>
+            {% else %}
+                <span class="darkPurple">Max Prestige!</span>
+            {% endif %}
+        </div>
+        <div class="doubleFlex darkGray makeThin center smallPrestige noShadow hideOnMobile">
+            {% if tierInfo.next_prestige %}
+                <span class="lightPurple">{{ xp|intcomma }}</span>/<span class="darkPurple">{{ tierInfo.next_xp|intcomma }}</span> ({{ tierInfo.next_xp|percent:xp }}%)
+            {% else %}
+                <span class="darkPurple">{{ xp|intcomma }}/{{ tierInfo.next_xp|intcomma }}</span> <span class="darkGreen">(100%)</span>
+            {% endif %}
+        </div>
+    {% endwith %}
+</div>
+{% endfor %}

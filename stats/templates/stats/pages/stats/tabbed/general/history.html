@@ -1,0 +1,31 @@
+<div id="generalHistoryContainer" class="wrappedFlex">
+    <div id="generalHistoryNameContainer">
+        <h2>Name History</h2>
+        <br>
+        <div id="generalHistoryNameList"></div>
+        <p>Mojang removed the API endpoint for name history on 13/09/22.<br><br>The official announcement detailing this deprecation has since been deleted from the Minecraft website.</p>
+    </div>
+    <div class="evenFlex">
+        <h2>Rank History</h2>
+        <h3>VIP to MVP+</h3>
+        <br>
+        <div id="generalHistoryRankList">
+            {% for raw, formatted in constants.general.historyRanks.items %}
+                {% if raw == "MVP" %}
+                    <br>
+                {% endif %}
+                
+                {% with timestamp=player.stats.general.rank_history|get_item:raw %}
+                    <div>
+                        <span class="smallPrestige">{{ formatted|safe }}</span> - <b>{{ timestamp|format_timestamp }}</b>
+                    </div>
+                    <div>
+                        <span>
+                            {{ timestamp|time_since_timestamp }}
+                        </span> ago
+                    </div>
+                {% endwith %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

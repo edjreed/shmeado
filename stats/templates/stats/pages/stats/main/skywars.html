@@ -1,0 +1,23 @@
+{% load humanize %}
+{% with s=player.stats.skywars %}
+    <div class="block">
+        <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+        <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+        <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+        <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+        <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Level:</b> {{ s.level|intcomma }} <span class='gray'>({{ s.level_old }})</span></p>
+        <p><b>Heads:</b> {{ s.heads|intcomma }}</p>
+        <p><b>Corruption:</b> {{ s.angel_of_death_level }}%</p>
+    </div>
+    <div class="block">
+        <p><b>SkyWars Playtime:</b></p>
+        <p>{{ s.time_played|format_duration }}</p>
+        <p><b>Experience:</b> {{ s.skywars_experience|floatformat:0|intcomma }}</p>
+    </div>
+{% endwith %}

@@ -1,0 +1,21 @@
+{% load humanize %}
+{% with s=player.stats.duels %}
+    <div class="scrollRowContainer">
+        <div class="scrollRow shmeadoColor">
+            <div><b>Mode</b></div>
+            <div><b>Current</b></div>
+            <div><b>Progress</b></div>
+            <div class="hideOnMobile"><b>Wins Needed</b></div>
+            <div class="hideOnMobile"><b>Next</b></div>
+        </div>
+        {% for title in s.division_titles %}
+            <div class="scrollRow">
+                <div><b class="makeDarkGrayWhite">{{ title.mode }}</b></div>
+                <div><b>{{ title.division_current|safe }}</b></div>
+                <div><p><b><span class="darkGreen">{{ title.progress_current|intcomma }}</span><span class="makeDarkGrayWhite">/{{ title.progress_next|intcomma }} ({{ title.progress_next|percent:title.progress_current }}%)</span></b></p></div>
+                <div class="hideOnMobile"><p><b><span class="makeDarkGrayWhite">{{ title.wins_needed|intcomma }} more</span></b></p></div>
+                <div class="hideOnMobile"><b>{{ title.division_next|safe }}</b></div>
+            </div>
+        {% endfor %}
+    </div>
+{% endwith %}

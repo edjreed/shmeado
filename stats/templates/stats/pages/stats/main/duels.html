@@ -1,0 +1,19 @@
+{% load humanize %}
+{% with s=player.stats.duels %}
+    <div class="block">
+        <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
+        <p><b>Losses:</b> {{ s.losses|intcomma }}</p>
+        <p><b>W/L Ratio:</b> {{ s.win_loss|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Kills:</b> {{ s.kills|intcomma }}</p>
+        <p><b>Deaths:</b> {{ s.deaths|intcomma }}</p>
+        <p><b>K/D Ratio:</b> {{ s.kill_death|floatformat:3|intcomma }}</p>
+    </div>
+    <div class="block">
+        <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
+        <p><b>Loot Chests:</b> {{ s.duels_chests|intcomma }}</p>
+        <p><b>Division:</b> {{ s.division|safe }}</p>
+    </div>
+    <div class="block emptyBlock"></div>
+{% endwith %}
