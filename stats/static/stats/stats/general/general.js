@@ -116,9 +116,9 @@ function fillEmptySlots(container, slots, text = false) {
 }
 
 // Create a simple text element
-const makeCell = (text) => {
+const makeCell = (text, hideOnMobile = false) => {
   const cell = document.createElement("div");
-  cell.className = "evenFlex";
+  cell.className = `evenFlex ${hideOnMobile ? "hideOnMobile" : ""}`;
   cell.innerHTML = `${text ?? ""}`;
   return cell;
 };
@@ -1031,9 +1031,9 @@ function recentGamesDetails(recentGamesInfo, gameInfo) {
 
     row.appendChild(makeCell(i.name));
     row.appendChild(makeCell(i.modeNames?.[game.mode] ?? "N/A"));
-    row.appendChild(makeCell(game.map || "N/A"));
-    row.appendChild(makeCell(startedStr));
-    row.appendChild(makeCell(durationStr));
+    row.appendChild(makeCell(game.map || "N/A", true));  // Hidden on mobile
+    row.appendChild(makeCell(startedStr, true));  // Hidden on mobile
+    row.appendChild(makeCell(durationStr, true));  // Hidden on mobile
     row.appendChild(makeCell(endedStr));
 
     recentGamesDiv.appendChild(row);
