@@ -47,7 +47,6 @@ function randomEmoji() {
   let emojiChoice = emojiChoices[emojiIndex];
   let emojiUrl = "https://abs.twimg.com/emoji/v2/svg/" + emojiChoice + ".svg";
 
-  document.getElementById("metaIcon").href = emojiUrl;
   document.getElementById("headerIconImage").src = emojiUrl;
   document.getElementById("headerIconImage").classList.remove("hidden");
   document.getElementById("headerIconPlaceholder").classList.add("hidden");

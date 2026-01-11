@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.views.generic import RedirectView
+from django.templatetags.static import static
 
 urlpatterns = [
     # Stats
@@ -16,4 +18,9 @@ urlpatterns = [
     # Miscellaneous
     path("about/", views.about, name="about"),
     path("", views.home, name="home"),
+    path(  # Provide support for root favicon.ico requests
+        "favicon.ico",
+        RedirectView.as_view(url=static("icons/favicon.ico")),
+        name="favicon",
+    ),
 ]
