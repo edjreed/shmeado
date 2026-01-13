@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render
 from django.http import JsonResponse
 
@@ -13,6 +14,8 @@ from .models import Supporter
 # ======================================================================================
 # PAGES
 # ======================================================================================
+
+logger = logging.getLogger(__name__)
 
 
 def home(request):
@@ -44,7 +47,7 @@ def stats(request, name, game=None, tab=None):
         # Check if game and tab are valid
         game = game if game in games else None
         tab = tab if any(tab in tab_list for tab_list in tabs.values()) else None
-        
+
         # Check if player is a supporter
         supporter = Supporter.objects.filter(uuid=uuid).first()
 
@@ -52,15 +55,13 @@ def stats(request, name, game=None, tab=None):
             "header": f"{name}'s Stats",
             "sidebar": "stats",
             "description": f"{name}'s Hypixel Stats",
-            
             "player": {
                 "name": name,
                 "uuid": uuid,
                 "rank": get_rank(player_api),
-                "stats": stats_main.get_stats(player_api)
+                "stats": stats_main.get_stats(player_api),
             },
             "supporter": supporter if supporter else None,
-            
             "constants": constants,
             "game": game if game is not None else games[0],
             "tab": tab if tab is not None else tabs[games[0]][0],
@@ -68,7 +69,9 @@ def stats(request, name, game=None, tab=None):
 
         return render(request, "stats/pages/stats/main.html", context)
 
-    except:  # noqa: E722 - no exception type is given as site must continue to function
+    except Exception as e:  # noqa: E722 - no exception type is given as site must continue to function
+        logger.error(f"name: '{name}' - {e}")
+
         context = {
             "header": "Player Stats",
             "sidebar": "stats",
