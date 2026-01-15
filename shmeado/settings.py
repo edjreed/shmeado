@@ -29,7 +29,7 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if ENVIRONMENT == "development" else False
 
-ALLOWED_HOSTS = ["*"] if DEBUG else ["www.shmeado.club", "shmeado.club"]
+ALLOWED_HOSTS = ["*"] if DEBUG else ["www.shmeado.club", "shmeado.club", "50.116.23.41"]
 
 
 # Application definition
