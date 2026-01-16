@@ -13,15 +13,16 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
-from pathlib import Path
 from environ import Env
+from pathlib import Path
 
+# Build paths inside the project like this:
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Lift environment variables
 env = Env()
 Env.read_env()
 ENVIRONMENT = env("ENVIRONMENT")
-
-# Build paths inside the project like this:
-BASE_DIR = BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("SECRET_KEY")
@@ -210,5 +211,5 @@ LOGGING = {
     "root": {
         "handlers": ["django_file", "warning_file"],
         "level": "INFO",
-    }
+    },
 }

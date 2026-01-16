@@ -1,4 +1,4 @@
-from environ import Env
+import os
 import json
 import time
 import urllib.request
@@ -74,11 +74,8 @@ def get_api_status():
 # API FUNCTIONS
 # ======================================================================================
 
-env = Env()
-Env.read_env()
-
-API_KEY = env("API_KEY")
-RATE_LIMIT = int(env("RATE_LIMIT"))
+API_KEY = os.getenv("API_KEY")
+RATE_LIMIT = int(os.getenv("RATE_LIMIT"))
 PER_MINUTE = 60
 
 

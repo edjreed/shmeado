@@ -1,12 +1,10 @@
-from environ import Env
+import os
 from stats.api_functions.main import api
 
 
 def ga_id(request):
     """Context processor to continually serve Google Analytics ID."""
-    env = Env()
-    Env.read_env()
-    ga_id = env("GA_ID", default=None)
+    ga_id = os.getenv("GA_ID", default=None)
     return {"GA_ID": ga_id}
 
 
