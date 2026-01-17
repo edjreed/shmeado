@@ -64,9 +64,11 @@
                 <div id="showMoreBlock">
                     <button id="showMoreUpper" class="showMoreButton noSelect">Show More</button>
                 </div>
-                {% if supporter %}
-                    <div id="supporterBio">{{ supporter.bio|safe }}</div>
-                {% endif %}
+                <div id="supporterBio">
+                    {% if supporter.bio %}
+                        {{ supporter.bio|safe }}
+                    {% endif %}
+                </div>
             </div>
 
             <!-- Main Stats -->
