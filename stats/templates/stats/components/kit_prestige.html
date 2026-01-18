@@ -24,7 +24,7 @@
             {% if tierInfo.next_prestige %}
                 <span class="lightPurple">{{ xp|intcomma }}</span>/<span class="darkPurple">{{ tierInfo.next_xp|intcomma }}</span> ({{ tierInfo.next_xp|percent:xp }}%)
             {% else %}
-                <span class="darkPurple">{{ xp|intcomma }}/{{ tierInfo.next_xp|intcomma }}</span> <span class="darkGreen">(100%)</span>
+                <span class="darkPurple">{{ xp|intcomma }}/{{ tierInfo.next_xp|intcomma }}</span>&nbsp;<span class="darkGreen">(100%)</span>
             {% endif %}
         </div>
     {% endwith %}

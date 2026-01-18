@@ -6,9 +6,9 @@
             <br>
             {% with best=s.best_season_ranked %}
                 {% if best %}
-                    <h6>Highest Position - <span class="ranked{{ best.color }}">#{{ best.position|intcomma }}</span> (Season {{ best.season }})</h6>
+                    <h6>Highest Position: <span class="{{ best.color }}">#{{ best.position|intcomma }}</span> (Season {{ best.season }})</h6>
                 {% else %}
-                    <h6>Highest Position - <span class="gray">N/A</span></h6>
+                    <h6>Highest Position: <span class="gray">N/A</span></h6>
                 {% endif %}
             {% endwith %}
             <br>
@@ -51,7 +51,7 @@
         <div id="rankedRight" class="evenFlex">
             <h2>History
                 <span class="tooltip">
-                    <i class="shmeadoColor pointer bi bi-question-circle-fill"></i>&nbsp
+                    <i class="shmeadoColor pointer bi bi-question-circle-fill"></i>&nbsp;
                     <span class="itemText">
                         <span class="tooltipMainText">The Hypixel API only tracks from Season 24 onwards.</span><br>
                         <span class="tooltipSubText">NOTE: Most masters achieved before Season 24 will still be shown.</span>
@@ -61,7 +61,7 @@
             <br>
             <div id="rankedHistory">
                 {% if s.history_ranked|length == 0 %}
-                    <div class="placeHolder rankedNone center">
+                    <div class="placeHolder grayBorder center">
                         <span class="gray">There is no history for this player</span>
                     </div>
                 {% else %}
