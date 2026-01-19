@@ -46,11 +46,11 @@
                                         <span class="gray">There are no recorded checkpoint times for this run</span>
                                     </div>
                                     {% for i in 3|loop_counter %}
-                                        <div class="placeHolder grayBorder"><span>&nbsp</span></div>
+                                        <div class="placeHolder grayBorder"><span>&nbsp;</span></div>
                                     {% endfor %}
                                 {% elif amount < 4 %}
                                     {% for i in 4|subtract:amount|loop_counter %}
-                                        <div class="placeHolder grayBorder"><span>&nbsp</span></div>
+                                        <div class="placeHolder grayBorder"><span>&nbsp;</span></div>
                                     {% endfor %}
                                 {% endif %}
                             {% endwith %}

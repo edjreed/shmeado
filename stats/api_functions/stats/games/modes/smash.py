@@ -88,10 +88,10 @@ def get_stats(player_api):
             f"<span class='{SH_HEROES[hero]['color']}'>{SH_HEROES[hero]['name']}</span>"  # Name and color
         )
         row["hero_formatted"] += (
-            f"&nbsp<span class='gray'>Lv</span><span class='darkAqua'>{row['lastLevel']}</span>"  # Level
+            f"&nbsp;<span class='gray'>Lv</span><span class='darkAqua'>{row['lastLevel']}</span>"  # Level
         )
         if row["pg"] > 0:  # Prestige
-            row["hero_formatted"] += f"&nbsp<span class='gold'>[{row['pg']}]</span>"
+            row["hero_formatted"] += f"&nbsp;<span class='gold'>[{row['pg']}]</span>"
 
         sh_heroes_rows.append(
             [
