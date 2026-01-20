@@ -10,7 +10,7 @@ function headerDomainGlint() {
         document.getElementById(char).classList.add("emojiColor");
       },
       index * increment,
-      c
+      c,
     );
   });
 
@@ -21,7 +21,7 @@ function headerDomainGlint() {
         document.getElementById(char).classList.replace("emojiColor", "white");
       },
       (index + string.length) * increment,
-      c
+      c,
     );
   });
 }
@@ -55,14 +55,11 @@ randomEmoji();
 
 function randomBackground() {
   let backgroundChoice = randomInteger(4) + 1;
-  document.body.style.backgroundImage =
-    "url(" + backgroundsUrl + backgroundChoice + ".png)";
+  document.documentElement.style.setProperty(
+    "--background-image",
+    "url(" + backgroundsUrl + backgroundChoice + ".png)",
+  );
 } // Excuted later during theme management
-
-// Dark theme background
-function darkBackground() {
-  document.body.style.background = "#111111";
-}
 
 // Header search bar
 const headerSearchTerm = document.getElementById("headerSearchBar");
@@ -157,9 +154,6 @@ function darkThemeActive() {
 
   // Sidebar Text
   document.getElementById("sidebarThemeToggleText").innerHTML = "Light";
-
-  // Background
-  document.body.style.background = "#111111";
 
   // Meta
   activeTheme = "dark";

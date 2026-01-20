@@ -1,15 +1,18 @@
 /* Global Variables */
 :root {
+  /* Manage background image for body and header behind searchbar */
+  --background-image: none;
   /* Manage size of gap in header to create transparent searchbar effect */
   --header-clip-path-width: min(calc(100% - 374px), 1000px);
 }
 
 /* Body */
 body {
-  background-image: url();
+  background-image:
+    linear-gradient(var(--background-tint), var(--background-tint)),
+    var(--background-image);
   background-size: cover;
-  background-position: 50% 50%;
-  height: 100vh;
+  background-position: top center;
   background-attachment: fixed;
 }
 
@@ -33,9 +36,27 @@ body {
   height: 80px;
   line-height: 80px;
   z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 #header::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-image:
+    linear-gradient(var(--background-tint), var(--background-tint)),
+    var(--background-image);
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+#header::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -43,6 +64,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+
   clip-path: polygon(
     0px 0px,
     0px 80px,
@@ -262,7 +284,7 @@ body {
 }
 
 @media only screen and (max-width: 900px) {
-  #header::before {
+  #header::after {
     clip-path: none;
     height: 80px;
   }

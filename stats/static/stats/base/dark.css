@@ -4,6 +4,7 @@
 
 body {
   --background: #aaaaaa;
+  --background-tint: rgba(17, 17, 17, 0);
   --bold: bold;
   --text: #111;
   --p-text: #1f1f1f;
@@ -33,31 +34,36 @@ body {
   --main-element: rgba(256, 256, 256, 0.85);
   --online-details-container: rgb(41, 41, 41, 0.85);
 
-  --nav-game-general: linear-gradient(
+  --nav-game-general:
+    linear-gradient(
       to right,
       rgba(170, 170, 170, 0.1) 20%,
       rgba(170, 170, 170, 0.1)
     ),
     url(/static/stats/main/images/navGameGeneral.png);
-  --nav-game-modes: linear-gradient(
+  --nav-game-modes:
+    linear-gradient(
       to right,
       rgba(170, 170, 170, 0.1) 20%,
       rgba(170, 170, 170, 0.1)
     ),
     url(/static/stats/main/images/navGameModes.png);
-  --nav-game-bedwars: linear-gradient(
+  --nav-game-bedwars:
+    linear-gradient(
       to right,
       rgba(170, 170, 170, 0.1) 20%,
       rgba(170, 170, 170, 0.1)
     ),
     url(/static/stats/main/images/navGameBedWars.png);
-  --nav-game-skywars: linear-gradient(
+  --nav-game-skywars:
+    linear-gradient(
       to right,
       rgba(170, 170, 170, 0.1) 20%,
       rgba(170, 170, 170, 0.1)
     ),
     url(/static/stats/main/images/navGameSkyWars.png);
-  --nav-game-duels: linear-gradient(
+  --nav-game-duels:
+    linear-gradient(
       to right,
       rgba(170, 170, 170, 0.1) 20%,
       rgba(170, 170, 170, 0.1)
@@ -85,7 +91,8 @@ body {
   --table-text: #333333;
   --table-hover: #d3d3d3;
 
-  --home-search: linear-gradient(
+  --home-search:
+    linear-gradient(
       to right,
       rgba(255, 255, 255, 0.75),
       rgba(255, 255, 255, 0.5)
@@ -125,6 +132,7 @@ body {
 
 body.dark-theme {
   --background: #222222;
+  --background-tint: rgba(17, 17, 17, 1);
   --bold: normal;
   --text: #eeeeee;
   --p-text: var(--text);
@@ -181,11 +189,8 @@ body.dark-theme {
   --table-text: var(--text);
   --table-hover: var(--background);
 
-  --home-search: linear-gradient(
-      to right,
-      rgba(27, 27, 27, 1),
-      rgba(27, 27, 27, 0.75)
-    ),
+  --home-search:
+    linear-gradient(to right, rgba(27, 27, 27, 1), rgba(27, 27, 27, 0.75)),
     url(/static/stats/home/images/homeSearchBackgroundDark.png);
   --home-search-container: linear-gradient(
     to left,
@@ -376,7 +381,7 @@ a:visited {
   background: var(--sidebar);
 }
 
-#header::before,
+#header::after,
 .mainHeader,
 .navTabBar {
   background: var(--header);
