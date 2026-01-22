@@ -766,6 +766,18 @@
   #petItemsContainer {
     display: block;
   }
+  #achievementsModeTitleContainer, #achievementsFilterContainer {
+    display: block;
+  }
+  #achievementsModeCompletionsContainer {
+    margin-left: 0px;
+  }
+  #achievementsDash {
+    display: none;
+  }
+  #achievementsMinimisedExpandedContainer {
+    margin-top: 24px;
+  }
   #petsOwnedContainer {
     margin-top: 24px;
   }
