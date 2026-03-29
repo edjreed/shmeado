@@ -3,7 +3,7 @@
 
     <h2>Turbo Kart Racers</h2>
     
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
@@ -33,7 +33,7 @@
 
     <br>
 
-    <!-- Current Kart -->
+    {% comment %} Current Kart {% endcomment %}
     <h2 class="divider">Current Kart</h2>
     <div id="currentKartContainer" class="wrappedFlex">
         {% for part in s.kart_parts %}

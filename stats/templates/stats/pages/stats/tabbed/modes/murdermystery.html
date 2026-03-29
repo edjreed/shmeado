@@ -3,7 +3,7 @@
 
     <h2>Murder Mystery</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
@@ -29,12 +29,12 @@
 
     <br>
 
-    <!-- Table -->
+    {% comment %} Table {% endcomment %}
     {% include "stats/components/table.html" with table=s.table %}
 
     <br>
 
-    <!-- Infection V2 -->
+    {% comment %} Infection V2 {% endcomment %}
     <h2 class="divider">Infection V2</h2>
     <div class="wrappedFlex">
     <div class="block">

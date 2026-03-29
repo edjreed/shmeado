@@ -3,7 +3,7 @@
 
     <h2>Mega Walls</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
@@ -29,13 +29,13 @@
 
     <br>
 
-    <!-- Modes Table -->
+    {% comment %} Modes Table {% endcomment %}
     <h2 class="divider">Modes</h2><br>
     {% include "stats/components/table.html" with table=s.table_modes %}
 
     <br>
 
-    <!-- Classes Table -->
+    {% comment %} Classes Table {% endcomment %}
     <h2 class="divider">Classes</h2><br>
     {% include "stats/components/table.html" with table=s.table_classes %}
 

@@ -2,7 +2,7 @@
 {% load static %}
 {% with s=player.stats.skywars %}
     <div id="angelsDescentContainer" class="wrappedFlex">
-        <!-- Descent Info -->
+        {% comment %} Descent Info {% endcomment %}
         <div id="angelsDescentText">
             <h2>Angel's Descent</h2>
             <h3>Hover over an item to see details</h3>
@@ -34,7 +34,7 @@
             <br>
             <div id="opalBarContainer">{% include "stats/components/progress_bar.html" with i=s.opal_progress mobileNumbers=True %}</div>
         </div>
-        <!-- Descent Visualisation -->
+        {% comment %} Descent Visualisation {% endcomment %}
         <div id="angelsDescentInventory" class="inventoryContainer">
             <div class="inventory">
                 <div class="slotContainer">
@@ -52,12 +52,12 @@
                                                         </span><br>
                                                         {{ info.description|safe }}
                                                         <br><br>
-                                                        <!-- Complete -->
+                                                        {% comment %} Complete {% endcomment %}
                                                         {% if s_item.value == s_item.tiers %}
-                                                            <!-- Owned -->
+                                                            {% comment %} Owned {% endcomment %}
                                                             {% if s_item.tiers == 1 %}
                                                                 <span class="yellow">Owned!</span>
-                                                            <!-- Fully upgraded -->
+                                                            {% comment %} Fully upgraded {% endcomment %}
                                                             {% else %}
                                                                 {% spaceless %}
                                                                     <span class="gold">Tier: </span>
@@ -67,9 +67,9 @@
                                                                     <span class="yellow">Fully upgraded!</span>
                                                                 {% endspaceless %}
                                                             {% endif %}
-                                                        <!-- Incomplete -->
+                                                        {% comment %} Incomplete {% endcomment %}
                                                         {% else %}
-                                                            <!-- In progress -->
+                                                            {% comment %} In progress {% endcomment %}
                                                             {% if s_item.value > 0 %}
                                                                 {% spaceless %}
                                                                     <span class="gold">Tier: </span>

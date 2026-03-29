@@ -3,7 +3,7 @@
 
     <h2>UHC Champions</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Score:</b> {{ s.score|intcomma }}</p>
@@ -29,12 +29,12 @@
 
     <br>
 
-    <!-- Progress Bar -->
+    {% comment %} Progress Bar {% endcomment %}
     {% include "stats/components/progress_bar.html" with i=s.title_progress %}
 
     <br>
 
-    <!-- Table -->
+    {% comment %} Table {% endcomment %}
     {% include "stats/components/table.html" with table=s.table %}
 
 {% endwith %}

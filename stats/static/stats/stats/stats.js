@@ -234,7 +234,7 @@ function randomBrackets() {
 let bracketInterval;
 let bracketsActive = false;
 let presElement = document.getElementById("playerPrestigeSkyWars");
-if (player.stats.skywars.active_scheme.includes("mythic")) {
+if (window.player.stats.skywars.active_scheme.includes("mythic")) {
   presElement.innerHTML = presElement.innerHTML.replace(
     "[",
     "<span id='front_bracket'>[</span>"

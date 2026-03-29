@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Google Analytics -->
+    {% comment %} Google Analytics {% endcomment %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_ID }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -13,16 +13,16 @@
         gtag('config', '{{ GA_ID }}');
     </script>
 
-    <!-- Meta -->
+    {% comment %} Meta {% endcomment %}
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="shmeado, hypixel, stats, bedwars, skywars, duels, gamemodes, quests, achievements, calculator">
 
-    <!-- Text Icons -->
+    {% comment %} Text Icons {% endcomment %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Page Title and Icons -->
+    {% comment %} Page Title and Icons {% endcomment %}
     <title>{{ header }} | Shmeado</title>
 
     <link rel="icon" type="image/png" href="{% static "icons/favicon-96x96.png" %}" sizes="96x96" />
@@ -33,22 +33,22 @@
     <link rel="manifest" href="{% static "icons/site.webmanifest" %}" />
 </head>
 
-<!-- Base Styles -->
+{% comment %} Base Styles {% endcomment %}
 <link rel="stylesheet" href="{% static 'stats/main/main.css' %}">
 <link rel="stylesheet" href="{% static 'stats/base/base.css' %}">
 <link rel="stylesheet" href="{% static 'stats/main/minecraftia/minecraftia.css' %}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
 
 <body>
-    <!-- Header -->
+    {% comment %} Header {% endcomment %}
     <div id="header" class="noSelect">
-        <!-- Icon -->
+        {% comment %} Icon {% endcomment %}
         <a id="headerIcon" class="hoverOpacity" href="{% url 'home' %}">
             <div id="headerIconPlaceholder"></div>
             <img id="headerIconImage" class="hidden" width="36" height="36">
         </a>
 
-        <!-- Domain -->
+        {% comment %} Domain {% endcomment %}
         <a class="noTextDecoration hoverOpacity" href="{% url 'home' %}">
             <h1 id="headerDomain">
                 {% spaceless %}
@@ -59,10 +59,10 @@
             </h1>
         </a>
 
-        <!-- Hamburger -->
+        {% comment %} Hamburger {% endcomment %}
         <h1 id="sidebarButton" class="pointer hoverOpacity" onclick="sidebar()">☰</h1>
 
-        <!-- Search Bar -->
+        {% comment %} Search Bar {% endcomment %}
         <div class="search" id="headerSearchBarContainer">
             <input type="text" id="headerSearchBar" class="searchTerm" placeholder="Name..." spellcheck="false">
             <div class="searchParent">
@@ -74,7 +74,7 @@
             </div>
         </div>
 
-        <!-- API Status -->
+        {% comment %} API Status {% endcomment %}
         <div id="apiStatusContainer">
             <div id="apiStatus">
                 <span class="white">API Response Time ~ </span>
@@ -94,13 +94,13 @@
             </div>
         </div>
 
-        <!-- Theme Toggle -->
+        {% comment %} Theme Toggle {% endcomment %}
         <div id="themeToggleContainer">
             <p><i id="themeToggleIcon" class="bi bi-moon-fill white pointer hoverOpacity" onclick="toggleTheme()"></i></p>
         </div>
     </div>
 
-    <!-- Sidebar -->
+    {% comment %} Sidebar {% endcomment %}
     <div id="sidebar" class="noSelect shown">
         <a href="{% url 'home' %}">
             <div class="sidebarElement {% if sidebar == "stats" %}sidebarElementSelected{% endif %} hoverOpacity">
@@ -138,19 +138,19 @@
         </a>
     </div>
 
-    <!-- Page Content -->
+    {% comment %} Page Content {% endcomment %}
     {% block content %} {% endblock %}
 
-    <!-- Footer -->
+    {% comment %} Footer {% endcomment %}
     <div id="pageFooter"></div>
 
-    <!-- JavaScript -->
+    {% comment %} JavaScript {% endcomment %}
     <script>
-        // Relevant URLs
+        {% comment %} Relevant URLs {% endcomment %}
         const backgroundsUrl = "{% static 'stats/base/backgrounds/' %}";
         const statsUrl = "{% url 'stats' 'name' %}";
 
-        // Page load animation
+        {% comment %} Page load animation {% endcomment %}
         setTimeout(function() {
             var main = document.getElementById("main");
             main.style.visibility = "visible";
@@ -159,7 +159,7 @@
     </script>
     <script type="text/javascript" src="{% static 'stats/base/base.js' %}"></script>
 
-    <!-- Themes -->
+    {% comment %} Themes {% endcomment %}
     <link rel="stylesheet" href="{% static 'stats/base/dark.css' %}">
 </body>
 

@@ -1,6 +1,6 @@
 {% load humanize %}
 {% with s=player.stats.general %}
-    <!-- Written Stats -->
+    {% comment %} Written Stats {% endcomment %}
     <div class="block">
         <p>
             <b>Level:</b> {{ s.network_level|intcomma }} 
@@ -19,7 +19,7 @@
     <div class="block">
         <p><b>Karma:</b> {{ s.karma|intcomma }}</p>
 
-        <!-- First Login -->
+        {% comment %} First Login {% endcomment %}
         <p class="pointer hoverOpacity" onclick="loginToggle('first')">
             <b id="firstLoginTitle">First Login: </b>
             {% with t=s.first_login %}
@@ -28,7 +28,7 @@
             {% endwith %}
         </p>
 
-        <!-- Last Login -->
+        {% comment %} Last Login {% endcomment %}
         <p class="pointer hoverOpacity" onclick="loginToggle('last')">
             <b id="lastLoginTitle">Last Login: </b>
             {% with t=s.last_login %}
@@ -44,7 +44,7 @@
         </p>
     </div>
 
-    <!-- Further Information Requests -->
+    {% comment %} Further Information Requests {% endcomment %}
     <div class="block">
         <p id="onlineError" class="hidden"><b>
             <span id="onlineError" class="red">Error Loading Online Status</span>

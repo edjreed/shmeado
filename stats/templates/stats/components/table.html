@@ -2,7 +2,9 @@
 {% load humanize %}
 {% load static %}
 
-<!-- 
+{% spaceless %}
+
+{% comment %}
 
 {
     "head": [
@@ -34,11 +36,9 @@
     }
 }
 
--->
+{% endcomment %}
 
-{% spaceless %}
-
-<!-- Buttons -->
+{% comment %} Buttons {% endcomment %}
 {% if table.buttons %}
     <div class="tableButtons noSelect">
         {% for button, cols in table.buttons.items %}
@@ -48,7 +48,7 @@
     </div>
 {% endif %}
 
-<!-- Table -->
+{% comment %} Table {% endcomment %}
 <table 
     id="{{ table.id }}"
     class="table"
@@ -57,13 +57,13 @@
     {% endif %}
 >
 
-    <!-- Header -->
+    {% comment %} Header {% endcomment %}
     {% for th in table.head %}
 
-        <!-- Col Number -->
+        {% comment %} Col Number {% endcomment %}
         {% with col=forloop.counter0 %}
 
-            <!-- Col Attributes -->
+            {% comment %} Col Attributes {% endcomment %}
             <th 
                 {% if col in table.percent %}
                     class="pointer" onclick="togglePercent('{{ table.id }}', {{ col }})"
@@ -76,13 +76,13 @@
 
     {% endfor %}
     
-    <!-- Rows -->
+    {% comment %} Rows {% endcomment %}
     {% for tr in table.rows %}
 
-        <!-- Row Number -->
+        {% comment %} Row Number {% endcomment %}
         {% with row=forloop.counter %}
 
-            <!-- Divider Row -->
+            {% comment %} Divider Row {% endcomment %}
             {% if row in table.divider %}
                 <tr>
                     {% for td in tr %}
@@ -97,15 +97,15 @@
                 </tr>
             {% endif %}
 
-            <!-- Row Elements (including bold styling) -->
+            {% comment %} Row Elements (including bold styling) {% endcomment %}
             <tr {% if row in table.boldRows %}class="bold"{% endif %}>
 
                 {% for td in tr %}
 
-                    <!-- Col Number -->
+                    {% comment %} Col Number {% endcomment %}
                     {% with col=forloop.counter0 %}
 
-                        <!-- Data Elements (including green and bold values) -->
+                        {% comment %} Data Elements (including green and bold values) {% endcomment %}
                         <td class="
                             {% if td >= table.green|get_item:col %}
                                 darkGreen
@@ -116,23 +116,23 @@
                             {% endif %}"
                         >
 
-                            <!-- Green Values -->
+                            {% comment %} Green Values {% endcomment %}
                             {% if table.green and table.green|get_item:col %}
                                 {{ td|floatformat:3 }}
 
-                            <!-- Percent Values -->
+                            {% comment %} Percent Values {% endcomment %}
                             {% elif col in table.percent %}
                                 {{ td|floatformat:3 }}
 
-                            <!-- Decimal Values -->
+                            {% comment %} Decimal Values {% endcomment %}
                             {% elif col in table.decimal %}
                                 {{ td|floatformat:3 }}
 
-                            <!-- Duration Values -->
+                            {% comment %} Duration Values {% endcomment %}
                             {% elif col in table.duration %}
                                 {{ td|format_duration }}
 
-                            <!-- Standard Values -->
+                            {% comment %} Standard Values {% endcomment %}
                             {% else %}
                                 {{ td|intcomma|safe }}
                             {% endif %}
@@ -157,14 +157,14 @@
 
 {% if table.buttons %}
     <script>
-        // Create a MediaQueryList object
+        {% comment %} Create a MediaQueryList object {% endcomment %}
         var mobileWidth = window.matchMedia("(max-width: 560px)");
         var tableCols = {% for button, cols in table.buttons.items %}{% if forloop.first %}{{ cols }}{% endif %}{% endfor %};
 
-        // Call listener function at run time
+        {% comment %} Call listener function at run time {% endcomment %}
         mobileColumns(mobileWidth, '{{ table.id }}', tableCols);
 
-        // Attach listener function on state changes
+        {% comment %} Attach listener function on state changes {% endcomment %}
         mobileWidth.addEventListener("change", function() {
             mobileColumns(mobileWidth, '{{ table.id }}', tableCols);
         });

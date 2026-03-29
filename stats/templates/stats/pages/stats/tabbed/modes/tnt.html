@@ -3,7 +3,7 @@
 
     <h2>TNT Games</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
@@ -49,7 +49,7 @@
 
     <br>
 
-    <!-- Wizards Stats -->
+    {% comment %} Wizards Stats {% endcomment %}
     <h2 class="divider">Wizards</h2>
     <div class="wrappedFlex">
         <div class="block">
@@ -67,7 +67,7 @@
 
     <br>
 
-    <!-- Wizards Table -->
+    {% comment %} Wizards Table {% endcomment %}
     {% include "stats/components/table.html" with table=s.table_capture %}
 
 {% endwith %}

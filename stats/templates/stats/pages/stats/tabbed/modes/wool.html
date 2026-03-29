@@ -3,7 +3,7 @@
 
     <h2>Wool Games</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
      <div class="wrappedFlex">
         <div class="block">
             <p><b>Level:</b> {{ s.level|floatformat:"4"|intcomma }} <span class="smallPrestige">{{ s.formatted_prestige|safe }}</span></p>
@@ -25,12 +25,12 @@
 
     <br>
 
-    <!-- Progress Bar -->
+    {% comment %} Progress Bar {% endcomment %}
     {% include "stats/components/progress_bar.html" with i=s.prestige_progress %}
 
     <br>
 
-    <!-- Wool Wars -->
+    {% comment %} Wool Wars {% endcomment %}
     <h2 class="divider">Wool Wars</h2>
     <div class="wrappedFlex">
         <div class="block">
@@ -53,12 +53,12 @@
 
     <br>
 
-    <!-- Wool Wars Table -->
+    {% comment %} Wool Wars Table {% endcomment %}
     {% include "stats/components/table.html" with table=s.table_classes %}
 
     <br>
 
-    <!-- Sheep Wars -->
+    {% comment %} Sheep Wars {% endcomment %}
     <h2 class="divider">Sheep Wars</h2>
     <div class="wrappedFlex">
         <div class="block">
@@ -85,7 +85,7 @@
 
     <br>
 
-    <!-- Capture the Wool -->
+    {% comment %} Capture the Wool {% endcomment %}
     <h2 class="divider">Capture the Wool</h2>
     <div class="wrappedFlex">
         <div class="block">

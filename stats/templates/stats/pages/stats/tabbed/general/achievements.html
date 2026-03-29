@@ -1,6 +1,6 @@
 {% load humanize %}
-<!-- This tab is dynamically populated using JS and Hypixel resources. -->
-<!-- Frontend resource request ensures up to date information without overloading the backend. -->
+{% comment %} This tab is dynamically populated using JS and Hypixel resources. {% endcomment %}
+{% comment %} Frontend resource request ensures up to date information without overloading the backend. {% endcomment %}
 
 <div id="achievementsError" class="hidden">
     {% include "stats/components/error.html" with tab="achievements" %}

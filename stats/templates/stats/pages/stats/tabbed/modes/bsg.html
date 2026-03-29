@@ -3,7 +3,7 @@
 
     <h2>Blitz Survival Games</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Wins:</b> {{ s.wins|intcomma }}</p>
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <!-- Table -->
+    {% comment %} Table {% endcomment %}
     {% if s.played_kits %}
         <br>{% include "stats/components/table.html" with table=s.table %}
     {% endif %}

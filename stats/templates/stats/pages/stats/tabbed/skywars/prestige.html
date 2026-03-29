@@ -1,6 +1,6 @@
 {% load humanize %}
 {% with s=player.stats.skywars.prestige %}
-    <!-- Headline -->
+    {% comment %} Headline {% endcomment %}
     <h2 class="white">Prestige Progress</h2>
     <br>
     <h2 class="white">
@@ -10,7 +10,7 @@
         <span class="levelCalcLinkContainer pointer hoverOpacity hidden"><a><i class="white bi bi-calculator-fill"></i></a></span>
     </h2>
     
-    <!-- Stats -->
+    {% comment %} Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p class="white"><b>Current: <span class="{{ s.previous.color }}">{{ s.previous.name }}</span></b> <span class="smallPrestige">{{ s.previous.formatted|safe }}</span></p>
@@ -31,6 +31,6 @@
 
     <br>
 
-    <!-- Progress Bar -->
+    {% comment %} Progress Bar {% endcomment %}
     {% include "stats/components/progress_bar.html" with i=s.progress mobileNumbers=True %}
 {% endwith %}

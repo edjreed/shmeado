@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{% static 'stats/stats/stats.css' %}">
 
 <div id="main">
-    <!-- Header -->
+    {% comment %} Header {% endcomment %}
     <div id="statsHeader" class="mainHeader shadow">
         <div id="playerContainer">
             <h4 id="playerPrestigeBedWars" class="{% if game != 'BedWars' %}hidden{% endif %}">{{ player.stats.bedwars.prestige_formatted|safe }}</h4>
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <!-- Online Details -->
+    {% comment %} Online Details {% endcomment %}
     <div id="onlineStatusDetails" class="zeroHeight">
         <p class="bold green">Online</p>
         <p class="bold white">
@@ -41,7 +41,7 @@
         </p>
     </div>
 
-    <!-- Game Selection -->
+    {% comment %} Game Selection {% endcomment %}
     <div id="navGames" class="navGames noSelect">
         {% for g in games %}
             <div class="navGame shadow {% if g == game %}navGameSelected{% endif %}" id="navGame{{ g }}">
@@ -51,11 +51,11 @@
         {% endfor %}
     </div>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div id="mainStatsElement" class="mainElement shadow {% if game == games.0 %}navGameSelectedTargetLeft{% endif %} {% if game == "Modes" %}hidden{% endif %}">
         <div id="mainStatsContainer" class="mainText">
 
-            <!-- Title -->
+            {% comment %} Title {% endcomment %}
             <div class="wrappedFlex">
                 <div id="gameTitleBlock">
                     <h2><span id="gameTitle">{{ game }}</span> Stats</h2>
@@ -71,7 +71,7 @@
                 </div>
             </div>
 
-            <!-- Main Stats -->
+            {% comment %} Main Stats {% endcomment %}
             {% for g in games %}
                 {% if g != "Modes" %}
                     <div id="mainStats{{ g }}" class="mainStats {% if g == game %}mainStatsSelected{% endif %}">
@@ -82,10 +82,10 @@
                 {% endif %}
             {% endfor %}
 
-            <!-- Secondary Show More Button -->
+            {% comment %} Secondary Show More Button {% endcomment %}
             <button id="showMoreLower" class="showMoreButton noSelect">Show More</button>
 
-            <!-- More Stats -->
+            {% comment %} More Stats {% endcomment %}
             <div id="moreStatsContainer" class="moreStatsContainer">
                 {% for g in games %}
                     {% if g != "Modes" %}
@@ -101,10 +101,10 @@
         </div>
     </div>
 
-    <!-- Tabbed  Stats -->
+    {% comment %} Tabbed  Stats {% endcomment %}
     <div id="tabbedStatsElement" class="shadow {% if game == 'Modes' %}tabbedStatsElementModesSelected{% endif %}">
 
-        <!-- Tab Selection -->
+        {% comment %} Tab Selection {% endcomment %}
         <div id="navTabBar" class="navTabBar noSelect {% if game == 'Modes' %}navTabBarModesSelected{% endif %}">
             {% for g, ts in tabs.items %}
                 <div id="navTabBar{{ g }}" {% if g == game %}class="navTabSelected"{% endif %}>
@@ -117,13 +117,13 @@
             {% endfor %}
         </div>
 
-        <!-- Tabs -->
+        {% comment %} Tabs {% endcomment %}
         <div id="navTabs" class="mainElement {% if tab == "Prestige" %}mainElementTransparent{% endif %}">
             {% for g, ts in tabs.items %}
                 <div id="navTabContainer{{ g }}" class="navTabContainer {% if g == game %}navTabSelected{% endif %}">
                     {% for t in ts %}
                         <div id="navTab{{ g }}{{ t }}" class="navTab {% if g == game and t == tab %}navTabSelected{% elif g != game and forloop.first %}navTabSelected{% endif %}">
-                            <!-- Sub Tabs -->
+                            {% comment %} Sub Tabs {% endcomment %}
                             {% if subTabs|get_item:g|get_item:t %}
                                 <div class="navTabBar navTabBarThin noSelect">
                                     {% for st in subTabs|get_item:g|get_item:t %}
@@ -139,7 +139,7 @@
                                         </div>
                                     {% endfor %}
                                 </div>
-                            <!-- Standard Tabs -->
+                            {% comment %} Standard Tabs {% endcomment %}
                             {% else %}
                                 {% with template=g|lower|add:"/"|add:t|lower|add:".html" %}
                                     {% include "stats/pages/stats/tabbed/"|add:template %}
@@ -155,13 +155,12 @@
 </div>
 
 <script>
-    // Constants
-    const player = {{ player|safe }};
-    console.log(player);
+    {% comment %} Constants {% endcomment %}
+    window.player = {{ player|safe }};
     const questRewards = {{ constants.general.questRewards|safe }};
     const gameInformation = {{ constants.main.gameInformation|safe }};
 
-    // Game and tab navigation
+    {% comment %} Game and tab navigation {% endcomment %}
     const navGames = {{ constants.main.games|safe }};
     let currentNavGame = "{{ game }}";
 
@@ -182,7 +181,7 @@
         }
     }
 
-    // Relevant URLs
+    {% comment %} Relevant URLs {% endcomment %}
     const statsUrlCustom = "{% url 'stats-custom' player.name 'param:game' 'param:tab' %}";
     const apiUrls = {
         "games": "https://api.hypixel.net/v2/resources/games",

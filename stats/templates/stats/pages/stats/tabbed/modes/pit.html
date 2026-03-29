@@ -3,7 +3,7 @@
 
     <h2>Pit</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Level:</b> <span class="smallPrestige">
@@ -41,7 +41,7 @@
 
     <br>
 
-    <!-- Progress Bars -->
+    {% comment %} Progress Bars {% endcomment %}
     {% include "stats/components/progress_bar.html" with i=s.prestige_xp_progress %}
     <br>
     {% include "stats/components/progress_bar.html" with i=s.prestige_gold_progress %}
@@ -50,7 +50,7 @@
 
     <br>
 
-    <!-- Combat Stats -->
+    {% comment %} Combat Stats {% endcomment %}
     <h2 class="divider">Combat</h2>
 
     <div class="wrappedFlex">
@@ -100,7 +100,7 @@
 
     <br>
 
-    <!-- Miscellaneous Stats -->
+    {% comment %} Miscellaneous Stats {% endcomment %}
     <h2 class="divider">Miscellaneous</h2>
 
     <div class="wrappedFlex">

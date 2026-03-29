@@ -1,3 +1,5 @@
+let loadStates = {}; // Track which requests have been made, prevent repetition
+
 // Logins
 function loginToggle(typeOfLogin) {
   ["", "Ago"].forEach((suffix) => {
@@ -49,8 +51,6 @@ function changeParkourGame(game) {
 //==============================================================================
 // COMMON FUNCTIONS
 //==============================================================================
-
-let loadStates = {}; // Track which requests have been made, prevent repitition
 
 // Make request and execute a following function
 // There must be <div>s with id of [name]Error and [name]Container
@@ -163,7 +163,7 @@ const makeLeftRightElement = (
 //==============================================================================
 
 function quests(questInfo) {
-  const questStats = player.stats.general.quests;
+  const questStats = window.player.stats.general.quests;
 
   // Display the details of a given quest
   const setQuestDetails = (title, description, rewards) => {
@@ -275,7 +275,7 @@ function quests(questInfo) {
 //==============================================================================
 
 function challenges(challengeInfo) {
-  const challengeStats = player.stats.general.challenges;
+  const challengeStats = window.player.stats.general.challenges;
 
   // Display the details of a given challenge
   const setChallengeDetails = (title, rewards) => {
@@ -426,7 +426,7 @@ function minimisedExpanded(expansion) {
 }
 
 // Populate achievement info
-const achievementStats = player.stats.general.achievements;
+const achievementStats = window.player.stats.general.achievements;
 let achievementInfo = null;
 let currentAchievementType = null;
 

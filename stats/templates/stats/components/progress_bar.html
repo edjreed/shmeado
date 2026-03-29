@@ -2,7 +2,7 @@
 {% load humanize %}
 {% load static %}
 
-<!--
+{% comment %}
 
 {
     "text": "Level 100 to 200"  # Optional text displayed at front of bar
@@ -17,7 +17,7 @@
     }
 }
 
--->
+{% endcomment %}
 
 {% with percent=i.next.needed|percent:i.current.progress %}
     <div class="bar {% if i.current.color %}{{ i.current.color }}{% endif %}Background">

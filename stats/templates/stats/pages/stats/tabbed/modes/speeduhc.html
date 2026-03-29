@@ -3,12 +3,12 @@
 
     <h2>Speed UHC</h2>
 
-    <!-- Main Stats -->
+    {% comment %} Main Stats {% endcomment %}
     <div class="wrappedFlex">
         <div class="block">
             <p><b>Score:</b> {{ s.score|intcomma }}</p>
             <p><b>Coins:</b> {{ s.coins|intcomma }}</p>
-            <p><b>Title: <span class="darkGray">{{ s.title|safe }}<span></b></p>
+            <p><b>Title: <span class="darkGray">{{ s.title|safe }}</span></b></p>
             <p><b>Next Title: <span class="darkGray">{{ s.next_title|safe }}</span></b></p>
         </div>
         <div class="block">
@@ -33,18 +33,18 @@
 
     <br>
 
-    <!-- Progress Bar -->
+    {% comment %} Progress Bar {% endcomment %}
     {% include "stats/components/progress_bar.html" with i=s.title_progress %}
 
     <br>
 
-    <!-- Modes Table -->
+    {% comment %} Modes Table {% endcomment %}
     <h2 class="divider">Modes</h2><br>
     {% include "stats/components/table.html" with table=s.table_modes %}
 
     <br>
 
-    <!-- Masteries Table -->
+    {% comment %} Masteries Table {% endcomment %}
     <h2 class="divider">Masteries</h2><br>
     {% include "stats/components/table.html" with table=s.table_masteries %}
 
