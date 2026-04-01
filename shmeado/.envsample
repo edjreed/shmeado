@@ -1,0 +1,10 @@
+ENVIRONMENT=<development/production>
+SECRET_KEY=<your Django secret key>
+API_KEY=<your Hypixel API key>
+RATE_LIMIT=<maximum number of Hypixel API requests per minute>
+DB_HOST=<address of the database>
+DB_PORT=<port of the database>
+DB_NAME=<name of the database>
+DB_USER=<name of the database user>
+DB_PASSWORD=<password of the database user>
+GA_ID=<your Google Analytics ID>
