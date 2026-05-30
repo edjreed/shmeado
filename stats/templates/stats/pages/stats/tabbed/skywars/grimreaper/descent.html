@@ -53,7 +53,7 @@
                                                         {{ info.description|safe }}
                                                         <br><br>
                                                         {% comment %} Complete {% endcomment %}
-                                                        {% if s_item.value == s_item.tiers %}
+                                                        {% if s_item.value >= s_item.tiers %}
                                                             {% comment %} Owned {% endcomment %}
                                                             {% if s_item.tiers == 1 %}
                                                                 <span class="yellow">Owned!</span>
@@ -81,6 +81,9 @@
                                                                 {% endspaceless %}
                                                             {% endif %}
                                                             <span class="gray">Cost: </span><span class="blue">{{ s_item.cost }} opals</span>
+                                                            {% if s_item.req > s.level %}
+                                                                <br><span class="red">Requires SkyWars Level {{ s_item.req }}!</span>
+                                                            {% endif %}
                                                         {% endif %}
                                                     </div>
                                                 {% endwith %}

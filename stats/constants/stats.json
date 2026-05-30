@@ -2329,8 +2329,8 @@
         "tiers": 1,
         "req": 15
       },
-      "grand_slam": { "type": "stat", "cost": 1, "tiers": 3, "req": 12 },
-      "tenacity": { "type": "stat", "cost": 1, "tiers": 1, "req": 13 },
+      "grand_slam": { "type": "stat", "cost": 1, "tiers": 3, "req": 15 },
+      "tenacity": { "type": "stat", "cost": 1, "tiers": 1, "req": 15 },
       "shard_seeker": { "type": "stat", "cost": 1, "tiers": 5, "req": 15 },
       "emblem_sigma_icon": {
         "type": "package",
@@ -2339,7 +2339,7 @@
         "req": 15
       },
       "meticulous_miner": { "type": "stat", "cost": 1, "tiers": 5, "req": 15 },
-      "hide_and_seek": { "type": "stat", "cost": 2, "tiers": 3, "req": 17 },
+      "hide_and_seek": { "type": "stat", "cost": 2, "tiers": 1, "req": 15 },
       "killeffect_vaporized": {
         "type": "package",
         "cost": 3,
@@ -2347,7 +2347,7 @@
         "req": 15
       },
       "midas_gift": { "type": "stat", "cost": 1, "tiers": 4, "req": 15 },
-      "angels_offering": { "type": "stat", "cost": 5, "tiers": 1, "req": 22 },
+      "angels_offering": { "type": "stat", "cost": 5, "tiers": 1, "req": 15 },
       "killmessages_flex": {
         "type": "package",
         "cost": 4,
@@ -2356,7 +2356,7 @@
       },
       "first_blood": { "type": "stat", "cost": 1, "tiers": 1, "req": 15 },
       "fortune_teller": { "type": "stat", "cost": 2, "tiers": 1, "req": 15 },
-      "cage_piston": { "type": "package", "cost": 5, "tiers": 1, "req": 30 },
+      "cage_piston": { "type": "package", "cost": 5, "tiers": 1, "req": 15 },
       "fireproof": { "type": "stat", "cost": 3, "tiers": 5, "req": 15 },
       "corrupted_coinage": { "type": "stat", "cost": 3, "tiers": 2, "req": 15 },
       "victorydance_super_sheep": {
@@ -2371,10 +2371,10 @@
         "type": "package",
         "cost": 8,
         "tiers": 1,
-        "req": 45
+        "req": 15
       },
-      "librarian": { "type": "stat", "cost": 10, "tiers": 1, "req": 46 },
-      "sorcerers_spell": { "type": "stat", "cost": 4, "tiers": 5, "req": 46 },
+      "librarian": { "type": "stat", "cost": 10, "tiers": 1, "req": 15 },
+      "sorcerers_spell": { "type": "stat", "cost": 4, "tiers": 5, "req": 15 },
       "cloak_falling_angel": {
         "type": "vanity",
         "cost": 7,
@@ -2387,7 +2387,7 @@
         "type": "package",
         "cost": 9,
         "tiers": 1,
-        "req": 15
+        "req": 50
       },
       "smarty_pants": { "type": "stat", "cost": 2, "tiers": 1, "req": 15 },
       "diamond_in_the_rough": {
@@ -2400,7 +2400,7 @@
         "type": "package",
         "cost": 10,
         "tiers": 1,
-        "req": 15
+        "req": 60
       },
       "telekinesis": { "type": "stat", "cost": 5, "tiers": 1, "req": 15 },
       "kit_basic_solo_archeologist": {
@@ -2435,13 +2435,13 @@
         "type": "package",
         "cost": 12,
         "tiers": 1,
-        "req": 15
+        "req": 70
       },
       "deathcry_eponymous_dragon": {
         "type": "package",
         "cost": 12,
         "tiers": 1,
-        "req": 15
+        "req": 70
       },
       "kill_xp_boost": { "type": "stat", "cost": 10, "tiers": 1, "req": 15 },
       "perk_slot": { "type": "stat", "cost": 20, "tiers": 1, "req": 15 },
@@ -2449,35 +2449,35 @@
         "type": "package",
         "cost": 12,
         "tiers": 1,
-        "req": 15
+        "req": 80
       },
       "emblem_delta_icon": {
         "type": "package",
         "cost": 14,
         "tiers": 1,
-        "req": 15
+        "req": 90
       },
       "victorydance_double_dragons_descent": {
         "type": "package",
         "cost": 16,
         "tiers": 1,
-        "req": 15
+        "req": 100
       },
       "cloak_angels_prestige": {
         "type": "vanity",
         "cost": 18,
         "tiers": 1,
-        "req": 15
+        "req": 110
       },
       "scheme_demigod": {
         "type": "package",
         "cost": 20,
         "tiers": 1,
-        "req": 15
+        "req": 110
       },
       "fallen_angel_kit": {
         "type": "package",
-        "cost": 20,
+        "cost": 25,
         "tiers": 1,
         "req": 15
       }
@@ -2537,7 +2537,7 @@
       "hide_and_seek": {
         "name": "Hide and Seek",
         "location": 26,
-        "description": "<span class='gray'>Compass</span><span class='green'> 10 sec</span><span class='gray'> per tier before refill.</span>"
+        "description": "<span class='gray'>Compass</span><span class='green'> 30s</span><span class='gray'> before refill.</span>"
       },
       "killeffect_vaporized": {
         "name": "Vaporized Kill Effect",
@@ -2672,7 +2672,7 @@
       "cloak_angels_prestige": {
         "name": "Angel's Prestige Cloak",
         "location": 100,
-        "description": "<span class='gray'>Show off your max</span> <span class='lightPurple'>Kit Prestiges</span><span class='gray'>.</span>"
+        "description": "<span class='gray'>Show off your max </span> <span class='lightPurple'>Kit Prestiges</span><span class='gray'>.</span>"
       },
       "double_edged_sword": {
         "name": "Double-Edged Sword",
