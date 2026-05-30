@@ -98,7 +98,7 @@ def get_uuid(name):
     # Otherwise try to get the UUID
     try:
         return url_to_json(
-            f"https://api.minecraftservices.com/users/profiles/minecraft/{name}"
+            f"https://api.mojang.com/users/profiles/minecraft/{name}"
         ).get("id", "Invalid Name")
     # Return as invalid if the UUID cannot be found for that name
     except (urllib.error.URLError, json.JSONDecodeError):
