@@ -2597,7 +2597,7 @@
       "apothecary": {
         "name": "Apothecary",
         "location": 55,
-        "description": "<span class='gray'>Extend positive potion</span><br><span class='gray'>effects by</span><span class='green'> 10%</span>"
+        "description": "<span class='gray'>Extend positive potion</span><br><span class='gray'>effects by</span><span class='green'> 30%</span>"
       },
       "sorcerers_spell": {
         "name": "Sorcerer's Spell",
@@ -2642,7 +2642,7 @@
       "distillery_discount": {
         "name": "Distillery Discount",
         "location": 82,
-        "description": "<span class='gray'>Potions in the <span class='red'>Angel's Brewery</span> cost<br><span class='gold'>-15% coins</span>.</span>"
+        "description": "<span class='gray'>Potions in the <span class='red'>Angel's Brewery</span> cost<br><span class='gold'> -5% coins </span> per tier.</span>"
       },
       "chilled_quiver": {
         "name": "Chilled Quiver",
@@ -2662,7 +2662,7 @@
       "opalsmith": {
         "name": "Opalsmith",
         "location": 95,
-        "description": "<span class='blue'>Opals</span> <span class='gray'>only cost</span> <span class='aqua'>1,250 Souls</span> <span class='gray'>to forge.</span>"
+        "description": "<span class='blue'>Opals </span> <span class='gray'>only cost </span> <span class='aqua'> 1,250 Souls </span> <span class='gray'>to forge.</span>"
       },
       "balloon_dual_dragon": {
         "name": "Dual Dragon Balloon",
@@ -2677,17 +2677,17 @@
       "double_edged_sword": {
         "name": "Double-Edged Sword",
         "location": 102,
-        "description": "<span class='gray'>First</span> <span class='green'>3</span> <span class='gray'>sword kills put one sharpness<br>level on your sword but inflict </span><span class='red'>-2 Max ❤</span><span class='gray'>.</span>"
+        "description": "<span class='gray'>First</span> <span class='green'> 3 </span> <span class='gray'> sword kills put one sharpness<br>level on your sword but inflict </span><span class='red'>-2 Max ❤</span><span class='gray'>.</span>"
       },
       "quest_masters_friend": {
         "name": "Quest Master's Best Friend",
         "location": 103,
-        "description": "<span class='gray'>Quests reward</span> <span class='gold'>+5% coins</span> per tier.</span>"
+        "description": "<span class='gray'>Quests reward</span> <span class='gold'> +5% coins </span> <span class='gray'> per tier.</span>"
       },
       "dragons_pledge": {
         "name": "Dragon's Pledge",
         "location": 104,
-        "description": "<span class='gray'>A pearl replaces loot in 1 island chest.<br>You start with only</span> <span class='red'>7 Max ❤</span>.</span>"
+        "description": "<span class='gray'>A pearl replaces loot in 1 island chest.<br>You start with only</span> <span class='red'> 7 Max ❤</span>.</span>"
       },
       "victorydance_double_dragons_descent": {
         "name": "Double Dragon's Descent Victory Dance",
@@ -2712,7 +2712,7 @@
       "projectiletrail_descent_dragon": {
         "name": "Descent Dragon Projectile Trail",
         "location": 115,
-        "description": "<span class='gray'>Prestige-ified version of the <span class='gold'>Double<br>Dragon Projectile Trail></span></span>"
+        "description": "<span class='gray'>Prestige-ified version of the <span class='gold'>Double<br>Dragon Projectile Trail</span>.</span>"
       },
       "perk_slot": {
         "name": "7th Perk Slot",
