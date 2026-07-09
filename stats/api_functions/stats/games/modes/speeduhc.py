@@ -87,7 +87,7 @@ def get_stats(player_api):
         "head": suhc_head,
         "rows": suhc_rows,
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6],
         "buttons": {
             "W/L": [0, 1, 2, 3],
@@ -131,7 +131,7 @@ def get_stats(player_api):
         "head": suhc_head,
         "rows": suhc_rows,
         "boldCols": [0],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6],
         "buttons": {
             "W/L": [0, 1, 2, 3],

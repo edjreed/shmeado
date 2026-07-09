@@ -96,7 +96,7 @@ def get_stats(player_api):
         "head": mm_head,
         "rows": mm_rows,
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6],
         "divider": {5: "Legacy"},
         "buttons": {

@@ -216,7 +216,7 @@ def get_stats(player_api):
         "rows": rows,
         "green": {3: 10, 6: 30},
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6, 9],
         "buttons": {
             "W/L": [0, 1, 2, 3],
@@ -433,7 +433,7 @@ def get_stats(player_api):
         "rows": rows,
         "green": {3: 10, 6: 30},
         "boldRows": [2, 6, 10, 13],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6, 9],
         "buttons": {
             "W/L": [0, 1, 2, 3],

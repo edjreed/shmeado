@@ -110,6 +110,19 @@
   background-color: #2a3142;
 }
 
+.table th i {
+  font-size: 16px;
+  margin-left: 6px;
+}
+
+.table th.percent {
+  transition: 0.2s;
+}
+
+.table th.percent:hover {
+  color: #ffffff99;
+}
+
 .table tr {
   background-color: #fff;
 }

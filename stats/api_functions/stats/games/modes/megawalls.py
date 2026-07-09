@@ -91,7 +91,7 @@ def get_stats(player_api):
         "head": mw_head,
         "rows": mw_rows,
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6, 9],
         "buttons": {
             "W/L": [0, 1, 2, 3],
@@ -137,7 +137,7 @@ def get_stats(player_api):
         "head": mw_classes_head,
         "rows": mw_classes_rows,
         "boldCols": [0],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6, 9],
         "buttons": {
             "W/L": [0, 1, 2, 3],

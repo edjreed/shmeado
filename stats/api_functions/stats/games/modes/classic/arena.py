@@ -79,7 +79,7 @@ def get_stats(player_api):
         "head": arena_head,
         "rows": arena_rows,
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6],
         "buttons": {"W/L": [0, 1, 2, 3], "K/D": [0, 4, 5, 6], "Winstreaks": [0, 7]},
     }

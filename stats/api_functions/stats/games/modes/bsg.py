@@ -143,7 +143,7 @@ def get_stats(player_api):
         "head": bsg_head,
         "rows": bsg_rows_sorted,
         "boldCols": [0],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "duration": [7],
         "buttons": {
             "W/L": [0, 1, 2, 3],

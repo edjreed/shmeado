@@ -153,7 +153,7 @@ def get_stats(player_api):
         "rows": wl_classes_rows,
         "boldRows": [1],
         "boldCols": [0],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "buttons": {"W/L": [0, 1, 2, 3], "Damage": [0, 4, 5], "Healing": [0, 6]},
     }
 

@@ -61,7 +61,7 @@ def get_stats(player_api):
         "head": sh_head,
         "rows": sh_rows,
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6],
         "buttons": {
             "W/L": [0, 1, 2, 3],
@@ -110,7 +110,7 @@ def get_stats(player_api):
         "head": sh_heroes_head,
         "rows": sh_heroes_rows,
         "boldCols": [0],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6],
         "buttons": {
             "W/L": [0, 1, 2, 3],

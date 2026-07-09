@@ -212,7 +212,7 @@ def get_stats(player_api):
         "head": pixel_party_head,
         "rows": pixel_party_rows,
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "buttons": {
             "W/L": [0, 1, 2, 3],
             "Powerups": [0, 4],

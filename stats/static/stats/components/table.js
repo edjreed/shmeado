@@ -2,6 +2,12 @@ function togglePercent(tableId, tableCol) {
   const table = document.getElementById(tableId);
   const rows = table.getElementsByTagName("tr");
 
+  // Swap column heading text
+  const header = table.rows[0].cells[tableCol];
+  ["Unselected", "Selected"].forEach((suffix) => {
+    header.querySelector(`.percent${suffix}`).classList.toggle("hidden");
+  });
+
   // Loop through each row and toggle the percentage
   for (let i = 1; i < rows.length; i++) {
     const cells = rows[i].getElementsByTagName("td");

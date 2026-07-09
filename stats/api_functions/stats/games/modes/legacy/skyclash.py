@@ -71,7 +71,7 @@ def get_stats(player_api):
         "head": sc_head,
         "rows": sc_rows,
         "boldRows": [1],
-        "percent": [3],
+        "percent": {3: "Win %"},
         "decimal": [6],
         "buttons": {
             "W/L": [0, 1, 2, 3],

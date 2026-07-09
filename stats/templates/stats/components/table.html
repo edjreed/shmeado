@@ -18,8 +18,13 @@
     "boldRows": [1, 2, etc.],
     "boldCols": [1, 2, etc.],
 
-    "percent": [3, etc.],
     "duration": [6, etc.],
+
+    "percent": {
+        3: "Win %",
+        6: "Arrow Hit %",
+        etc.
+    },
 
     "green": {
         3: 1,
@@ -64,13 +69,15 @@
         {% with col=forloop.counter0 %}
 
             {% comment %} Col Attributes {% endcomment %}
-            <th 
-                {% if col in table.percent %}
-                    class="pointer" onclick="togglePercent('{{ table.id }}', {{ col }})"
-                {% endif %}
-            >
-                {{ th }} {% if col in table.percent %}(%){% endif %}
-            </th>
+            {% if col in table.percent %}
+                <th class="percent pointer" onclick="togglePercent('{{ table.id }}', {{ col }})">
+                    <span class="percentUnselected">{{ th }}</span>
+                    <span class="percentSelected hidden">{{ table.percent|get_item:col }}</span>
+                    <i class="bi bi-arrow-left-right"></i>
+                </th>
+            {% else %}
+                <th>{{ th }}</th>
+            {% endif %}
 
         {% endwith %}
 
