@@ -15,8 +15,10 @@
     {% elif api_status.status == 2 or api_status.status == 1 %}
         <div class="shadow">
             <div class="mainElement apiStatusWarning apiStatusWarningSlow">
-                <b class="white">The Hypixel API is currently{% if api_status.status == 2 %} very{% endif %} slow!</b>
-                <span class="white">Latest response time was ~ {{ api_status.time|floatformat:3 }}s.</span>
+                <span class="white">
+                    <b>The Hypixel API is currently {% if api_status.status == 2 %} very {% endif %} slow!</b>
+                    Latest response time was ~ {{ api_status.time|floatformat:3 }}s.
+                </span>
             </div>
         </div>
     {% endif %}
