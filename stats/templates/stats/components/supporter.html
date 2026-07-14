@@ -9,5 +9,7 @@
         </div>
     </a>
 {% else %}
-    <img class="supporterEmoji" class="pointer noSelect" src="https://abs.twimg.com/emoji/v2/svg/{{ supporter.emoji }}.svg" width="25" height="25">
+    <div class="supporterContainer">
+        <img class="supporterEmoji noSelect" src="https://abs.twimg.com/emoji/v2/svg/{{ supporter.emoji }}.svg" width="25" height="25">
+    </div>
 {% endif %}
